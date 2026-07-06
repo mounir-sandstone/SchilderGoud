@@ -176,6 +176,12 @@
             transform: translateX(16px);
             transition: opacity 220ms ease, transform 220ms ease;
         }
+        .review-slide:not(.is-active) {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            pointer-events: none;
+        }
         .review-slide.is-active {
             opacity: 1;
             transform: translateX(0);
@@ -200,7 +206,8 @@
             background: #ffffff;
         }
         .review-carousel__arrow:focus-visible,
-        .review-carousel__dot:focus-visible {
+        .review-carousel__dot:focus-visible,
+        .review-carousel__toggle:focus-visible {
             outline: 2px solid #7c5800;
             outline-offset: 4px;
         }
@@ -218,6 +225,25 @@
             background: #ffc659;
             transform: scale(1.08);
         }
+        .review-carousel__toggle {
+            width: 34px;
+            height: 34px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #cdc5bc;
+            color: #1a1c1a;
+            background: rgba(255, 255, 255, 0.58);
+            transition: border-color 180ms ease, color 180ms ease, background-color 180ms ease;
+        }
+        .review-carousel__toggle:hover {
+            border-color: #7c5800;
+            color: #7c5800;
+            background: #ffffff;
+        }
+        .review-carousel__toggle .material-symbols-outlined {
+            font-size: 18px;
+        }
         @media (max-width: 639px) {
             .review-carousel__viewport,
             .review-slide {
@@ -227,7 +253,8 @@
         @media (prefers-reduced-motion: reduce) {
             .review-slide,
             .review-carousel__arrow,
-            .review-carousel__dot {
+            .review-carousel__dot,
+            .review-carousel__toggle {
                 transition: none;
             }
         }
@@ -587,6 +614,7 @@
 <button class="review-carousel__dot is-active" type="button" aria-label="Toon review 1" aria-current="true" data-review-dot></button>
 <button class="review-carousel__dot" type="button" aria-label="Toon review 2" data-review-dot></button>
 <button class="review-carousel__dot" type="button" aria-label="Toon review 3" data-review-dot></button>
+<button class="review-carousel__toggle" type="button" aria-label="Pauzeer automatische reviews" data-review-toggle><span class="material-symbols-outlined" aria-hidden="true">pause</span></button>
 </div>
 <button class="review-carousel__arrow" type="button" aria-label="Volgende review" data-review-next><span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></button>
 </div>
@@ -755,26 +783,91 @@
         initSlider(1);
 
         // Review Carousel Logic
-        const reviewCarousel = document.querySelector('[data-review-carousel]');
-        if (reviewCarousel) {
+        document.querySelectorAll('[data-review-carousel]').forEach((reviewCarousel) => {
+            if (reviewCarousel.dataset.reviewCarouselInitialized === 'true') {
+                return;
+            }
+            reviewCarousel.dataset.reviewCarouselInitialized = 'true';
+
             const slides = Array.from(reviewCarousel.querySelectorAll('[data-review-slide]'));
             const dots = Array.from(reviewCarousel.querySelectorAll('[data-review-dot]'));
             const prevButton = reviewCarousel.querySelector('[data-review-prev]');
             const nextButton = reviewCarousel.querySelector('[data-review-next]');
+            const toggleButton = reviewCarousel.querySelector('[data-review-toggle]');
+            const toggleIcon = toggleButton ? toggleButton.querySelector('.material-symbols-outlined') : null;
+            const reduceMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+            const autoRotateDelay = 8000;
             let activeIndex = 0;
             let touchStartX = 0;
+            let autoRotateTimer = null;
+            let transitionTimer = null;
+            let isUserPaused = false;
+            let isHoverPaused = false;
+            let isFocusPaused = false;
+            let isTabHidden = document.hidden;
+            let isReducedMotion = reduceMotionQuery.matches;
+
+            function canAutoRotate() {
+                return !isReducedMotion && !isUserPaused && !isHoverPaused && !isFocusPaused && !isTabHidden;
+            }
+
+            function updateToggleButton() {
+                if (!toggleButton || !toggleIcon) {
+                    return;
+                }
+                const isPlaying = !isReducedMotion && !isUserPaused;
+                toggleButton.setAttribute('aria-label', isPlaying ? 'Pauzeer automatische reviews' : 'Start automatische reviews');
+                toggleIcon.textContent = isPlaying ? 'pause' : 'play_arrow';
+                toggleButton.setAttribute('aria-pressed', String(!isPlaying));
+            }
+
+            function stopAutoRotate() {
+                if (autoRotateTimer) {
+                    window.clearTimeout(autoRotateTimer);
+                    autoRotateTimer = null;
+                }
+            }
+
+            function scheduleAutoRotate() {
+                stopAutoRotate();
+                updateToggleButton();
+                if (!canAutoRotate() || slides.length < 2) {
+                    return;
+                }
+                autoRotateTimer = window.setTimeout(() => {
+                    setSlide(activeIndex + 1);
+                    scheduleAutoRotate();
+                }, autoRotateDelay);
+            }
 
             function setSlide(index) {
                 activeIndex = (index + slides.length) % slides.length;
-                slides.forEach((slide, slideIndex) => {
-                    const isActive = slideIndex === activeIndex;
-                    slide.hidden = !isActive;
-                    slide.classList.toggle('is-active', isActive);
-                    slide.setAttribute('aria-hidden', String(!isActive));
-                    slide.querySelectorAll('button, a').forEach((control) => {
-                        control.tabIndex = isActive ? 0 : -1;
-                    });
+                if (transitionTimer) {
+                    window.clearTimeout(transitionTimer);
+                    transitionTimer = null;
+                }
+
+                slides.forEach((slide) => {
+                    slide.hidden = false;
                 });
+
+                window.requestAnimationFrame(() => {
+                    slides.forEach((slide, slideIndex) => {
+                        const isActive = slideIndex === activeIndex;
+                        slide.classList.toggle('is-active', isActive);
+                        slide.setAttribute('aria-hidden', String(!isActive));
+                        slide.querySelectorAll('button, a').forEach((control) => {
+                            control.tabIndex = isActive ? 0 : -1;
+                        });
+                    });
+
+                    transitionTimer = window.setTimeout(() => {
+                        slides.forEach((slide, slideIndex) => {
+                            slide.hidden = slideIndex !== activeIndex;
+                        });
+                    }, isReducedMotion ? 0 : 240);
+                });
+
                 dots.forEach((dot, dotIndex) => {
                     const isActive = dotIndex === activeIndex;
                     dot.classList.toggle('is-active', isActive);
@@ -784,6 +877,11 @@
                         dot.removeAttribute('aria-current');
                     }
                 });
+            }
+
+            function manualSetSlide(index) {
+                setSlide(index);
+                scheduleAutoRotate();
             }
 
             reviewCarousel.querySelectorAll('.review-read-more').forEach((button) => {
@@ -802,17 +900,45 @@
                 });
             });
 
-            prevButton.addEventListener('click', () => setSlide(activeIndex - 1));
-            nextButton.addEventListener('click', () => setSlide(activeIndex + 1));
-            dots.forEach((dot, dotIndex) => dot.addEventListener('click', () => setSlide(dotIndex)));
+            prevButton.addEventListener('click', () => manualSetSlide(activeIndex - 1));
+            nextButton.addEventListener('click', () => manualSetSlide(activeIndex + 1));
+            dots.forEach((dot, dotIndex) => dot.addEventListener('click', () => manualSetSlide(dotIndex)));
+            if (toggleButton) {
+                toggleButton.addEventListener('click', () => {
+                    isUserPaused = !isUserPaused;
+                    scheduleAutoRotate();
+                });
+            }
+            reviewCarousel.addEventListener('mouseenter', () => {
+                isHoverPaused = true;
+                scheduleAutoRotate();
+            });
+            reviewCarousel.addEventListener('mouseleave', () => {
+                isHoverPaused = false;
+                scheduleAutoRotate();
+            });
+            reviewCarousel.addEventListener('focusin', () => {
+                isFocusPaused = true;
+                scheduleAutoRotate();
+            });
+            reviewCarousel.addEventListener('focusout', () => {
+                window.setTimeout(() => {
+                    isFocusPaused = reviewCarousel.contains(document.activeElement);
+                    scheduleAutoRotate();
+                }, 0);
+            });
+            document.addEventListener('visibilitychange', () => {
+                isTabHidden = document.hidden;
+                scheduleAutoRotate();
+            });
             reviewCarousel.addEventListener('keydown', (event) => {
                 if (event.key === 'ArrowLeft') {
                     event.preventDefault();
-                    setSlide(activeIndex - 1);
+                    manualSetSlide(activeIndex - 1);
                 }
                 if (event.key === 'ArrowRight') {
                     event.preventDefault();
-                    setSlide(activeIndex + 1);
+                    manualSetSlide(activeIndex + 1);
                 }
             });
             reviewCarousel.addEventListener('touchstart', (event) => {
@@ -822,12 +948,25 @@
                 const touchEndX = event.changedTouches[0].clientX;
                 const deltaX = touchEndX - touchStartX;
                 if (Math.abs(deltaX) > 50) {
-                    setSlide(activeIndex + (deltaX < 0 ? 1 : -1));
+                    manualSetSlide(activeIndex + (deltaX < 0 ? 1 : -1));
                 }
             }, { passive: true });
 
+            if (typeof reduceMotionQuery.addEventListener === 'function') {
+                reduceMotionQuery.addEventListener('change', (event) => {
+                    isReducedMotion = event.matches;
+                    scheduleAutoRotate();
+                });
+            } else if (typeof reduceMotionQuery.addListener === 'function') {
+                reduceMotionQuery.addListener((event) => {
+                    isReducedMotion = event.matches;
+                    scheduleAutoRotate();
+                });
+            }
+
             setSlide(0);
-        }
+            scheduleAutoRotate();
+        });
 
 
         // Sticky Header Shrink Effect
