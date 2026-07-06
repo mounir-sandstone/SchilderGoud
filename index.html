@@ -163,6 +163,86 @@
             scrollbar-width: none;
         }
 
+
+        a, button, input, select, textarea {
+            transition-property: color, background-color, border-color, transform, box-shadow;
+            transition-duration: 200ms;
+            transition-timing-function: ease-out;
+        }
+        a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, [tabindex]:focus-visible {
+            outline: none;
+            box-shadow: 0 0 0 2px #ffc659, 0 0 0 5px rgba(250, 249, 246, 0.95);
+        }
+        a:active, button:active {
+            transform: translateY(0);
+        }
+
+        .sg-focus {
+            transition-property: color, background-color, border-color, transform, box-shadow;
+            transition-duration: 200ms;
+            transition-timing-function: ease-out;
+        }
+        .sg-focus:focus-visible {
+            outline: none;
+            box-shadow: 0 0 0 2px #ffc659, 0 0 0 5px rgba(250, 249, 246, 0.95);
+        }
+        .sg-primary-gold:hover {
+            background: #000000;
+            color: #ffffff;
+            border-color: #000000;
+            transform: translateY(-1px);
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
+        }
+        .sg-primary-black:hover {
+            background: #ffc659;
+            color: #1a1c1a;
+            border-color: #ffc659;
+            transform: translateY(-1px);
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+        }
+        .sg-outline-light:hover {
+            background: #000000;
+            color: #ffffff;
+            border-color: #000000;
+            transform: translateY(-1px);
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+        }
+        .sg-outline-dark:hover {
+            background: #ffffff;
+            color: #1a1c1a;
+            border-color: #ffffff;
+            transform: translateY(-1px);
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+        }
+        .sg-link:hover {
+            color: #7c5800;
+            border-color: #7c5800;
+        }
+        .sg-arrow {
+            transition: transform 200ms ease-out;
+        }
+        a:hover .sg-arrow, button:hover .sg-arrow, .group:hover .sg-arrow {
+            transform: translateX(3px);
+        }
+        .sg-card-image {
+            transition: transform 700ms ease-out;
+        }
+        .group:hover .sg-card-image {
+            transform: scale(1.03);
+        }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                scroll-behavior: auto !important;
+                transition-duration: 0.01ms !important;
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+            }
+            .sg-primary-gold:hover, .sg-primary-black:hover, .sg-outline-light:hover, .sg-outline-dark:hover,
+            a:hover .sg-arrow, button:hover .sg-arrow, .group:hover .sg-arrow, .group:hover .sg-card-image {
+                transform: none;
+            }
+        }
+
         .review-read-more:focus-visible {
             outline: 2px solid #7c5800;
             outline-offset: 4px;
@@ -172,7 +252,7 @@
 <body class="bg-background text-on-surface font-body-md overflow-x-hidden">
 <!-- Header (Shared Component Mapping) -->
 <header class="w-full top-0 sticky z-50 bg-background/95 backdrop-blur border-b border-outline-variant transition-all duration-200 ease-in-out">
-<div class="flex justify-between items-center px-margin-mobile lg:px-10 xl:px-16 py-4 max-w-[1440px] mx-auto">
+<div class="flex justify-between items-center px-6 lg:px-10 xl:px-16 py-4 max-w-[1440px] mx-auto">
 <a class="flex flex-col" href="index.html" aria-label="SchilderGoud home">
 <span class="font-display-lg text-headline-sm tracking-tighter text-primary"><span>Schilder</span><span class="text-secondary">Goud</span></span>
 <span class="text-[10px] font-label-caps text-on-surface-variant uppercase tracking-[0.2em]">Rijswijk &amp; Omgeving</span>
@@ -186,7 +266,7 @@
 </nav>
 <div class="hidden lg:flex items-center gap-5">
 <a class="text-[12px] font-bold text-on-surface-variant hover:text-primary transition-colors" href="tel:+31633733706">06 33 73 37 06</a>
-<a class="py-3 px-5 bg-secondary-container text-on-secondary-container font-bold text-[11px] tracking-widest hover:bg-secondary-fixed transition-colors" href="contact.html#offerte">Vraag een offerte aan</a>
+<a class="sg-focus sg-primary-gold min-h-12 inline-flex items-center py-3 px-5 border border-secondary-container bg-secondary-container text-on-secondary-container font-bold text-[11px] tracking-widest" href="contact.html#offerte">Vraag een offerte aan</a>
 </div>
 <button class="lg:hidden p-2 text-primary" id="mobileMenuBtn" aria-label="Open mobiel menu" aria-expanded="false" aria-controls="mobileMenu">
 <span class="material-symbols-outlined text-[32px]">menu</span>
@@ -209,19 +289,19 @@
 <a class="font-nav-link text-headline-sm text-on-surface-variant" href="contact.html">Contact</a>
 </nav>
 <div class="mt-auto p-margin-mobile flex flex-col space-y-4">
-<a class="w-full py-4 bg-secondary text-on-primary text-center font-bold" href="contact.html#offerte">Vraag een offerte aan</a>
-<a class="w-full py-4 border border-primary text-center font-bold" href="tel:+31633733706">06 33 73 37 06</a>
+<a class="sg-focus sg-primary-gold w-full min-h-12 py-4 bg-secondary-container border border-secondary-container text-on-secondary-container text-center font-bold" href="contact.html#offerte">Vraag een offerte aan</a>
+<a class="sg-focus sg-outline-light w-full min-h-12 py-4 border border-primary text-center font-bold" href="tel:+31633733706">06 33 73 37 06</a>
 </div>
 </div>
 </div>
 <main>
 <!-- Hero Section -->
-<section class="relative min-h-[640px] h-[85vh] lg:min-h-[760px] flex flex-col justify-end overflow-hidden">
+<section class="relative min-h-[640px] h-[85vh] lg:min-h-[720px] flex flex-col justify-end overflow-hidden">
 <div class="absolute inset-0 z-0">
 <img class="w-full h-full object-cover" alt="Monumentaal woonhuis met strak afgewerkt buitenschilderwerk van SchilderGoud" src="assets/Monumenthuis%20hout%20schilderwerk.jpg"/>
 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
 </div>
-<div class="relative z-10 px-margin-mobile lg:px-10 xl:px-16 pb-12 md:pb-20 lg:pb-28 text-white max-w-[1440px] mx-auto w-full">
+<div class="relative z-10 px-6 lg:px-10 xl:px-16 pb-12 md:pb-20 lg:pb-28 text-white max-w-[1440px] mx-auto w-full">
 <p class="font-label-caps text-secondary-container mb-2 tracking-widest">GOED VOORBEREID. GOUD AFGEWERKT.</p>
 <h1 class="font-display-lg-mobile text-display-lg-mobile md:text-[52px] lg:text-[68px] xl:text-[72px] mb-6 leading-tight max-w-4xl">
                     Schilderwerk waar je elke dag <span class="text-secondary-container">het verschil</span> ziet.
@@ -230,48 +310,48 @@
                     Van buitengevel tot binnendetail. Netjes, duurzaam en tot in de puntjes afgewerkt door lokale vakmensen.
                 </p>
 <div class="flex flex-col sm:flex-row gap-4 sm:gap-5 max-w-xl">
-<a class="w-full sm:w-auto py-4 px-8 bg-secondary-container text-on-secondary-container text-center font-bold" href="contact.html#offerte">VRAAG EEN OFFERTE AAN</a>
-<a class="w-full sm:w-auto py-4 px-8 border border-white/40 text-center font-bold backdrop-blur-sm" href="projecten.html">BEKIJK ONS WERK</a>
+<a class="sg-focus sg-primary-gold w-full sm:w-auto min-h-12 py-4 px-8 border border-secondary-container bg-secondary-container text-on-secondary-container text-center font-bold" href="contact.html#offerte">VRAAG EEN OFFERTE AAN</a>
+<a class="sg-focus sg-outline-dark w-full sm:w-auto min-h-12 py-4 px-8 border border-white/60 text-center font-bold backdrop-blur-sm" href="projecten.html">BEKIJK ONS WERK</a>
 </div>
 </div>
 </section>
 <!-- USP Section -->
-<section class="bg-background py-16 lg:py-20" id="over-ons">
+<section class="bg-background py-16 md:py-20 lg:py-24 xl:py-28" id="over-ons">
 <div class="max-w-[1440px] mx-auto px-6 lg:px-10 xl:px-16">
 <div class="text-center max-w-2xl mx-auto mb-10 lg:mb-12">
 <p class="font-label-caps text-secondary tracking-widest mb-3">WAAROM SCHILDERGOUD</p>
-<h2 class="font-headline-md text-2xl md:text-[28px] leading-snug text-on-surface">Zorgvuldig voorbereid. Duurzaam afgewerkt.</h2>
+<h2 class="font-headline-md text-[30px] md:text-[42px] leading-tight text-on-surface">Zorgvuldig voorbereid. Duurzaam afgewerkt.</h2>
 <div class="w-16 h-[2px] bg-secondary-container mx-auto mt-5"></div>
 </div>
-<div class="grid grid-cols-1 min-[520px]:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-9 lg:gap-x-10">
-<div class="flex flex-col space-y-3">
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-9 lg:gap-x-10">
+<div class="flex flex-col items-center text-center space-y-3">
 <span class="material-symbols-outlined text-[34px] text-outline leading-none">verified</span>
 <h3 class="font-headline-sm text-lg">Vakwerk &amp; Ervaring</h3>
-<p class="text-xs text-on-surface-variant leading-relaxed max-w-[16rem]">Ervaring met zorgvuldig schilderwerk voor woningen en bedrijfspanden.</p>
+<p class="text-[11px] sm:text-xs text-on-surface-variant leading-relaxed max-w-[16rem]">Ervaring met zorgvuldig schilderwerk voor woningen en bedrijfspanden.</p>
 </div>
-<div class="flex flex-col space-y-3">
+<div class="flex flex-col items-center text-center space-y-3">
 <span class="material-symbols-outlined text-[34px] text-outline leading-none">workspace_premium</span>
 <h3 class="font-headline-sm text-lg">Kwaliteit in Detail</h3>
-<p class="text-xs text-on-surface-variant leading-relaxed max-w-[16rem]">Van voorbereiding tot afwerking met aandacht voor ieder oppervlak.</p>
+<p class="text-[11px] sm:text-xs text-on-surface-variant leading-relaxed max-w-[16rem]">Van voorbereiding tot afwerking met aandacht voor ieder oppervlak.</p>
 </div>
-<div class="flex flex-col space-y-3">
+<div class="flex flex-col items-center text-center space-y-3">
 <span class="material-symbols-outlined text-[34px] text-outline leading-none">calendar_month</span>
 <h3 class="font-headline-sm text-lg">Duidelijke Afspraken</h3>
-<p class="text-xs text-on-surface-variant leading-relaxed max-w-[16rem]">Heldere planning, eerlijke communicatie en geen verrassingen.</p>
+<p class="text-[11px] sm:text-xs text-on-surface-variant leading-relaxed max-w-[16rem]">Heldere planning, eerlijke communicatie en geen verrassingen.</p>
 </div>
-<div class="flex flex-col space-y-3">
+<div class="flex flex-col items-center text-center space-y-3">
 <span class="material-symbols-outlined text-[34px] text-outline leading-none">home</span>
 <h3 class="font-headline-sm text-lg">Binnen &amp; Buiten</h3>
-<p class="text-xs text-on-surface-variant leading-relaxed max-w-[16rem]">Van gevel en houtwerk tot wanden, plafonds en interieur.</p>
+<p class="text-[11px] sm:text-xs text-on-surface-variant leading-relaxed max-w-[16rem]">Van gevel en houtwerk tot wanden, plafonds en interieur.</p>
 </div>
 </div>
 </div>
 </section>
 <!-- BEFORE & AFTER SLIDER -->
-<section class="py-section-padding-mobile lg:py-section-padding-desktop bg-surface-container-low" id="voor-na">
-<div class="px-margin-mobile lg:px-10 xl:px-16 max-w-[1440px] mx-auto">
+<section class="py-16 md:py-20 lg:py-24 xl:py-28 bg-surface-container-low" id="voor-na">
+<div class="px-6 lg:px-10 xl:px-16 max-w-[1440px] mx-auto">
 <div class="text-center mb-10 lg:mb-16">
-<h2 class="font-headline-md text-headline-md leading-tight">Voor &amp; na. Zo maken wij het verschil.</h2>
+<h2 class="font-headline-md text-[32px] md:text-[42px] lg:text-[48px] leading-tight">Voor &amp; na. Zo maken wij het verschil.</h2>
 <div class="w-20 h-1 bg-secondary-container mx-auto mt-5"></div>
 </div>
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 max-w-6xl mx-auto items-stretch">
@@ -288,20 +368,20 @@
 <p class="font-label-caps text-secondary tracking-widest mb-5">RESTAURATIE PROJECT RIJSWIJK</p>
 <h3 class="font-headline-sm text-headline-sm mb-6">Herstel van monumentaal houtwerk</h3>
 <p class="text-on-surface-variant leading-relaxed mb-8 max-w-xl">Bij dit project hebben we de oorspronkelijke allure van een 19e-eeuwse villa hersteld. Na jaren van verwaarlozing vereiste het houtwerk grondige sanering en een vijflaags verfsysteem voor maximale bescherming.</p>
-<a class="inline-flex self-start border-b border-primary pb-1 text-primary font-nav-link text-sm uppercase tracking-wider hover:text-secondary hover:border-secondary transition-colors" href="projecten.html">BEKIJK PROJECT DETAILS</a>
+<a class="sg-link inline-flex self-start border-b border-primary pb-1 text-primary font-nav-link text-sm uppercase tracking-wider" href="projecten.html">BEKIJK PROJECT DETAILS</a>
 </div>
 </div>
 </div>
 </section>
 <!-- Services Section (Bento Inspired Grid) -->
-<section class="py-section-padding-mobile lg:py-section-padding-desktop px-margin-mobile lg:px-10 xl:px-16" id="diensten">
+<section class="py-16 md:py-20 lg:py-24 xl:py-28 px-6 lg:px-10 xl:px-16" id="diensten">
 <div class="max-w-[1440px] mx-auto">
 <span class="font-label-caps text-secondary tracking-widest block mb-2">ONZE DIENSTEN</span>
-<h2 class="font-headline-md text-headline-md leading-tight mb-8">Voor iedere klus de juiste oplossing.</h2>
+<h2 class="font-headline-md text-[32px] md:text-[42px] lg:text-[48px] leading-tight mb-8">Voor iedere klus de juiste oplossing.</h2>
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
 <!-- Large Card -->
 <div class="group relative overflow-hidden h-[300px] lg:h-auto lg:min-h-[560px] lg:col-span-7 lg:row-span-2">
-<img class="w-full h-full object-cover grayscale-[0.2] transition-transform duration-700 group-hover:scale-105" alt="Luxe buitenschilderwerk aan een verzorgde woning" src="assets/Geschilderd%20%26%20coating.jpg"/>
+<img class="w-full h-full object-cover grayscale-[0.2] sg-card-image" alt="Luxe buitenschilderwerk aan een verzorgde woning" src="assets/Geschilderd%20%26%20coating.jpg"/>
 <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
 <div class="absolute bottom-0 p-6 text-white">
 <h3 class="font-headline-sm text-xl mb-2">Buitenschilderwerk</h3>
@@ -348,18 +428,110 @@
 </div>
 </div>
 <div class="mt-8 lg:mt-10">
-<a class="inline-flex w-full sm:w-auto justify-center py-4 px-8 border border-primary font-bold hover:bg-primary hover:text-white transition-colors" href="diensten.html">ONTDEK ALLE DIENSTEN</a>
+<a class="sg-focus sg-outline-light inline-flex w-full sm:w-auto min-h-12 items-center justify-center py-4 px-8 border border-primary font-bold" href="diensten.html">ONTDEK ALLE DIENSTEN</a>
+</div>
+</div>
+</section>
+<!-- Project Gallery -->
+<section class="py-16 md:py-20 lg:py-24 xl:py-28" id="projecten">
+<div class="px-6 lg:px-10 xl:px-16 mb-8 lg:mb-12 max-w-[1440px] mx-auto">
+<span class="font-label-caps text-secondary tracking-widest block mb-2">PORTFOLIO</span>
+<h2 class="font-headline-md text-[32px] md:text-[42px] lg:text-[48px] leading-tight">Bekijk onze meest recente projecten.</h2>
+</div>
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-3 max-w-[1440px] mx-auto px-6 lg:px-10 xl:px-16">
+<div class="aspect-square overflow-hidden relative group">
+<img class="w-full h-full object-cover grayscale-[0.3] sg-card-image" src="assets/Fotobehang.jpg" alt="Fotobehang project met zorgvuldig geplaatst patroon"/>
+<div class="absolute inset-0 bg-primary/20 lg:bg-primary/10 lg:group-hover:bg-primary/45 transition-colors duration-300"></div><div class="hidden lg:flex absolute inset-0 items-end p-5 text-white opacity-0 group-hover:opacity-100 transition-opacity"><span class="font-label-caps text-xs">Recent project</span></div>
+</div>
+<div class="aspect-square overflow-hidden relative group">
+<img class="w-full h-full object-cover grayscale-[0.3] sg-card-image" alt="Vernis gespoten decoratie met gladde professionele afwerking" src="assets/Vernis%20bespoten%20decoratie.jpg"/>
+<div class="absolute inset-0 bg-primary/20 lg:bg-primary/10 lg:group-hover:bg-primary/45 transition-colors duration-300"></div><div class="hidden lg:flex absolute inset-0 items-end p-5 text-white opacity-0 group-hover:opacity-100 transition-opacity"><span class="font-label-caps text-xs">Recent project</span></div>
+</div>
+<div class="aspect-square overflow-hidden relative group">
+<img class="w-full h-full object-cover grayscale-[0.3] sg-card-image" alt="Vernis en antislip behandeling voor duurzaam beschermd oppervlak" src="assets/Vernis%20%26%20antislip.jpg"/>
+<div class="absolute inset-0 bg-primary/20 lg:bg-primary/10 lg:group-hover:bg-primary/45 transition-colors duration-300"></div><div class="hidden lg:flex absolute inset-0 items-end p-5 text-white opacity-0 group-hover:opacity-100 transition-opacity"><span class="font-label-caps text-xs">Recent project</span></div>
+</div>
+<div class="aspect-square overflow-hidden relative group">
+<img class="w-full h-full object-cover grayscale-[0.3] sg-card-image" alt="Airless spuitwerk als recent project van SchilderGoud" src="assets/Airless%20gespoten.jpg"/>
+<div class="absolute inset-0 bg-primary/20 lg:bg-primary/10 lg:group-hover:bg-primary/45 transition-colors duration-300"></div><div class="hidden lg:flex absolute inset-0 items-end p-5 text-white opacity-0 group-hover:opacity-100 transition-opacity"><span class="font-label-caps text-xs">Recent project</span></div>
+</div>
+</div>
+<div class="px-6 lg:px-10 xl:px-16 mt-8 max-w-[1440px] mx-auto">
+<a class="sg-focus sg-outline-light inline-flex w-full sm:w-auto min-h-12 items-center justify-center py-4 px-8 border border-primary font-bold" href="projecten.html">VOLLEDIG PORTFOLIO</a>
+</div>
+</section>
+<!-- Reviews Section -->
+<section class="py-16 md:py-20 lg:py-24 xl:py-28 bg-surface-container-low" id="reviews" aria-labelledby="reviews-heading">
+<div class="max-w-[1440px] mx-auto px-6 lg:px-10 xl:px-16">
+<div class="text-center mb-10 lg:mb-12">
+<h2 class="font-headline-md text-[32px] md:text-[42px] lg:text-[48px] leading-tight" id="reviews-heading">Ervaringen van onze klanten.</h2>
+<div class="w-20 h-1 bg-secondary-container mx-auto mt-5"></div>
+</div>
+<div class="grid lg:grid-cols-[minmax(0,0.32fr)_minmax(0,0.68fr)] gap-10 xl:gap-14 items-center" role="region" aria-label="Klantervaringen">
+<aside class="max-w-xl">
+<h3 class="font-headline-md text-[32px] md:text-[38px] leading-tight mb-6">Wat klanten over ons zeggen.</h3>
+<div class="mb-6">
+<div class="flex gap-1 mb-3 text-secondary" aria-label="5 van 5 sterren">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
+</div>
+<p class="font-label-caps text-sm tracking-[0.18em] uppercase text-on-surface">Echte ervaringen van klanten</p>
+</div>
+<p class="text-sm lg:text-base text-on-surface-variant leading-relaxed mb-7">Lees wat klanten zeggen over onze werkwijze, communicatie en afwerking.</p>
+<a class="sg-link inline-flex items-center gap-2 border-b border-primary pb-1 text-primary font-nav-link text-xs uppercase tracking-wider" href="https://share.google/LeLFp1Pr14YgfNLCb" target="_blank" rel="noopener noreferrer">
+<span>BEKIJK GOOGLE REVIEWS</span>
+<span class="material-symbols-outlined text-base" aria-hidden="true">open_in_new</span>
+</a>
+</aside>
+<div class="grid md:grid-cols-2 gap-6 lg:gap-7">
+<article class="bg-white border border-surface-container-high shadow-[0_16px_38px_rgba(26,28,26,0.045)] p-8 lg:p-10 flex flex-col">
+<div class="flex gap-1 mb-7 text-secondary" aria-label="5 van 5 sterren">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
+</div>
+<blockquote class="border-l-2 border-secondary pl-6 lg:pl-7 flex flex-col flex-1">
+<p class="text-lg lg:text-[22px] xl:text-[24px] text-on-surface italic leading-relaxed mb-7">“Mo heeft onlangs ons huis voor en achter geschilderd. Professioneel, vriendelijk en komt afspraken na. Wij zijn erg tevreden over het resultaat.”</p>
+<footer class="mt-auto pt-4">
+<p class="text-[11px] font-bold tracking-[0.18em] uppercase">Marlies Kesseler</p>
+<p class="text-[11px] text-on-surface-variant mt-2">9 maanden geleden</p>
+</footer>
+</blockquote>
+</article>
+<article class="bg-white border border-surface-container-high shadow-[0_16px_38px_rgba(26,28,26,0.045)] p-8 lg:p-10 flex flex-col">
+<div class="flex gap-1 mb-7 text-secondary" aria-label="5 van 5 sterren">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
+</div>
+<blockquote class="border-l-2 border-secondary pl-6 lg:pl-7 flex flex-col flex-1">
+<p class="text-lg lg:text-[22px] xl:text-[24px] text-on-surface italic leading-relaxed mb-5" data-review-excerpt="“Mo en zijn collega’s zijn goud! Geweldig schilderwerk gedaan, binnen en buiten, netjes, precies en met oog voor detail. Heel betrouwbaar ook.”" data-review-full="“Mo en zijn collega’s zijn goud! Geweldig schilderwerk gedaan, binnen en buiten, netjes, precies en met oog voor detail. Heel betrouwbaar ook. Mo is heel lief, muzikaal, aardig en altijd vrolijk. Ons huis was bij hem in perfecte handen. We zijn heel blij met Mo! Dank je wel, ons huis ziet er dankzij jullie prachtig uit.”">“Mo en zijn collega’s zijn goud! Geweldig schilderwerk gedaan, binnen en buiten, netjes, precies en met oog voor detail. Heel betrouwbaar ook.”</p>
+<button class="sg-link review-read-more self-start text-secondary font-label-caps tracking-widest uppercase border-b border-secondary pb-1" type="button" aria-expanded="false">Lees volledige review</button>
+<footer class="mt-auto pt-7">
+<p class="text-[11px] font-bold tracking-[0.18em] uppercase">Carla Bos</p>
+<p class="text-[11px] text-on-surface-variant mt-2">1 jaar geleden</p>
+</footer>
+</blockquote>
+</article>
+</div>
 </div>
 </div>
 </section>
 <!-- Journey & Contact Form -->
-<section class="py-section-padding-mobile lg:py-section-padding-desktop bg-primary text-white" id="contact">
-<div class="px-margin-mobile lg:px-10 xl:px-16 max-w-[1440px] mx-auto lg:grid lg:grid-cols-2 lg:gap-16 xl:gap-24 items-start">
+<section class="py-16 md:py-20 lg:py-24 xl:py-28 bg-primary text-white" id="contact">
+<div class="px-6 lg:px-10 xl:px-16 max-w-[1440px] mx-auto lg:grid lg:grid-cols-2 lg:gap-16 xl:gap-24 items-start">
 <div>
 <span class="font-label-caps text-secondary-container tracking-widest block mb-4">ONZE AANPAK</span>
-<h2 class="font-headline-md text-headline-md leading-tight mb-12">In 5 stappen naar een gouden resultaat.</h2>
+<h2 class="font-headline-md text-[32px] md:text-[42px] lg:text-[48px] leading-tight mb-8 lg:mb-12">In 5 stappen naar een gouden resultaat.</h2>
 <!-- Vertical Stepper -->
-<div class="space-y-12 relative">
+<div class="space-y-8 lg:space-y-10 relative">
 <div class="absolute left-[11px] top-0 bottom-0 w-[2px] bg-secondary-container/30"></div>
 <div class="relative flex space-x-6">
 <div class="z-10 w-6 h-6 rounded-full bg-secondary-container flex items-center justify-center shrink-0">
@@ -409,144 +581,52 @@
 </div>
 </div>
 <!-- Form Card -->
-<div class="mt-20 lg:mt-0 bg-surface-container p-8 md:p-10 text-on-surface">
+<div class="mt-12 lg:mt-0 bg-surface-container p-8 md:p-10 text-on-surface">
 <h3 class="font-display-lg text-2xl mb-2">Vertel ons over je klus</h3>
 <p class="text-xs text-on-surface-variant mb-8">Binnen 1 werkdag reactie.</p>
 <form class="space-y-6">
 <div class="space-y-4">
 <div class="md:grid md:grid-cols-2 md:gap-4 space-y-4 md:space-y-0">
-<input aria-label="Naam" class="w-full border border-outline-variant p-3 focus:border-secondary focus:ring-secondary text-sm bg-surface-container-low" placeholder="Naam" type="text"/>
-<input aria-label="Telefoonnummer" class="w-full border border-outline-variant p-3 focus:border-secondary focus:ring-secondary text-sm bg-surface-container-low" placeholder="Telefoonnummer" type="tel"/>
+<input aria-label="Naam" class="w-full border border-outline-variant min-h-12 p-3 focus:border-secondary focus:ring-secondary focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 text-sm bg-surface-container-low" placeholder="Naam" type="text"/>
+<input aria-label="Telefoonnummer" class="w-full border border-outline-variant min-h-12 p-3 focus:border-secondary focus:ring-secondary focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 text-sm bg-surface-container-low" placeholder="Telefoonnummer" type="tel"/>
 </div>
-<input aria-label="E-mailadres" class="w-full border border-outline-variant p-3 focus:border-secondary focus:ring-secondary text-sm bg-surface-container-low" placeholder="E-mailadres" type="email"/>
-<select aria-label="Type klus" class="w-full border border-outline-variant p-3 focus:border-secondary focus:ring-secondary text-sm appearance-none bg-surface-container-low">
+<input aria-label="E-mailadres" class="w-full border border-outline-variant min-h-12 p-3 focus:border-secondary focus:ring-secondary focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 text-sm bg-surface-container-low" placeholder="E-mailadres" type="email"/>
+<select aria-label="Type klus" class="w-full min-h-12 border border-outline-variant p-3 focus:border-secondary focus:ring-secondary focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 text-sm appearance-none bg-surface-container-low">
 <option>Type klus...</option>
 <option>Buitenschilderwerk</option>
 <option>Binnenschilderwerk</option>
 <option>Overig</option>
 </select>
-<textarea aria-label="Omschrijf de klus" class="w-full border border-outline-variant p-3 focus:border-secondary focus:ring-secondary text-sm resize-none bg-surface-container-low" placeholder="Omschrijf de klus" rows="4"></textarea>
+<textarea aria-label="Omschrijf de klus" class="w-full min-h-12 border border-outline-variant p-3 focus:border-secondary focus:ring-secondary focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 text-sm resize-none bg-surface-container-low" placeholder="Omschrijf de klus" rows="4"></textarea>
 </div>
-<div class="bg-surface-container-high border-2 border-dashed border-outline-variant p-8 text-center cursor-pointer">
+<div class="bg-surface-container-high border-2 border-dashed border-outline-variant p-8 text-center">
 <span class="material-symbols-outlined text-4xl lg:text-5xl text-outline mb-2">upload_file</span>
 <p class="text-[10px] font-label-caps">FOTO'S TOEVOEGEN (OPTIONEEL)</p>
 </div>
 <div class="flex items-start space-x-3">
-<input class="mt-1 bg-surface-container-low" id="privacy" type="checkbox"/>
+<input class="mt-1 h-5 w-5 bg-surface-container-low focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2" id="privacy" type="checkbox"/>
 <label class="text-[10px] text-on-surface-variant leading-tight" for="privacy">Ik ga akkoord met de <a class="underline" href="#">privacyverklaring</a>.</label>
 </div>
-<button class="w-full py-5 bg-secondary text-on-primary font-bold tracking-widest flex items-center justify-center space-x-2" type="submit">
+<button class="sg-focus sg-primary-gold w-full min-h-12 py-5 bg-secondary-container border border-secondary-container text-on-secondary-container font-bold tracking-widest flex items-center justify-center space-x-2" type="submit">
 <span>OFFERTE AANVRAGEN</span>
-<span class="material-symbols-outlined text-lg">arrow_forward</span>
+<span class="material-symbols-outlined text-lg sg-arrow">arrow_forward</span>
 </button>
 </form>
 <p class="text-[9px] text-center mt-6 text-on-surface-variant/60 italic">Jouw gegevens zijn veilig bij ons en worden niet gedeeld met derden.</p>
 </div>
 </div>
 </section>
-<!-- Reviews Section -->
-<section class="py-section-padding-mobile lg:py-section-padding-desktop bg-surface-container-low" id="reviews" aria-labelledby="reviews-heading">
-<div class="max-w-[1440px] mx-auto px-6 lg:px-10 xl:px-16">
-<div class="text-center mb-10 lg:mb-12">
-<h2 class="font-headline-md text-headline-md leading-tight" id="reviews-heading">Ervaringen van onze klanten.</h2>
-<div class="w-20 h-1 bg-secondary-container mx-auto mt-5"></div>
-</div>
-<div class="grid lg:grid-cols-[minmax(0,0.32fr)_minmax(0,0.68fr)] gap-10 xl:gap-14 items-center" role="region" aria-label="Klantervaringen">
-<aside class="max-w-xl">
-<h3 class="font-headline-md text-[32px] md:text-[38px] leading-tight mb-6">Wat klanten over ons zeggen.</h3>
-<div class="mb-6">
-<div class="flex gap-1 mb-3 text-secondary" aria-label="5 van 5 sterren">
-<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
-<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
-<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
-<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
-<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
-</div>
-<p class="font-label-caps text-sm tracking-[0.18em] uppercase text-on-surface">Echte ervaringen van klanten</p>
-</div>
-<p class="text-sm lg:text-base text-on-surface-variant leading-relaxed mb-7">Lees wat klanten zeggen over onze werkwijze, communicatie en afwerking.</p>
-<a class="inline-flex items-center gap-2 border-b border-primary pb-1 text-primary font-nav-link text-xs uppercase tracking-wider hover:text-secondary hover:border-secondary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-secondary transition-colors" href="https://share.google/LeLFp1Pr14YgfNLCb" target="_blank" rel="noopener noreferrer">
-<span>BEKIJK GOOGLE REVIEWS</span>
-<span class="material-symbols-outlined text-base" aria-hidden="true">open_in_new</span>
-</a>
-</aside>
-<div class="grid md:grid-cols-2 gap-6 lg:gap-7">
-<article class="bg-white border border-surface-container-high shadow-[0_16px_38px_rgba(26,28,26,0.045)] p-8 lg:p-10 min-h-[420px] flex flex-col">
-<div class="flex gap-1 mb-7 text-secondary" aria-label="5 van 5 sterren">
-<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
-<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
-<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
-<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
-<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
-</div>
-<blockquote class="border-l-2 border-secondary pl-6 lg:pl-7 flex flex-col flex-1">
-<p class="text-lg lg:text-[22px] xl:text-[24px] text-on-surface italic leading-relaxed mb-7">“Mo heeft onlangs ons huis voor en achter geschilderd. Professioneel, vriendelijk en komt afspraken na. Wij zijn erg tevreden over het resultaat.”</p>
-<footer class="mt-auto pt-4">
-<p class="text-[11px] font-bold tracking-[0.18em] uppercase">Marlies Kesseler</p>
-<p class="text-[11px] text-on-surface-variant mt-2">9 maanden geleden</p>
-</footer>
-</blockquote>
-</article>
-<article class="bg-white border border-surface-container-high shadow-[0_16px_38px_rgba(26,28,26,0.045)] p-8 lg:p-10 min-h-[420px] flex flex-col">
-<div class="flex gap-1 mb-7 text-secondary" aria-label="5 van 5 sterren">
-<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
-<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
-<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
-<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
-<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
-</div>
-<blockquote class="border-l-2 border-secondary pl-6 lg:pl-7 flex flex-col flex-1">
-<p class="text-lg lg:text-[22px] xl:text-[24px] text-on-surface italic leading-relaxed mb-5" data-review-excerpt="“Mo en zijn collega’s zijn goud! Geweldig schilderwerk gedaan, binnen en buiten, netjes, precies en met oog voor detail. Heel betrouwbaar ook.”" data-review-full="“Mo en zijn collega’s zijn goud! Geweldig schilderwerk gedaan, binnen en buiten, netjes, precies en met oog voor detail. Heel betrouwbaar ook. Mo is heel lief, muzikaal, aardig en altijd vrolijk. Ons huis was bij hem in perfecte handen. We zijn heel blij met Mo! Dank je wel, ons huis ziet er dankzij jullie prachtig uit.”">“Mo en zijn collega’s zijn goud! Geweldig schilderwerk gedaan, binnen en buiten, netjes, precies en met oog voor detail. Heel betrouwbaar ook.”</p>
-<button class="review-read-more self-start text-secondary font-label-caps tracking-widest uppercase border-b border-secondary pb-1 hover:text-primary hover:border-primary transition-colors" type="button" aria-expanded="false">Lees volledige review</button>
-<footer class="mt-auto pt-7">
-<p class="text-[11px] font-bold tracking-[0.18em] uppercase">Carla Bos</p>
-<p class="text-[11px] text-on-surface-variant mt-2">1 jaar geleden</p>
-</footer>
-</blockquote>
-</article>
-</div>
-</div>
-</div>
-</section>
-<!-- Project Gallery -->
-<section class="py-section-padding-mobile lg:py-section-padding-desktop" id="projecten">
-<div class="px-margin-mobile lg:px-10 xl:px-16 mb-8 lg:mb-12 max-w-[1440px] mx-auto">
-<span class="font-label-caps text-secondary tracking-widest block mb-2">PORTFOLIO</span>
-<h2 class="font-headline-md text-headline-md leading-tight">Bekijk onze meest recente projecten.</h2>
-</div>
-<div class="grid grid-cols-2 lg:grid-cols-4 gap-1 lg:gap-3 max-w-[1440px] mx-auto lg:px-10 xl:px-16">
-<div class="aspect-square overflow-hidden relative group">
-<img class="w-full h-full object-cover grayscale-[0.3] transition-transform duration-700 group-hover:scale-105" src="assets/Fotobehang.jpg" alt="Fotobehang project met zorgvuldig geplaatst patroon"/>
-<div class="absolute inset-0 bg-primary/20 lg:bg-primary/10 lg:group-hover:bg-primary/55 transition-colors duration-300"></div><div class="hidden lg:flex absolute inset-0 items-end p-5 text-white opacity-0 group-hover:opacity-100 transition-opacity"><span class="font-label-caps text-xs">Recent project</span></div>
-</div>
-<div class="aspect-square overflow-hidden relative group">
-<img class="w-full h-full object-cover grayscale-[0.3] transition-transform duration-700 group-hover:scale-105" alt="Vernis gespoten decoratie met gladde professionele afwerking" src="assets/Vernis%20bespoten%20decoratie.jpg"/>
-<div class="absolute inset-0 bg-primary/20 lg:bg-primary/10 lg:group-hover:bg-primary/55 transition-colors duration-300"></div><div class="hidden lg:flex absolute inset-0 items-end p-5 text-white opacity-0 group-hover:opacity-100 transition-opacity"><span class="font-label-caps text-xs">Recent project</span></div>
-</div>
-<div class="aspect-square overflow-hidden relative group">
-<img class="w-full h-full object-cover grayscale-[0.3] transition-transform duration-700 group-hover:scale-105" alt="Vernis en antislip behandeling voor duurzaam beschermd oppervlak" src="assets/Vernis%20%26%20antislip.jpg"/>
-<div class="absolute inset-0 bg-primary/20 lg:bg-primary/10 lg:group-hover:bg-primary/55 transition-colors duration-300"></div><div class="hidden lg:flex absolute inset-0 items-end p-5 text-white opacity-0 group-hover:opacity-100 transition-opacity"><span class="font-label-caps text-xs">Recent project</span></div>
-</div>
-<div class="aspect-square overflow-hidden relative group">
-<img class="w-full h-full object-cover grayscale-[0.3] transition-transform duration-700 group-hover:scale-105" alt="Airless spuitwerk als recent project van SchilderGoud" src="assets/Airless%20gespoten.jpg"/>
-<div class="absolute inset-0 bg-primary/20 lg:bg-primary/10 lg:group-hover:bg-primary/55 transition-colors duration-300"></div><div class="hidden lg:flex absolute inset-0 items-end p-5 text-white opacity-0 group-hover:opacity-100 transition-opacity"><span class="font-label-caps text-xs">Recent project</span></div>
-</div>
-</div>
-<div class="px-margin-mobile lg:px-10 xl:px-16 mt-8 max-w-[1440px] mx-auto">
-<a class="inline-flex w-full sm:w-auto justify-center py-4 px-8 border border-primary font-bold hover:bg-primary hover:text-white transition-colors" href="projecten.html">VOLLEDIG PORTFOLIO</a>
-</div>
-</section>
 <!-- Final CTA (With Background Asset) -->
-<section class="relative py-24 overflow-hidden">
+<section class="relative py-16 md:py-20 lg:py-24 xl:py-28 overflow-hidden">
 <div class="absolute inset-0 z-0">
 <img class="w-full h-full object-cover grayscale-[0.4]" alt="Monumentaal woonhuis met houtschilderwerk als achtergrond voor offerteaanvraag" src="assets/Monumenthuis%20hout%20schilderwerk.jpg"/>
 <div class="absolute inset-0 bg-secondary/80 mix-blend-multiply"></div>
 </div>
-<div class="relative z-10 px-margin-mobile lg:px-10 xl:px-16 text-center text-white max-w-[1100px] mx-auto">
+<div class="relative z-10 px-6 lg:px-10 xl:px-16 text-center text-white max-w-[1100px] mx-auto">
 <h2 class="font-display-lg text-3xl md:text-5xl lg:text-[64px] mb-6 leading-tight">Klaar voor een resultaat waar je elke dag trots op bent?</h2>
 <div class="flex flex-col sm:flex-row gap-4 sm:gap-8 max-w-none mx-auto justify-center items-center">
-<a class="bg-primary py-4 px-8 font-bold tracking-widest" href="contact.html#offerte">OFFERTE AANVRAGEN</a>
-<a class="text-sm font-bold flex items-center justify-center space-x-2" href="tel:+31633733706">
+<a class="sg-focus sg-primary-black min-h-12 inline-flex items-center bg-primary border border-primary py-4 px-8 font-bold tracking-widest" href="contact.html#offerte">OFFERTE AANVRAGEN</a>
+<a class="sg-focus sg-link min-h-12 text-sm font-bold flex items-center justify-center space-x-2 border-b border-transparent" href="tel:+31633733706">
 <span class="material-symbols-outlined">call</span>
 <span>06 33 73 37 06</span>
 </a>
