@@ -2,10 +2,47 @@
 
 <html class="scroll-smooth" lang="nl"><head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="assets/Favicon - SchilderGoud.png" rel="icon" type="image/png"/>
-<title>Over ons | SchilderGoud</title>
-<meta content="Leer SchilderGoud kennen: zorgvuldig schilderwerk, duidelijke afspraken en afwerking met aandacht voor ieder detail in Rijswijk en omgeving." name="description"/>
+<!-- TODO: Replace SITE_URL with the final custom production domain before launch -->
+<script>const SITE_URL = "https://schilder-goud.vercel.app";</script>
+<title>Over SchilderGoud | Vakmanschap in Rijswijk</title>
+<meta name="description" content="Leer SchilderGoud kennen: zorgvuldig schilderwerk, duidelijke afspraken en duurzame afwerking voor woningen en bedrijfspanden in Rijswijk en omgeving.">
+<meta name="robots" content="index,follow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://schilder-goud.vercel.app/over-ons">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SchilderGoud">
+<meta property="og:title" content="Over SchilderGoud | Vakmanschap in Rijswijk">
+<meta property="og:description" content="Leer SchilderGoud kennen: zorgvuldig schilderwerk, duidelijke afspraken en duurzame afwerking voor woningen en bedrijfspanden in Rijswijk en omgeving.">
+<meta property="og:url" content="https://schilder-goud.vercel.app/over-ons">
+<meta property="og:image" content="https://schilder-goud.vercel.app/assets/Monumenthuis%20hout%20schilderwerk.jpg">
+<meta property="og:image:alt" content="SchilderGoud schilderwerk in Rijswijk en omgeving">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Over SchilderGoud | Vakmanschap in Rijswijk">
+<meta name="twitter:description" content="Leer SchilderGoud kennen: zorgvuldig schilderwerk, duidelijke afspraken en duurzame afwerking voor woningen en bedrijfspanden in Rijswijk en omgeving.">
+<meta name="twitter:image" content="https://schilder-goud.vercel.app/assets/Monumenthuis%20hout%20schilderwerk.jpg">
+<link href="/assets/Favicon - SchilderGoud.png" rel="icon" type="image/png"/>
+<!-- GTM container snippet will be added here later. Do not add tracking tags directly to page templates. -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: "page_context",
+    page_type: "about",
+    page_name: "Over ons",
+    page_path: window.location.pathname,
+    page_title: document.title,
+    site_language: "nl"
+  });
+</script>
+<script src="/assets/js/datalayer-events.js" defer></script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://schilder-goud.vercel.app/"},
+    {"@type": "ListItem", "position": 2, "name": "Over ons", "item": "https://schilder-goud.vercel.app/over-ons"}
+  ]
+}</script>
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -168,19 +205,19 @@
 <!-- Header (Shared Component Mapping) -->
 <header class="w-full top-0 sticky z-50 bg-background/95 backdrop-blur border-b border-outline-variant transition-all duration-200 ease-in-out">
 <div class="flex justify-between items-center px-margin-mobile lg:px-10 xl:px-16 py-4 max-w-[1440px] mx-auto">
-<a class="flex flex-col" href="index.html" aria-label="SchilderGoud home">
+<a class="flex flex-col" href="/" aria-label="SchilderGoud home">
 <span class="font-display-lg text-headline-sm tracking-tighter text-primary"><span>Schilder</span><span class="text-secondary">Goud</span></span>
 <span class="text-[10px] font-label-caps text-on-surface-variant uppercase tracking-[0.2em]">Rijswijk &amp; Omgeving</span>
 </a>
 <nav class="hidden lg:flex items-center gap-8 xl:gap-10 font-nav-link text-[12px] uppercase tracking-[0.12em] text-on-surface-variant">
-<a class="hover:text-primary transition-colors" href="diensten.html">Diensten</a>
-<a class="hover:text-primary transition-colors" href="projecten.html">Projecten</a>
-<a class="hover:text-primary transition-colors" href="over-ons.html">Over ons</a>
-<a class="hover:text-primary transition-colors" href="contact.html">Contact</a>
+<a class="hover:text-primary transition-colors" href="/diensten">Diensten</a>
+<a class="hover:text-primary transition-colors" href="/projecten">Projecten</a>
+<a class="hover:text-primary transition-colors" href="/over-ons">Over ons</a>
+<a class="hover:text-primary transition-colors" href="/contact">Contact</a>
 </nav>
 <div class="hidden lg:flex items-center gap-5">
-<a class="text-[12px] font-bold text-on-surface-variant hover:text-primary transition-colors" href="tel:+31633733706">06 33 73 37 06</a>
-<a class="py-3 px-5 bg-secondary-container text-on-secondary-container font-bold text-[11px] tracking-widest hover:bg-secondary-fixed transition-colors" href="contact.html#offerte">Vraag een offerte aan</a>
+<a class="text-[12px] font-bold text-on-surface-variant hover:text-primary transition-colors" href="tel:+31633733706" data-track="phone" data-contact-location="footer">06 33 73 37 06</a>
+<a class="py-3 px-5 bg-secondary-container text-on-secondary-container font-bold text-[11px] tracking-widest hover:bg-secondary-fixed transition-colors" href="/contact#offerte" data-track="cta" data-cta-name="Vraag een offerte aan" data-cta-location="header" data-cta-destination="/contact#offerte">Vraag een offerte aan</a>
 </div>
 <button class="lg:hidden p-2 text-primary" id="mobileMenuBtn" aria-label="Open mobiel menu" aria-expanded="false" aria-controls="mobileMenu">
 <span class="material-symbols-outlined text-[32px]">menu</span>
@@ -196,32 +233,32 @@
 </button>
 </div>
 <nav class="flex flex-col items-center justify-center space-y-8 mt-12">
-<a class="font-nav-link text-headline-sm text-on-surface-variant" href="diensten.html">Diensten</a>
-<a class="font-nav-link text-headline-sm text-on-surface-variant" href="projecten.html">Projecten</a>
-<a class="font-nav-link text-headline-sm text-on-surface-variant" href="over-ons.html">Over ons</a>
-<a class="font-nav-link text-headline-sm text-on-surface-variant" href="contact.html">Contact</a>
+<a class="font-nav-link text-headline-sm text-on-surface-variant" href="/diensten">Diensten</a>
+<a class="font-nav-link text-headline-sm text-on-surface-variant" href="/projecten">Projecten</a>
+<a class="font-nav-link text-headline-sm text-on-surface-variant" href="/over-ons">Over ons</a>
+<a class="font-nav-link text-headline-sm text-on-surface-variant" href="/contact">Contact</a>
 </nav>
 <div class="mt-auto p-margin-mobile flex flex-col space-y-4">
-<a class="w-full py-4 bg-secondary text-on-primary text-center font-bold" href="contact.html#offerte">Vraag een offerte aan</a>
-<a class="w-full py-4 border border-primary text-center font-bold" href="tel:+31633733706">06 33 73 37 06</a>
+<a class="w-full py-4 bg-secondary text-on-primary text-center font-bold" href="/contact#offerte" data-track="cta" data-cta-name="Vraag een offerte aan" data-cta-location="header" data-cta-destination="/contact#offerte">Vraag een offerte aan</a>
+<a class="w-full py-4 border border-primary text-center font-bold" href="tel:+31633733706" data-track="phone" data-contact-location="footer">06 33 73 37 06</a>
 </div>
 </div>
 </div>
 <main>
 
-<section class="py-section-padding-mobile lg:py-section-padding-desktop px-margin-mobile lg:px-10 xl:px-16 bg-background"><div class="max-w-[1440px] mx-auto grid lg:grid-cols-12 gap-10 items-center"><div class="lg:col-span-7"><p class="font-label-caps text-secondary tracking-widest mb-4">SCHILDERGOUD</p><h1 class="font-display-lg-mobile text-display-lg-mobile md:text-[56px] lg:text-display-lg mb-6">Goed voorbereid. Goud afgewerkt.</h1><p class="font-body-lg text-on-surface-variant max-w-2xl mb-8">SchilderGoud staat voor zorgvuldig schilderwerk, duidelijke afspraken en afwerking met aandacht voor ieder detail.</p><a class="inline-block py-4 px-8 bg-primary text-white font-bold tracking-widest text-xs" href="contact.html#offerte">Bespreek jouw schilderklus</a></div><div class="lg:col-span-5"><img class="w-full aspect-[4/5] object-cover border border-outline-variant" src="assets/Monumenthuis%20hout%20schilderwerk.jpg" alt="SchilderGoud buitenschilderwerk aan monumentaal houtwerk"/></div></div></section>
+<section class="py-section-padding-mobile lg:py-section-padding-desktop px-margin-mobile lg:px-10 xl:px-16 bg-background"><div class="max-w-[1440px] mx-auto grid lg:grid-cols-12 gap-10 items-center"><div class="lg:col-span-7"><p class="font-label-caps text-secondary tracking-widest mb-4">SCHILDERGOUD</p><h1 class="font-display-lg-mobile text-display-lg-mobile md:text-[56px] lg:text-display-lg mb-6">Goed voorbereid. Goud afgewerkt.</h1><p class="font-body-lg text-on-surface-variant max-w-2xl mb-8">SchilderGoud staat voor zorgvuldig schilderwerk, duidelijke afspraken en afwerking met aandacht voor ieder detail.</p><a class="inline-block py-4 px-8 bg-primary text-white font-bold tracking-widest text-xs" href="/contact#offerte" data-track="cta" data-cta-name="Vraag een offerte aan" data-cta-location="hero" data-cta-destination="/contact#offerte">Bespreek jouw schilderklus</a></div><div class="lg:col-span-5"><img class="w-full aspect-[4/5] object-cover border border-outline-variant" src="assets/Monumenthuis%20hout%20schilderwerk.jpg" alt="SchilderGoud buitenschilderwerk aan monumentaal houtwerk"/></div></div></section>
 <section class="py-section-padding-mobile lg:py-section-padding-desktop px-margin-mobile lg:px-10 xl:px-16 bg-surface-container-low"><div class="max-w-[1120px] mx-auto"><p class="font-label-caps text-secondary tracking-widest mb-4">ONZE WERKWIJZE</p><h2 class="font-headline-md text-headline-md md:text-[44px] mb-6">Geen haastwerk. Wel een resultaat dat lang mooi blijft.</h2><p class="text-on-surface-variant leading-relaxed max-w-3xl mb-10">Mooi schilderwerk begint niet bij de laatste laklaag, maar bij een goede voorbereiding. Daarom nemen we de tijd voor een nette ondergrond, duidelijke afstemming en bescherming van de omgeving voordat we starten.</p><ul class="grid md:grid-cols-2 gap-4"><li class="border border-outline-variant bg-background p-5 flex gap-3"><span class="material-symbols-outlined text-secondary">check</span><span>Zorgvuldige voorbereiding van iedere ondergrond</span></li><li class="border border-outline-variant bg-background p-5 flex gap-3"><span class="material-symbols-outlined text-secondary">check</span><span>Duidelijke afspraken over planning en uitvoering</span></li><li class="border border-outline-variant bg-background p-5 flex gap-3"><span class="material-symbols-outlined text-secondary">check</span><span>Bescherming en nette werkwijze tijdens het werk</span></li><li class="border border-outline-variant bg-background p-5 flex gap-3"><span class="material-symbols-outlined text-secondary">check</span><span>Oog voor detail bij iedere afwerking</span></li></ul></div></section>
 <section class="py-section-padding-mobile lg:py-section-padding-desktop px-margin-mobile lg:px-10 xl:px-16 bg-background"><div class="max-w-[1440px] mx-auto grid lg:grid-cols-2 gap-10 lg:gap-16 items-center"><img class="w-full aspect-[5/4] object-cover border border-outline-variant" src="assets/Fotobehang.jpg" alt="Decoratieve wandafwerking met fotobehang door SchilderGoud"/><div><h2 class="font-headline-md text-headline-md md:text-[44px] mb-6">Van karaktervol houtwerk tot strak interieur.</h2><p class="text-on-surface-variant leading-relaxed">Of het nu gaat om een monumentale gevel, een trap, kozijnen, wanden of decoratieve wandafwerking: iedere klus vraagt om een passende aanpak. SchilderGoud combineert vakmanschap met materialen en technieken die aansluiten op het oppervlak en de gewenste uitstraling.</p></div></div></section>
 <section class="py-section-padding-mobile lg:py-section-padding-desktop px-margin-mobile lg:px-10 xl:px-16 bg-primary text-white"><div class="max-w-[1120px] mx-auto"><p class="font-label-caps text-secondary-container tracking-widest mb-4">WERKGEBIED</p><h2 class="font-headline-md text-headline-md md:text-[44px] mb-6">Actief in Rijswijk en de wijde omgeving.</h2><p class="text-white/70 leading-relaxed max-w-3xl">SchilderGoud werkt voor particuliere en zakelijke opdrachtgevers in Rijswijk en omgeving. Twijfel je of jouw locatie binnen ons werkgebied valt? Neem gerust contact op.</p></div></section>
-<section class="py-section-padding-mobile lg:py-section-padding-desktop px-margin-mobile lg:px-10 xl:px-16 bg-background"><div class="max-w-[1120px] mx-auto"><p class="font-label-caps text-secondary tracking-widest mb-4">ERVARINGEN</p><h2 class="font-headline-md text-headline-md md:text-[44px] mb-10">Werk waar klanten met vertrouwen op terugkijken.</h2><div class="grid md:grid-cols-2 gap-6 mb-8"><blockquote class="border-l-2 border-secondary pl-6 text-on-surface-variant">“Professioneel, vriendelijk en komt afspraken na. Wij zijn erg tevreden over het resultaat.” <footer class="mt-4 font-bold text-on-surface">— Marlies Kesseler</footer></blockquote><blockquote class="border-l-2 border-secondary pl-6 text-on-surface-variant">“Geweldig schilderwerk gedaan, binnen en buiten, netjes, precies en met oog voor detail.” <footer class="mt-4 font-bold text-on-surface">— Carla Bos</footer></blockquote></div><a class="inline-block py-4 px-8 border border-primary font-bold tracking-widest text-xs" href="index.html#ervaringen">Bekijk alle ervaringen</a></div></section>
-<section class="py-section-padding-mobile lg:py-section-padding-desktop px-margin-mobile lg:px-10 xl:px-16 bg-surface-container-low text-center"><div class="max-w-3xl mx-auto"><h2 class="font-headline-md text-headline-md md:text-[44px] mb-8">Benieuwd wat wij voor jouw woning of project kunnen betekenen?</h2><a class="inline-block py-4 px-8 bg-primary text-white font-bold tracking-widest text-xs" href="contact.html#offerte">Vraag een offerte aan</a></div></section>
+<section class="py-section-padding-mobile lg:py-section-padding-desktop px-margin-mobile lg:px-10 xl:px-16 bg-background"><div class="max-w-[1120px] mx-auto"><p class="font-label-caps text-secondary tracking-widest mb-4">ERVARINGEN</p><h2 class="font-headline-md text-headline-md md:text-[44px] mb-10">Werk waar klanten met vertrouwen op terugkijken.</h2><div class="grid md:grid-cols-2 gap-6 mb-8"><blockquote class="border-l-2 border-secondary pl-6 text-on-surface-variant">“Professioneel, vriendelijk en komt afspraken na. Wij zijn erg tevreden over het resultaat.” <footer class="mt-4 font-bold text-on-surface">— Marlies Kesseler</footer></blockquote><blockquote class="border-l-2 border-secondary pl-6 text-on-surface-variant">“Geweldig schilderwerk gedaan, binnen en buiten, netjes, precies en met oog voor detail.” <footer class="mt-4 font-bold text-on-surface">— Carla Bos</footer></blockquote></div><a class="inline-block py-4 px-8 border border-primary font-bold tracking-widest text-xs" href="/#ervaringen" data-track="cta" data-cta-name="Bekijk Google Reviews" data-cta-location="reviews" data-cta-destination="/#ervaringen">Bekijk alle ervaringen</a></div></section>
+<section class="py-section-padding-mobile lg:py-section-padding-desktop px-margin-mobile lg:px-10 xl:px-16 bg-surface-container-low text-center"><div class="max-w-3xl mx-auto"><h2 class="font-headline-md text-headline-md md:text-[44px] mb-8">Benieuwd wat wij voor jouw woning of project kunnen betekenen?</h2><a class="inline-block py-4 px-8 bg-primary text-white font-bold tracking-widest text-xs" href="/contact#offerte" data-track="cta" data-cta-name="Vraag een offerte aan" data-cta-location="header" data-cta-destination="/contact#offerte">Vraag een offerte aan</a></div></section>
 </main>
 <!-- Footer (Shared Component Mapping) -->
 <footer class="bg-primary text-white pt-16 lg:pt-20 pb-8 lg:pb-10">
 <div class="max-w-[1440px] mx-auto px-6 lg:px-10 xl:px-16">
 <div class="grid gap-10 lg:gap-16 xl:gap-24 lg:grid-cols-12 items-start">
 <div class="lg:col-span-5 space-y-5">
-<a class="inline-flex flex-col" href="index.html" aria-label="SchilderGoud home">
+<a class="inline-flex flex-col" href="/" aria-label="SchilderGoud home">
 <span class="font-display-lg text-headline-sm leading-none block"><span class="text-white">Schilder</span><span class="text-secondary-container">Goud</span></span>
 <span class="mt-2 font-label-caps text-[10px] tracking-[0.32em] text-white/55 uppercase">RIJSWIJK &amp; OMGEVING</span>
 </a>
@@ -230,24 +267,24 @@
 <div class="lg:col-span-3 space-y-5">
 <h5 class="font-label-caps text-xs tracking-widest text-secondary-container">NAVIGATIE</h5>
 <ul class="space-y-3 text-sm text-white/65">
-<li><a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="diensten.html">Diensten</a></li>
-<li><a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="projecten.html">Projecten</a></li>
-<li><a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="projecten.html#voor-na">Voor &amp; na</a></li>
-<li><a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="over-ons.html">Over ons</a></li>
-<li><a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="contact.html">Contact</a></li>
+<li><a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="/diensten">Diensten</a></li>
+<li><a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="/projecten">Projecten</a></li>
+<li><a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="/projecten#voor-na">Voor &amp; na</a></li>
+<li><a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="/over-ons">Over ons</a></li>
+<li><a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="/contact">Contact</a></li>
 </ul>
 </div>
 <div class="lg:col-span-4 space-y-5">
 <h5 class="font-label-caps text-xs tracking-widest text-secondary-container">CONTACT</h5>
 <ul class="space-y-4 text-sm text-white/65">
 <li>
-<a class="inline-flex items-center gap-3 transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="tel:+31633733706">
+<a class="inline-flex items-center gap-3 transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="tel:+31633733706" data-track="phone" data-contact-location="footer">
 <span class="material-symbols-outlined text-[18px]" aria-hidden="true">call</span>
 <span>06 33 73 37 06</span>
 </a>
 </li>
 <li>
-<a class="inline-flex items-center gap-3 transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="mailto:goudrijswijk.m@gmail.com">
+<a class="inline-flex items-center gap-3 transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="mailto:goudrijswijk.m@gmail.com" data-track="email" data-contact-location="footer">
 <span class="material-symbols-outlined text-[18px]" aria-hidden="true">mail</span>
 <span>goudrijswijk.m@gmail.com</span>
 </a>
@@ -258,8 +295,8 @@
 <div class="mt-12 lg:mt-14 pt-6 border-t border-white/10 flex flex-col items-center gap-4 text-center lg:flex-row lg:justify-between lg:text-left">
 <p class="text-[10px] sm:text-xs text-white/45">© 2026 SchilderGoud. Alle rechten voorbehouden. KvK: 85979864</p>
 <nav aria-label="Juridische links" class="flex flex-col items-center gap-2 sm:flex-row sm:gap-5 text-[10px] sm:text-xs text-white/45">
-<a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="privacybeleid.html">Privacybeleid</a>
-<a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="algemene-voorwaarden.html">Algemene voorwaarden</a>
+<a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="/privacybeleid">Privacybeleid</a>
+<a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="/algemene-voorwaarden">Algemene voorwaarden</a>
 </nav>
 </div>
 </div>

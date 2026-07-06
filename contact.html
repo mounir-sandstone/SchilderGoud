@@ -2,10 +2,47 @@
 
 <html class="scroll-smooth" lang="nl"><head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="assets/Favicon - SchilderGoud.png" rel="icon" type="image/png"/>
-<title>Contact | SchilderGoud</title>
-<meta content="Neem contact op met SchilderGoud voor jouw schilderklus en vraag vrijblijvend een offerte aan." name="description"/>
+<!-- TODO: Replace SITE_URL with the final custom production domain before launch -->
+<script>const SITE_URL = "https://schilder-goud.vercel.app";</script>
+<title>Offerte aanvragen voor schilderwerk | SchilderGoud</title>
+<meta name="description" content="Vraag vrijblijvend een offerte aan voor schilderwerk in Rijswijk en omgeving. Stuur foto’s mee en ontvang binnen één werkdag een reactie van SchilderGoud.">
+<meta name="robots" content="index,follow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://schilder-goud.vercel.app/contact">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SchilderGoud">
+<meta property="og:title" content="Offerte aanvragen voor schilderwerk | SchilderGoud">
+<meta property="og:description" content="Vraag vrijblijvend een offerte aan voor schilderwerk in Rijswijk en omgeving. Stuur foto’s mee en ontvang binnen één werkdag een reactie van SchilderGoud.">
+<meta property="og:url" content="https://schilder-goud.vercel.app/contact">
+<meta property="og:image" content="https://schilder-goud.vercel.app/assets/Monumenthuis%20hout%20schilderwerk.jpg">
+<meta property="og:image:alt" content="SchilderGoud schilderwerk in Rijswijk en omgeving">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Offerte aanvragen voor schilderwerk | SchilderGoud">
+<meta name="twitter:description" content="Vraag vrijblijvend een offerte aan voor schilderwerk in Rijswijk en omgeving. Stuur foto’s mee en ontvang binnen één werkdag een reactie van SchilderGoud.">
+<meta name="twitter:image" content="https://schilder-goud.vercel.app/assets/Monumenthuis%20hout%20schilderwerk.jpg">
+<link href="/assets/Favicon - SchilderGoud.png" rel="icon" type="image/png"/>
+<!-- GTM container snippet will be added here later. Do not add tracking tags directly to page templates. -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: "page_context",
+    page_type: "contact",
+    page_name: "Contact",
+    page_path: window.location.pathname,
+    page_title: document.title,
+    site_language: "nl"
+  });
+</script>
+<script src="/assets/js/datalayer-events.js" defer></script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://schilder-goud.vercel.app/"},
+    {"@type": "ListItem", "position": 2, "name": "Contact", "item": "https://schilder-goud.vercel.app/contact"}
+  ]
+}</script>
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -180,19 +217,19 @@
 <!-- Header (Shared Component Mapping) -->
 <header class="w-full top-0 sticky z-50 bg-background/95 backdrop-blur border-b border-outline-variant transition-all duration-200 ease-in-out">
 <div class="flex justify-between items-center px-margin-mobile lg:px-10 xl:px-16 py-4 max-w-[1440px] mx-auto">
-<a class="flex flex-col" href="index.html" aria-label="SchilderGoud home">
+<a class="flex flex-col" href="/" aria-label="SchilderGoud home">
 <span class="font-display-lg text-headline-sm tracking-tighter text-primary"><span>Schilder</span><span class="text-secondary">Goud</span></span>
 <span class="text-[10px] font-label-caps text-on-surface-variant uppercase tracking-[0.2em]">Rijswijk &amp; Omgeving</span>
 </a>
 <nav class="hidden lg:flex items-center gap-8 xl:gap-10 font-nav-link text-[12px] uppercase tracking-[0.12em] text-on-surface-variant">
-<a class="hover:text-primary transition-colors" href="diensten.html">Diensten</a>
-<a class="hover:text-primary transition-colors" href="projecten.html">Projecten</a>
-<a class="hover:text-primary transition-colors" href="over-ons.html">Over ons</a>
-<a class="hover:text-primary transition-colors" href="contact.html">Contact</a>
+<a class="hover:text-primary transition-colors" href="/diensten">Diensten</a>
+<a class="hover:text-primary transition-colors" href="/projecten">Projecten</a>
+<a class="hover:text-primary transition-colors" href="/over-ons">Over ons</a>
+<a class="hover:text-primary transition-colors" href="/contact">Contact</a>
 </nav>
 <div class="hidden lg:flex items-center gap-5">
-<a class="text-[12px] font-bold text-on-surface-variant hover:text-primary transition-colors" href="tel:+31633733706">06 33 73 37 06</a>
-<a class="py-3 px-5 bg-secondary-container text-on-secondary-container font-bold text-[11px] tracking-widest hover:bg-secondary-fixed transition-colors" href="contact.html#offerte">Vraag een offerte aan</a>
+<a class="text-[12px] font-bold text-on-surface-variant hover:text-primary transition-colors" href="tel:+31633733706" data-track="phone" data-contact-location="footer">06 33 73 37 06</a>
+<a class="py-3 px-5 bg-secondary-container text-on-secondary-container font-bold text-[11px] tracking-widest hover:bg-secondary-fixed transition-colors" href="/contact#offerte" data-track="cta" data-cta-name="Vraag een offerte aan" data-cta-location="header" data-cta-destination="/contact#offerte">Vraag een offerte aan</a>
 </div>
 <button class="lg:hidden p-2 text-primary" id="mobileMenuBtn" aria-label="Open mobiel menu" aria-expanded="false" aria-controls="mobileMenu">
 <span class="material-symbols-outlined text-[32px]">menu</span>
@@ -208,14 +245,14 @@
 </button>
 </div>
 <nav class="flex flex-col items-center justify-center space-y-8 mt-12">
-<a class="font-nav-link text-headline-sm text-on-surface-variant" href="diensten.html">Diensten</a>
-<a class="font-nav-link text-headline-sm text-on-surface-variant" href="projecten.html">Projecten</a>
-<a class="font-nav-link text-headline-sm text-on-surface-variant" href="over-ons.html">Over ons</a>
-<a class="font-nav-link text-headline-sm text-on-surface-variant" href="contact.html">Contact</a>
+<a class="font-nav-link text-headline-sm text-on-surface-variant" href="/diensten">Diensten</a>
+<a class="font-nav-link text-headline-sm text-on-surface-variant" href="/projecten">Projecten</a>
+<a class="font-nav-link text-headline-sm text-on-surface-variant" href="/over-ons">Over ons</a>
+<a class="font-nav-link text-headline-sm text-on-surface-variant" href="/contact">Contact</a>
 </nav>
 <div class="mt-auto p-margin-mobile flex flex-col space-y-4">
-<a class="w-full py-4 bg-secondary text-on-primary text-center font-bold" href="contact.html#offerte">Vraag een offerte aan</a>
-<a class="w-full py-4 border border-primary text-center font-bold" href="tel:+31633733706">06 33 73 37 06</a>
+<a class="w-full py-4 bg-secondary text-on-primary text-center font-bold" href="/contact#offerte" data-track="cta" data-cta-name="Vraag een offerte aan" data-cta-location="header" data-cta-destination="/contact#offerte">Vraag een offerte aan</a>
+<a class="w-full py-4 border border-primary text-center font-bold" href="tel:+31633733706" data-track="phone" data-contact-location="footer">06 33 73 37 06</a>
 </div>
 </div>
 </div>
@@ -224,7 +261,7 @@
 <section class="py-section-padding-mobile lg:py-section-padding-desktop px-margin-mobile lg:px-10 xl:px-16 bg-background"><div class="max-w-[1440px] mx-auto"><p class="font-label-caps text-secondary tracking-widest mb-4">CONTACT</p><h1 class="font-display-lg-mobile text-display-lg-mobile md:text-[56px] lg:text-display-lg mb-6">Vertel ons over jouw schilderklus.</h1><p class="font-body-lg text-on-surface-variant max-w-3xl">Stuur je aanvraag, voeg eventueel foto’s toe en ontvang binnen één werkdag een vrijblijvende reactie.</p></div></section>
 <section class="pb-section-padding-mobile lg:pb-section-padding-desktop px-margin-mobile lg:px-10 xl:px-16 bg-background">
 <div class="max-w-[1440px] mx-auto grid lg:grid-cols-12 gap-10 lg:gap-16">
-<aside class="lg:col-span-4 bg-primary text-white p-8 lg:p-10 self-start"><h2 class="font-headline-md text-headline-md mb-6">Liever direct overleggen?</h2><div class="space-y-4 mb-8"><a class="flex gap-3 hover:text-secondary-container" href="tel:+31633733706"><span class="material-symbols-outlined">call</span>06 33 73 37 06</a><a class="flex gap-3 hover:text-secondary-container" href="mailto:goudrijswijk.m@gmail.com"><span class="material-symbols-outlined">mail</span>goudrijswijk.m@gmail.com</a></div><p class="text-white/70 mb-6">Beschrijf kort je wensen of bel direct om de mogelijkheden te bespreken.</p><p class="font-label-caps text-secondary-container tracking-widest">Werkzaam in Rijswijk en de wijde omgeving.</p></aside>
+<aside class="lg:col-span-4 bg-primary text-white p-8 lg:p-10 self-start"><h2 class="font-headline-md text-headline-md mb-6">Liever direct overleggen?</h2><div class="space-y-4 mb-8"><a class="flex gap-3 hover:text-secondary-container" href="tel:+31633733706" data-track="phone" data-contact-location="footer"><span class="material-symbols-outlined">call</span>06 33 73 37 06</a><a class="flex gap-3 hover:text-secondary-container" href="mailto:goudrijswijk.m@gmail.com" data-track="email" data-contact-location="footer"><span class="material-symbols-outlined">mail</span>goudrijswijk.m@gmail.com</a></div><p class="text-white/70 mb-6">Beschrijf kort je wensen of bel direct om de mogelijkheden te bespreken.</p><p class="font-label-caps text-secondary-container tracking-widest">Werkzaam in Rijswijk en de wijde omgeving.</p></aside>
 <div class="lg:col-span-8" id="offerte">
 <div class="bg-surface-container p-6 md:p-10 border border-outline-variant">
 <h2 class="font-headline-md text-headline-md mb-2">Offerte aanvragen</h2>
@@ -236,7 +273,7 @@
 <button class="quote-reset text-secondary underline underline-offset-4 hover:text-on-secondary-container focus-visible:outline-none" type="button" id="quoteReset">Nieuwe aanvraag versturen</button>
 </div>
 <!-- TODO: replace FORM_ENDPOINT_PLACEHOLDER with the real Formspree endpoint -->
-<form id="quoteForm" action="FORM_ENDPOINT_PLACEHOLDER" method="POST" enctype="multipart/form-data" class="space-y-5" novalidate>
+<form id="quoteForm" data-track-form="quote" data-form-location="contact_page" action="FORM_ENDPOINT_PLACEHOLDER" method="POST" enctype="multipart/form-data" class="space-y-5" novalidate>
 <div class="grid md:grid-cols-2 gap-4">
 <input name="naam" aria-label="Naam" class="quote-field w-full border border-outline-variant p-3 bg-surface-container-low focus-visible:outline-none" placeholder="Naam" type="text" required/>
 <input name="telefoon" aria-label="Telefoonnummer" class="quote-field w-full border border-outline-variant p-3 bg-surface-container-low focus-visible:outline-none" placeholder="Telefoonnummer" type="tel" required/>
@@ -267,9 +304,9 @@
 <p id="photoError" class="hidden text-sm text-on-error-container bg-error-container p-3" aria-live="polite"></p>
 <div class="flex items-start gap-3">
 <input id="privacy" name="privacy" type="checkbox" required class="quote-checkbox mt-0.5 h-5 w-5 shrink-0 rounded-none border border-outline bg-transparent accent-secondary focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus-visible:outline-none"/>
-<label for="privacy" class="cursor-pointer text-sm leading-6 text-on-surface-variant">Ik ga akkoord met de <a href="privacybeleid.html" class="underline underline-offset-2 hover:text-secondary focus-visible:text-secondary">privacyverklaring</a>.</label>
+<label for="privacy" class="cursor-pointer text-sm leading-6 text-on-surface-variant">Ik ga akkoord met de <a href="/privacybeleid" class="underline underline-offset-2 hover:text-secondary focus-visible:text-secondary">privacyverklaring</a>.</label>
 </div>
-<p class="text-xs text-on-surface-variant leading-relaxed">Een aanvraag is vrijblijvend. Op werkzaamheden die voortkomen uit een geaccepteerde offerte zijn onze <a class="underline underline-offset-2 hover:text-secondary focus-visible:text-secondary" href="algemene-voorwaarden.html">Algemene voorwaarden</a> van toepassing.</p>
+<p class="text-xs text-on-surface-variant leading-relaxed">Een aanvraag is vrijblijvend. Op werkzaamheden die voortkomen uit een geaccepteerde offerte zijn onze <a class="underline underline-offset-2 hover:text-secondary focus-visible:text-secondary" href="/algemene-voorwaarden">Algemene voorwaarden</a> van toepassing.</p>
 <p id="quoteError" class="hidden text-sm text-on-error-container bg-error-container p-3" aria-live="polite">Het versturen is niet gelukt. Probeer het opnieuw of neem direct contact op via 06 33 73 37 06.</p>
 <button id="quoteSubmit" class="quote-submit w-full min-h-12 py-5 bg-secondary-container border border-secondary-container text-on-secondary-container font-bold tracking-widest hover:bg-secondary-fixed transition-colors focus-visible:outline-none" type="submit">OFFERTE AANVRAGEN</button>
 </form>
@@ -284,7 +321,7 @@
 <div class="max-w-[1440px] mx-auto px-6 lg:px-10 xl:px-16">
 <div class="grid gap-10 lg:gap-16 xl:gap-24 lg:grid-cols-12 items-start">
 <div class="lg:col-span-5 space-y-5">
-<a class="inline-flex flex-col" href="index.html" aria-label="SchilderGoud home">
+<a class="inline-flex flex-col" href="/" aria-label="SchilderGoud home">
 <span class="font-display-lg text-headline-sm leading-none block"><span class="text-white">Schilder</span><span class="text-secondary-container">Goud</span></span>
 <span class="mt-2 font-label-caps text-[10px] tracking-[0.32em] text-white/55 uppercase">RIJSWIJK &amp; OMGEVING</span>
 </a>
@@ -293,24 +330,24 @@
 <div class="lg:col-span-3 space-y-5">
 <h5 class="font-label-caps text-xs tracking-widest text-secondary-container">NAVIGATIE</h5>
 <ul class="space-y-3 text-sm text-white/65">
-<li><a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="diensten.html">Diensten</a></li>
-<li><a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="projecten.html">Projecten</a></li>
-<li><a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="projecten.html#voor-na">Voor &amp; na</a></li>
-<li><a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="over-ons.html">Over ons</a></li>
-<li><a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="contact.html">Contact</a></li>
+<li><a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="/diensten">Diensten</a></li>
+<li><a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="/projecten">Projecten</a></li>
+<li><a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="/projecten#voor-na">Voor &amp; na</a></li>
+<li><a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="/over-ons">Over ons</a></li>
+<li><a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="/contact">Contact</a></li>
 </ul>
 </div>
 <div class="lg:col-span-4 space-y-5">
 <h5 class="font-label-caps text-xs tracking-widest text-secondary-container">CONTACT</h5>
 <ul class="space-y-4 text-sm text-white/65">
 <li>
-<a class="inline-flex items-center gap-3 transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="tel:+31633733706">
+<a class="inline-flex items-center gap-3 transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="tel:+31633733706" data-track="phone" data-contact-location="footer">
 <span class="material-symbols-outlined text-[18px]" aria-hidden="true">call</span>
 <span>06 33 73 37 06</span>
 </a>
 </li>
 <li>
-<a class="inline-flex items-center gap-3 transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="mailto:goudrijswijk.m@gmail.com">
+<a class="inline-flex items-center gap-3 transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="mailto:goudrijswijk.m@gmail.com" data-track="email" data-contact-location="footer">
 <span class="material-symbols-outlined text-[18px]" aria-hidden="true">mail</span>
 <span>goudrijswijk.m@gmail.com</span>
 </a>
@@ -321,8 +358,8 @@
 <div class="mt-12 lg:mt-14 pt-6 border-t border-white/10 flex flex-col items-center gap-4 text-center lg:flex-row lg:justify-between lg:text-left">
 <p class="text-[10px] sm:text-xs text-white/45">© 2026 SchilderGoud. Alle rechten voorbehouden. KvK: 85979864</p>
 <nav aria-label="Juridische links" class="flex flex-col items-center gap-2 sm:flex-row sm:gap-5 text-[10px] sm:text-xs text-white/45">
-<a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="privacybeleid.html">Privacybeleid</a>
-<a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="algemene-voorwaarden.html">Algemene voorwaarden</a>
+<a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="/privacybeleid">Privacybeleid</a>
+<a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="/algemene-voorwaarden">Algemene voorwaarden</a>
 </nav>
 </div>
 </div>
@@ -428,9 +465,11 @@ quoteForm.addEventListener('submit', async (event) => {
 
     quoteForm.classList.add('hidden');
     quoteSuccess.classList.remove('hidden');
+    document.dispatchEvent(new CustomEvent('quote_form_success', { detail: { form_location: 'contact_page' } }));
     quoteFormStatus.className = 'mb-6 hidden';
   } catch (error) {
     quoteError.classList.remove('hidden');
+    document.dispatchEvent(new CustomEvent('quote_form_error', { detail: { form_location: 'contact_page' } }));
     quoteFormStatus.className = 'mb-6 hidden';
     setSubmitting(false);
   }

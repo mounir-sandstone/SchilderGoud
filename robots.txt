@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://schilder-goud.vercel.app/sitemap.xml
