@@ -4,8 +4,8 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="assets/Favicon - SchilderGoud.png" rel="icon" type="image/png"/>
-<title>Contact | SchilderGoud</title>
-<meta content="Neem contact op met SchilderGoud voor jouw schilderklus en vraag vrijblijvend een offerte aan." name="description"/>
+<title>Algemene voorwaarden | SchilderGoud</title>
+<meta content="Lees de algemene voorwaarden van SchilderGoud voor schilderwerk, onderhoud en specialistische afwerkingen." name="description"/>
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -175,8 +175,7 @@
             opacity: 0.7;
         }
     </style>
-</head>
-<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+</head><body class="bg-background text-on-surface font-body-md overflow-x-hidden">
 <!-- Header (Shared Component Mapping) -->
 <header class="w-full top-0 sticky z-50 bg-background/95 backdrop-blur border-b border-outline-variant transition-all duration-200 ease-in-out">
 <div class="flex justify-between items-center px-margin-mobile lg:px-10 xl:px-16 py-4 max-w-[1440px] mx-auto">
@@ -219,66 +218,24 @@
 </div>
 </div>
 </div>
-<main>
-
-<section class="py-section-padding-mobile lg:py-section-padding-desktop px-margin-mobile lg:px-10 xl:px-16 bg-background"><div class="max-w-[1440px] mx-auto"><p class="font-label-caps text-secondary tracking-widest mb-4">CONTACT</p><h1 class="font-display-lg-mobile text-display-lg-mobile md:text-[56px] lg:text-display-lg mb-6">Vertel ons over jouw schilderklus.</h1><p class="font-body-lg text-on-surface-variant max-w-3xl">Stuur je aanvraag, voeg eventueel foto’s toe en ontvang binnen één werkdag een vrijblijvende reactie.</p></div></section>
-<section class="pb-section-padding-mobile lg:pb-section-padding-desktop px-margin-mobile lg:px-10 xl:px-16 bg-background">
-<div class="max-w-[1440px] mx-auto grid lg:grid-cols-12 gap-10 lg:gap-16">
-<aside class="lg:col-span-4 bg-primary text-white p-8 lg:p-10 self-start"><h2 class="font-headline-md text-headline-md mb-6">Liever direct overleggen?</h2><div class="space-y-4 mb-8"><a class="flex gap-3 hover:text-secondary-container" href="tel:+31633733706"><span class="material-symbols-outlined">call</span>06 33 73 37 06</a><a class="flex gap-3 hover:text-secondary-container" href="mailto:goudrijswijk.m@gmail.com"><span class="material-symbols-outlined">mail</span>goudrijswijk.m@gmail.com</a></div><p class="text-white/70 mb-6">Beschrijf kort je wensen of bel direct om de mogelijkheden te bespreken.</p><p class="font-label-caps text-secondary-container tracking-widest">Werkzaam in Rijswijk en de wijde omgeving.</p></aside>
-<div class="lg:col-span-8" id="offerte">
-<div class="bg-surface-container p-6 md:p-10 border border-outline-variant">
-<h2 class="font-headline-md text-headline-md mb-2">Offerte aanvragen</h2>
-<p class="text-sm text-on-surface-variant mb-8">Vul je gegevens in, dan nemen we contact met je op.</p>
-<div id="quoteFormStatus" class="mb-6 hidden" aria-live="polite"></div>
-<div id="quoteSuccess" class="hidden" aria-live="polite">
-<h3 class="font-headline-md text-headline-md mb-3">Bedankt voor je aanvraag.</h3>
-<p class="text-on-surface-variant mb-6">Wij hebben je bericht ontvangen en nemen binnen één werkdag contact met je op.</p>
-<button class="quote-reset text-secondary underline underline-offset-4 hover:text-on-secondary-container focus-visible:outline-none" type="button" id="quoteReset">Nieuwe aanvraag versturen</button>
-</div>
-<!-- TODO: replace FORM_ENDPOINT_PLACEHOLDER with the real Formspree endpoint -->
-<form id="quoteForm" action="FORM_ENDPOINT_PLACEHOLDER" method="POST" enctype="multipart/form-data" class="space-y-5" novalidate>
-<div class="grid md:grid-cols-2 gap-4">
-<input name="naam" aria-label="Naam" class="quote-field w-full border border-outline-variant p-3 bg-surface-container-low focus-visible:outline-none" placeholder="Naam" type="text" required/>
-<input name="telefoon" aria-label="Telefoonnummer" class="quote-field w-full border border-outline-variant p-3 bg-surface-container-low focus-visible:outline-none" placeholder="Telefoonnummer" type="tel" required/>
-<input name="email" aria-label="E-mailadres" class="quote-field w-full border border-outline-variant p-3 bg-surface-container-low focus-visible:outline-none" placeholder="E-mailadres" type="email" required/>
-<input name="plaats" aria-label="Plaats" class="quote-field w-full border border-outline-variant p-3 bg-surface-container-low focus-visible:outline-none" placeholder="Plaats" type="text"/>
-<select name="type_klus" aria-label="Type klus" class="quote-field w-full border border-outline-variant p-3 bg-surface-container-low focus-visible:outline-none" required>
-<option value="">Type klus</option>
-<option>Buitenschilderwerk</option>
-<option>Binnenschilderwerk</option>
-<option>Houtwerk reparatie</option>
-<option>Stuc- &amp; pleisterwerk</option>
-<option>Airless spuitwerk</option>
-<option>Behangwerk</option>
-<option>Onderhoud &amp; renovatie</option>
-<option>Decoratief werk</option>
-<option>Anders</option>
-</select>
-<input name="uitvoeringsperiode" aria-label="Gewenste uitvoeringsperiode" class="quote-field w-full border border-outline-variant p-3 bg-surface-container-low focus-visible:outline-none" placeholder="Gewenste uitvoeringsperiode" type="text"/>
-</div>
-<textarea name="omschrijving" aria-label="Omschrijf de klus" class="quote-field w-full border border-outline-variant p-3 bg-surface-container-low resize-none focus-visible:outline-none" placeholder="Omschrijf de klus" rows="5" required></textarea>
-<label class="quote-upload block bg-surface-container-high border-2 border-dashed border-outline-variant p-8 text-center cursor-pointer focus-within:outline-none" for="photos">
-<span class="material-symbols-outlined text-4xl text-outline mb-2" aria-hidden="true">upload_file</span>
-<span class="block font-label-caps text-[10px]">Foto’s toevoegen, optioneel</span>
-<span class="block mt-2 text-sm text-on-surface-variant">Maximaal 5 afbeeldingen, 10 MB per bestand.</span>
-<input id="photos" name="photos" class="sr-only" type="file" multiple accept="image/jpeg,image/png,image/webp"/>
-</label>
-<p id="photoFileList" class="text-sm text-on-surface-variant" aria-live="polite"></p>
-<p id="photoError" class="hidden text-sm text-on-error-container bg-error-container p-3" aria-live="polite"></p>
-<div class="flex items-start gap-3">
-<input id="privacy" name="privacy" type="checkbox" required class="quote-checkbox mt-0.5 h-5 w-5 shrink-0 rounded-none border border-outline bg-transparent accent-secondary focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus-visible:outline-none"/>
-<label for="privacy" class="cursor-pointer text-sm leading-6 text-on-surface-variant">Ik ga akkoord met de <a href="privacybeleid.html" class="underline underline-offset-2 hover:text-secondary focus-visible:text-secondary">privacyverklaring</a>.</label>
-</div>
-<p class="text-xs text-on-surface-variant leading-relaxed">Een aanvraag is vrijblijvend. Op werkzaamheden die voortkomen uit een geaccepteerde offerte zijn onze <a class="underline underline-offset-2 hover:text-secondary focus-visible:text-secondary" href="algemene-voorwaarden.html">Algemene voorwaarden</a> van toepassing.</p>
-<p id="quoteError" class="hidden text-sm text-on-error-container bg-error-container p-3" aria-live="polite">Het versturen is niet gelukt. Probeer het opnieuw of neem direct contact op via 06 33 73 37 06.</p>
-<button id="quoteSubmit" class="quote-submit w-full min-h-12 py-5 bg-secondary-container border border-secondary-container text-on-secondary-container font-bold tracking-widest hover:bg-secondary-fixed transition-colors focus-visible:outline-none" type="submit">OFFERTE AANVRAGEN</button>
-</form>
-</div>
-</div>
-</div>
-</section>
-<section class="py-section-padding-mobile lg:py-section-padding-desktop px-margin-mobile lg:px-10 xl:px-16 bg-surface-container-low"><div class="max-w-[960px] mx-auto"><h2 class="font-headline-md text-headline-md md:text-[44px] mb-10">Veelgestelde vragen</h2><div class="space-y-5"><details class="border border-outline-variant bg-background p-5"><summary class="font-bold cursor-pointer">Is een offerte vrijblijvend?</summary><p class="mt-3 text-on-surface-variant">Ja. We bekijken graag wat er nodig is en sturen een duidelijke, vrijblijvende offerte op maat.</p></details><details class="border border-outline-variant bg-background p-5"><summary class="font-bold cursor-pointer">Kan ik foto’s van mijn klus meesturen?</summary><p class="mt-3 text-on-surface-variant">Ja. Foto’s helpen om vooraf een beter beeld te krijgen van de situatie en de benodigde werkzaamheden.</p></details><details class="border border-outline-variant bg-background p-5"><summary class="font-bold cursor-pointer">Wanneer ontvang ik een reactie?</summary><p class="mt-3 text-on-surface-variant">We streven ernaar om binnen één werkdag op jouw aanvraag te reageren.</p></details><details class="border border-outline-variant bg-background p-5"><summary class="font-bold cursor-pointer">Werken jullie ook aan binnen- én buitenprojecten?</summary><p class="mt-3 text-on-surface-variant">Ja. SchilderGoud verzorgt zowel binnen- als buitenschilderwerk, plus diverse specialistische afwerkingen.</p></details><details class="border border-outline-variant bg-background p-5"><summary class="font-bold cursor-pointer">Kan ik advies krijgen over kleur en afwerking?</summary><p class="mt-3 text-on-surface-variant">Ja. Tijdens het contactmoment denken we mee over passende kleuren, materialen en afwerking.</p></details></div></div></section>
-</main>
+<main id="top">
+<section class="py-section-padding-mobile lg:py-section-padding-desktop px-margin-mobile lg:px-10 xl:px-16 bg-background"><div class="max-w-[1440px] mx-auto"><p class="font-label-caps text-secondary tracking-widest mb-4">VOORWAARDEN</p><h1 class="font-display-lg-mobile text-display-lg-mobile md:text-[56px] lg:text-display-lg mb-6">Algemene voorwaarden</h1><p class="font-body-lg text-on-surface-variant max-w-3xl">Deze algemene voorwaarden gelden voor offertes, overeenkomsten en werkzaamheden van SchilderGoud, tenzij schriftelijk anders is afgesproken.</p><p class="mt-6 text-sm text-on-surface-variant">Versie: juli 2026</p></div></section>
+<section class="pb-section-padding-mobile lg:pb-section-padding-desktop px-margin-mobile lg:px-10 xl:px-16 bg-background"><div class="max-w-[1440px] mx-auto grid lg:grid-cols-12 gap-10 lg:gap-16"><aside class="hidden lg:block lg:col-span-3"><nav class="sticky top-28 border-l border-outline-variant pl-5 text-sm text-on-surface-variant space-y-3" aria-label="Inhoudsopgave"><p class="font-label-caps text-secondary tracking-widest mb-4">INHOUD</p><a class="block hover:text-secondary" href="#definities">Definities</a><a class="block hover:text-secondary" href="#toepasselijkheid">Toepasselijkheid</a><a class="block hover:text-secondary" href="#offertes">Offertes</a><a class="block hover:text-secondary" href="#uitvoering">Uitvoering</a><a class="block hover:text-secondary" href="#opdrachtgever">Opdrachtgever</a><a class="block hover:text-secondary" href="#meerwerk">Meerwerk</a><a class="block hover:text-secondary" href="#betaling">Betaling</a><a class="block hover:text-secondary" href="#oplevering">Oplevering</a><a class="block hover:text-secondary" href="#annulering">Annulering</a><a class="block hover:text-secondary" href="#aansprakelijkheid">Aansprakelijkheid</a><a class="block hover:text-secondary" href="#overmacht">Overmacht</a><a class="block hover:text-secondary" href="#privacy">Privacy</a><a class="block hover:text-secondary" href="#geschillen">Geschillen</a></nav></aside><div class="lg:col-span-9 max-w-4xl text-base leading-relaxed text-on-surface-variant">
+<section id="definities" class="border-t border-outline-variant py-8"><h2 class="font-headline-md text-headline-md text-on-surface mb-4">1. Definities</h2><dl class="space-y-3"><div><dt class="font-bold text-on-surface">SchilderGoud</dt><dd>de aanbieder van schilderwerk, onderhoud en specialistische afwerkingen.</dd></div><div><dt class="font-bold text-on-surface">opdrachtgever</dt><dd>de persoon of organisatie die een offerte aanvraagt of een overeenkomst sluit met SchilderGoud.</dd></div><div><dt class="font-bold text-on-surface">consument</dt><dd>een opdrachtgever die handelt voor privédoeleinden en niet voor beroep of bedrijf.</dd></div><div><dt class="font-bold text-on-surface">offerte</dt><dd>een schriftelijk of digitaal voorstel van SchilderGoud voor werkzaamheden en bijbehorende afspraken.</dd></div><div><dt class="font-bold text-on-surface">overeenkomst</dt><dd>de afspraken tussen SchilderGoud en de opdrachtgever nadat een offerte is geaccepteerd.</dd></div><div><dt class="font-bold text-on-surface">werkzaamheden</dt><dd>alle schilder-, onderhouds-, herstel- en afwerkingswerkzaamheden die SchilderGoud uitvoert.</dd></div></dl></section>
+<section id="toepasselijkheid" class="border-t border-outline-variant py-8"><h2 class="font-headline-md text-headline-md text-on-surface mb-4">2. Toepasselijkheid</h2><p>Deze voorwaarden zijn van toepassing op alle offertes, overeenkomsten en werkzaamheden van SchilderGoud.</p><p class="mt-4">Afwijkingen zijn alleen geldig wanneer deze schriftelijk zijn bevestigd.</p><p class="mt-4">Voor consumenten blijven dwingende wettelijke rechten altijd gelden.</p></section>
+<section id="offertes" class="border-t border-outline-variant py-8"><h2 class="font-headline-md text-headline-md text-on-surface mb-4">3. Offertes en totstandkoming overeenkomst</h2><p>Een offerte is vrijblijvend, tenzij daarin uitdrukkelijk anders staat vermeld.</p><p class="mt-4">Een overeenkomst komt tot stand nadat de opdrachtgever de offerte schriftelijk, digitaal of op andere duidelijke wijze heeft geaccepteerd.</p><p class="mt-4">De offerte beschrijft de werkzaamheden, prijsafspraken, eventuele materialen, planning en overige relevante afspraken.</p><!-- TODO: confirm quotation validity period --><p class="mt-4">Offertes zijn geldig gedurende [aantal dagen invullen] dagen, tenzij in de offerte anders staat.</p></section>
+<section id="uitvoering" class="border-t border-outline-variant py-8"><h2 class="font-headline-md text-headline-md text-on-surface mb-4">4. Werkzaamheden en uitvoering</h2><p>SchilderGoud voert de werkzaamheden zorgvuldig en naar beste inzicht en vermogen uit.</p><p class="mt-4">Planning en uitvoeringsdata zijn afhankelijk van onder meer weersomstandigheden, droogtijden, beschikbaarheid van materialen en toegang tot de werklocatie.</p><p class="mt-4">Wanneer omstandigheden dit noodzakelijk maken, overlegt SchilderGoud zo snel mogelijk met de opdrachtgever over een aangepaste planning.</p></section>
+<section id="opdrachtgever" class="border-t border-outline-variant py-8"><h2 class="font-headline-md text-headline-md text-on-surface mb-4">5. Verplichtingen opdrachtgever</h2><ul class="list-disc pl-6 space-y-2"><li>tijdige en veilige toegang tot de werkplek</li><li>voldoende mogelijkheid om werkzaamheden uit te voeren</li><li>het tijdig verstrekken van relevante informatie over de ondergrond, eerdere behandelingen, vochtproblemen, gebreken of bijzondere omstandigheden</li><li>het verwijderen of beschermen van persoonlijke eigendommen, tenzij anders afgesproken</li><li>het zorgen voor noodzakelijke voorzieningen zoals stroom en water, wanneer dit redelijkerwijs nodig is</li></ul></section>
+<section id="meerwerk" class="border-t border-outline-variant py-8"><h2 class="font-headline-md text-headline-md text-on-surface mb-4">6. Meerwerk en wijzigingen</h2><p>Werkzaamheden die niet in de offerte zijn opgenomen, worden alleen uitgevoerd na overleg met de opdrachtgever.</p><p class="mt-4">Wanneer tijdens de uitvoering blijkt dat aanvullend werk noodzakelijk is door niet vooraf zichtbare omstandigheden, bespreekt SchilderGoud dit eerst met de opdrachtgever.</p><p class="mt-4">Meerwerk, aanvullende materialen of wijzigingen kunnen leiden tot een aangepaste prijs en planning.</p></section>
+<section id="betaling" class="border-t border-outline-variant py-8"><h2 class="font-headline-md text-headline-md text-on-surface mb-4">7. Prijzen en betaling</h2><p>Prijzen en betalingsafspraken staan in de offerte of overeenkomst.</p><!-- TODO: confirm whether displayed prices are inclusive or exclusive of VAT --><p class="mt-4">Alle bedragen zijn [inclusief/exclusief] btw, tenzij anders vermeld.</p><p class="mt-4">Wanneer de opdrachtgever niet tijdig betaalt, kan SchilderGoud na een redelijke herinnering de werkzaamheden opschorten of verdere uitvoering uitstellen, voor zover de wet dat toestaat.</p></section>
+<section id="oplevering" class="border-t border-outline-variant py-8"><h2 class="font-headline-md text-headline-md text-on-surface mb-4">8. Oplevering en klachten</h2><p>Na afronding van de werkzaamheden beoordelen opdrachtgever en SchilderGoud het resultaat, voor zover dit redelijkerwijs mogelijk is.</p><p class="mt-4">Klachten of zichtbare gebreken meldt de opdrachtgever zo snel mogelijk en bij voorkeur schriftelijk, zodat SchilderGoud de gelegenheid krijgt om de situatie te beoordelen en, waar nodig, een passende oplossing te bieden.</p><p class="mt-4">Wettelijke rechten van consumenten blijven onverminderd van kracht.</p></section>
+<section id="annulering" class="border-t border-outline-variant py-8"><h2 class="font-headline-md text-headline-md text-on-surface mb-4">9. Annulering en beëindiging</h2><p>Wil de opdrachtgever een geplande opdracht annuleren of wijzigen? Neem dan zo snel mogelijk contact op met SchilderGoud.</p><p class="mt-4">Wanneer werkzaamheden al zijn uitgevoerd, materialen speciaal zijn besteld of aantoonbare kosten zijn gemaakt, kunnen in redelijkheid kosten in rekening worden gebracht, voor zover dit vooraf is afgesproken of wettelijk is toegestaan.</p><p class="mt-4">Voor consumenten gelden eventuele wettelijke rechten, waaronder het herroepingsrecht wanneer dat van toepassing is, onverminderd.</p></section>
+<section id="aansprakelijkheid" class="border-t border-outline-variant py-8"><h2 class="font-headline-md text-headline-md text-on-surface mb-4">10. Aansprakelijkheid</h2><p>SchilderGoud is aansprakelijk voor schade die het rechtstreekse gevolg is van een toerekenbare tekortkoming, voor zover die aansprakelijkheid niet op grond van de wet kan worden uitgesloten.</p><p class="mt-4">SchilderGoud is niet aansprakelijk voor schade die ontstaat door gebreken in de ondergrond, verborgen constructieve problemen, ondeugdelijke eerdere behandelingen of onjuiste of onvolledige informatie van de opdrachtgever, tenzij SchilderGoud deze omstandigheden kende of redelijkerwijs had moeten kennen.</p><p class="mt-4">Deze bepaling beperkt geen wettelijke rechten van consumenten.</p></section>
+<section id="overmacht" class="border-t border-outline-variant py-8"><h2 class="font-headline-md text-headline-md text-on-surface mb-4">11. Overmacht</h2><p>SchilderGoud is niet gehouden tot nakoming wanneer uitvoering tijdelijk of blijvend wordt verhinderd door omstandigheden buiten redelijke invloed, zoals extreme weersomstandigheden, ziekte, storingen, materiaaltekorten of overheidsmaatregelen.</p><p class="mt-4">Wanneer mogelijk bespreken partijen een passende nieuwe planning.</p></section>
+<section id="privacy" class="border-t border-outline-variant py-8"><h2 class="font-headline-md text-headline-md text-on-surface mb-4">12. Privacy</h2><p>SchilderGoud verwerkt persoonsgegevens volgens het <a class="underline hover:text-secondary" href="privacybeleid.html">privacybeleid</a>.</p></section>
+<section id="geschillen" class="border-t border-outline-variant py-8"><h2 class="font-headline-md text-headline-md text-on-surface mb-4">13. Toepasselijk recht en geschillen</h2><p>Op overeenkomsten met SchilderGoud is Nederlands recht van toepassing.</p><p class="mt-4">Partijen proberen een geschil eerst in goed overleg op te lossen.</p><p class="mt-4">Voor consumenten wordt de wettelijk bevoegde rechter niet beperkt.</p></section>
+<div class="border-t border-outline-variant pt-8"><h2 class="font-headline-md text-headline-md text-on-surface mb-3">Vragen over een offerte of afspraak?</h2><p>Neem contact op. We lichten onze werkwijze en afspraken graag toe.</p><div class="mt-6 flex flex-col sm:flex-row gap-3"><a class="sg-focus sg-primary-gold inline-flex justify-center py-4 px-6 bg-secondary-container border border-secondary-container text-on-secondary-container font-bold tracking-widest text-xs" href="contact.html#offerte">Neem contact op</a><a class="sg-focus sg-outline-light inline-flex justify-center py-4 px-6 border border-primary text-primary font-bold tracking-widest text-xs" href="tel:+31633733706">Bel 06 33 73 37 06</a></div><a class="inline-block mt-8 text-sm underline underline-offset-4 hover:text-secondary" href="#top">Terug naar boven</a></div>
+</div></div></section></main>
 <!-- Footer (Shared Component Mapping) -->
 <footer class="bg-primary text-white pt-16 lg:pt-20 pb-8 lg:pb-10">
 <div class="max-w-[1440px] mx-auto px-6 lg:px-10 xl:px-16">
@@ -348,94 +305,6 @@ function toggleMenu() {
 menuBtn.addEventListener('click', toggleMenu);
 closeBtn.addEventListener('click', toggleMenu);
 navLinks.forEach(link => link.addEventListener('click', toggleMenu));
-
-const quoteForm = document.getElementById('quoteForm');
-const quoteSubmit = document.getElementById('quoteSubmit');
-const quoteError = document.getElementById('quoteError');
-const quoteSuccess = document.getElementById('quoteSuccess');
-const quoteReset = document.getElementById('quoteReset');
-const quoteFormStatus = document.getElementById('quoteFormStatus');
-const photosInput = document.getElementById('photos');
-const photoFileList = document.getElementById('photoFileList');
-const photoError = document.getElementById('photoError');
-
-function setPhotoError(message) {
-  photoError.textContent = message;
-  photoError.classList.toggle('hidden', !message);
-}
-
-function validatePhotos() {
-  const files = Array.from(photosInput.files);
-  setPhotoError('');
-  photoFileList.textContent = files.map(file => file.name).join(', ');
-
-  if (files.length > 5) {
-    setPhotoError('Je kunt maximaal 5 foto’s toevoegen.');
-    return false;
-  }
-
-  const oversizedFile = files.find(file => file.size > 10 * 1024 * 1024);
-  if (oversizedFile) {
-    setPhotoError(`Het bestand "${oversizedFile.name}" is groter dan 10 MB.`);
-    return false;
-  }
-
-  return true;
-}
-
-function setSubmitting(isSubmitting) {
-  quoteSubmit.disabled = isSubmitting;
-  quoteSubmit.textContent = isSubmitting ? 'VERSTUREN...' : 'OFFERTE AANVRAGEN';
-  quoteFormStatus.textContent = isSubmitting ? 'Je aanvraag wordt verstuurd.' : '';
-  quoteFormStatus.className = isSubmitting ? 'mb-6 text-sm text-on-surface-variant' : 'mb-6 hidden';
-}
-
-photosInput.addEventListener('change', validatePhotos);
-
-quoteReset.addEventListener('click', () => {
-  quoteForm.reset();
-  photoFileList.textContent = '';
-  setPhotoError('');
-  quoteError.classList.add('hidden');
-  quoteSuccess.classList.add('hidden');
-  quoteForm.classList.remove('hidden');
-  quoteFormStatus.className = 'mb-6 hidden';
-  setSubmitting(false);
-});
-
-quoteForm.addEventListener('submit', async (event) => {
-  event.preventDefault();
-  quoteError.classList.add('hidden');
-
-  if (!quoteForm.reportValidity() || !validatePhotos()) {
-    return;
-  }
-
-  setSubmitting(true);
-
-  try {
-    const response = await fetch(quoteForm.action, {
-      method: 'POST',
-      body: new FormData(quoteForm),
-      headers: {
-        Accept: 'application/json'
-      }
-    });
-
-    if (!response.ok) {
-      throw new Error('Formspree request failed');
-    }
-
-    quoteForm.classList.add('hidden');
-    quoteSuccess.classList.remove('hidden');
-    quoteFormStatus.className = 'mb-6 hidden';
-  } catch (error) {
-    quoteError.classList.remove('hidden');
-    quoteFormStatus.className = 'mb-6 hidden';
-    setSubmitting(false);
-  }
-});
-
 window.addEventListener('scroll', () => {
   const header = document.querySelector('header');
   header.classList.toggle('shadow-sm', window.scrollY > 50);
