@@ -271,38 +271,29 @@
 </div>
 </div>
 </section>
-<!-- Before & After (Slider Component) -->
-<section class="py-section-padding-mobile lg:py-section-padding-desktop bg-surface-container" id="voor-na">
-<div class="px-margin-mobile lg:px-10 xl:px-16 mb-8 lg:mb-12 max-w-[1440px] mx-auto">
-<span class="font-label-caps text-secondary tracking-widest block mb-2">HET VERSCHIL</span>
-<h2 class="font-headline-md text-headline-md leading-tight">Vakmanschap tot in de kleinste details</h2>
+<!-- BEFORE & AFTER SLIDER -->
+<section class="py-section-padding-mobile lg:py-section-padding-desktop bg-surface-container-low" id="voor-na">
+<div class="px-margin-mobile lg:px-10 xl:px-16 max-w-[1440px] mx-auto">
+<div class="text-center mb-10 lg:mb-16">
+<h2 class="font-headline-md text-headline-md leading-tight">Voor &amp; na. Zo maken wij het verschil.</h2>
+<div class="w-20 h-1 bg-secondary-container mx-auto mt-5"></div>
 </div>
-<div class="px-margin-mobile lg:px-10 xl:px-16 flex lg:grid lg:grid-cols-2 overflow-x-auto lg:overflow-visible space-x-6 lg:space-x-0 lg:gap-8 pb-4 hide-scrollbar snap-x max-w-[1440px] mx-auto">
-<div class="snap-center min-w-[85vw] lg:min-w-0">
-<div class="before-after-slider lg:aspect-[4/3] mb-4">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 max-w-6xl mx-auto items-stretch">
+<div class="before-after-slider lg:aspect-[4/3] min-h-[320px] sm:min-h-[420px] lg:min-h-0 border border-outline-variant shadow-[0_24px_60px_rgba(26,28,26,0.12)]">
 <img class="image-before" alt="Geschilderd monumentenhuis met verzorgd houtwerk en geveldetails" src="assets/Geschilderd%20monumentenhuis.jpg"/>
 <div class="image-after" id="after-1">
 <img class="w-full h-full object-cover" alt="Afgelakt schilderwerk met strakke details en duurzame afwerking" src="assets/Geschilderd%20%26%20afgelakt.jpg"/>
 </div>
 <div class="before-after-handle" id="handle-1" role="slider" tabindex="0" aria-label="Voor en na slider Monumentenhuis schilderwerk" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" style="left: 50%;"></div>
-<div class="absolute bottom-4 left-4 bg-black/50 text-white px-3 py-1 text-[10px] font-label-caps backdrop-blur-sm">VOOR</div>
+<div class="absolute bottom-4 left-4 bg-black/70 text-white px-3 py-1 text-[10px] font-label-caps backdrop-blur-sm">VOOR</div>
 <div class="absolute bottom-4 right-4 bg-secondary text-white px-3 py-1 text-[10px] font-label-caps">NA</div>
 </div>
-<h4 class="font-headline-sm text-base">Monumentenhuis schilderwerk</h4>
-<p class="text-xs text-on-surface-variant mt-1 italic">Houtwerk en geveldetails</p>
+<div class="bg-white p-8 lg:p-10 xl:p-12 flex flex-col justify-center shadow-[0_24px_60px_rgba(26,28,26,0.06)] border border-surface-container-high min-h-[320px] sm:min-h-[360px] lg:min-h-0">
+<p class="font-label-caps text-secondary tracking-widest mb-5">RESTAURATIE PROJECT RIJSWIJK</p>
+<h3 class="font-headline-sm text-headline-sm mb-6">Herstel van monumentaal houtwerk</h3>
+<p class="text-on-surface-variant leading-relaxed mb-8 max-w-xl">Bij dit project hebben we de oorspronkelijke allure van een 19e-eeuwse villa hersteld. Na jaren van verwaarlozing vereiste het houtwerk grondige sanering en een vijflaags verfsysteem voor maximale bescherming.</p>
+<a class="inline-flex self-start border-b border-primary pb-1 text-primary font-nav-link text-sm uppercase tracking-wider hover:text-secondary hover:border-secondary transition-colors" href="#projecten">BEKIJK PROJECT DETAILS</a>
 </div>
-<div class="snap-center min-w-[85vw] lg:min-w-0">
-<div class="before-after-slider lg:aspect-[4/3] mb-4">
-<img class="image-before" alt="Latex antischimmel schilderwerk voor een strak en fris interieur" src="assets/Latex%20antischimmel%20geschilderd.jpg"/>
-<div class="image-after" id="after-2">
-<img class="w-full h-full object-cover" alt="Airless gespoten interieur met egale professionele dekking" src="assets/Airless%20gespoten.jpg"/>
-</div>
-<div class="before-after-handle" id="handle-2" role="slider" tabindex="0" aria-label="Voor en na slider Latex &amp; spuitwerk" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" style="left: 50%;"></div>
-<div class="absolute bottom-4 left-4 bg-black/50 text-white px-3 py-1 text-[10px] font-label-caps backdrop-blur-sm">VOOR</div>
-<div class="absolute bottom-4 right-4 bg-secondary text-white px-3 py-1 text-[10px] font-label-caps">NA</div>
-</div>
-<h4 class="font-headline-sm text-base">Latex &amp; spuitwerk</h4>
-<p class="text-xs text-on-surface-variant mt-1 italic">Wanden en interieurafwerking</p>
 </div>
 </div>
 </section>
@@ -649,7 +640,6 @@
         }
 
         initSlider(1);
-        initSlider(2);
 
         // Sticky Header Shrink Effect
         window.addEventListener('scroll', () => {
