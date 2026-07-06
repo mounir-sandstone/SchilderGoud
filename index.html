@@ -163,100 +163,9 @@
             scrollbar-width: none;
         }
 
-        .review-carousel {
-            touch-action: pan-y;
-        }
-        .review-carousel__viewport {
-            position: relative;
-            min-height: 300px;
-        }
-        .review-slide {
-            min-height: 300px;
-            opacity: 0;
-            transform: translateX(16px);
-            transition: opacity 220ms ease, transform 220ms ease;
-        }
-        .review-slide:not(.is-active) {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            pointer-events: none;
-        }
-        .review-slide.is-active {
-            opacity: 1;
-            transform: translateX(0);
-        }
-        .review-quote__text {
-            font-size: clamp(1.125rem, 1.4vw, 1.5rem);
-        }
-        .review-carousel__arrow {
-            width: 44px;
-            height: 44px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid #cdc5bc;
-            color: #1a1c1a;
-            background: transparent;
-            transition: border-color 180ms ease, color 180ms ease, background-color 180ms ease;
-        }
-        .review-carousel__arrow:hover {
-            border-color: #7c5800;
-            color: #7c5800;
-            background: #ffffff;
-        }
-        .review-carousel__arrow:focus-visible,
-        .review-carousel__dot:focus-visible,
-        .review-carousel__toggle:focus-visible {
+        .review-read-more:focus-visible {
             outline: 2px solid #7c5800;
             outline-offset: 4px;
-        }
-        .review-carousel__dot {
-            width: 11px;
-            height: 11px;
-            border: 1px solid #7c766e;
-            background: transparent;
-            padding: 0;
-            border-radius: 999px;
-            transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
-        }
-        .review-carousel__dot.is-active {
-            border-color: #ffc659;
-            background: #ffc659;
-            transform: scale(1.08);
-        }
-        .review-carousel__toggle {
-            width: 34px;
-            height: 34px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid #cdc5bc;
-            color: #1a1c1a;
-            background: rgba(255, 255, 255, 0.58);
-            transition: border-color 180ms ease, color 180ms ease, background-color 180ms ease;
-        }
-        .review-carousel__toggle:hover {
-            border-color: #7c5800;
-            color: #7c5800;
-            background: #ffffff;
-        }
-        .review-carousel__toggle .material-symbols-outlined {
-            font-size: 18px;
-        }
-        @media (max-width: 639px) {
-            .review-carousel__viewport,
-            .review-slide {
-                min-height: 360px;
-            }
-        }
-        @media (prefers-reduced-motion: reduce) {
-            .review-slide,
-            .review-carousel__arrow,
-            .review-carousel__dot,
-            .review-carousel__toggle {
-                transition: none;
-            }
         }
     </style>
 </head>
@@ -546,77 +455,65 @@
 </div>
 </section>
 <!-- Reviews Section -->
-<section class="py-section-padding-mobile lg:py-section-padding-desktop bg-surface-container-low" id="reviews">
-<div class="px-margin-mobile lg:px-10 xl:px-16 max-w-[1440px] mx-auto">
+<section class="py-section-padding-mobile lg:py-section-padding-desktop bg-surface-container-low" id="reviews" aria-labelledby="reviews-heading">
+<div class="max-w-[1440px] mx-auto px-6 lg:px-10 xl:px-16">
 <div class="text-center mb-10 lg:mb-12">
-<h2 class="font-headline-md text-headline-md leading-tight">Ervaringen van onze klanten.</h2>
+<h2 class="font-headline-md text-headline-md leading-tight" id="reviews-heading">Ervaringen van onze klanten.</h2>
 <div class="w-20 h-1 bg-secondary-container mx-auto mt-5"></div>
 </div>
-<div class="reviews-intro max-w-3xl mx-auto mb-10 lg:mb-12 text-center">
-<div class="flex justify-center gap-1 mb-3" aria-label="Vijf sterren beoordeling">
-<span class="material-symbols-outlined text-secondary text-[19px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-secondary text-[19px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-secondary text-[19px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-secondary text-[19px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-secondary text-[19px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<div class="grid lg:grid-cols-[minmax(0,0.32fr)_minmax(0,0.68fr)] gap-10 xl:gap-14 items-center" role="region" aria-label="Klantervaringen">
+<aside class="max-w-xl">
+<h3 class="font-headline-md text-[32px] md:text-[38px] leading-tight mb-6">Wat klanten over ons zeggen.</h3>
+<div class="mb-6">
+<div class="flex gap-1 mb-3 text-secondary" aria-label="5 van 5 sterren">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
 </div>
-<p class="font-label-caps text-secondary tracking-widest mb-2">GOOGLE REVIEWS</p>
-<p class="text-sm font-bold tracking-widest uppercase text-on-surface mb-2">Echte ervaringen van klanten</p>
-<p class="text-sm text-on-surface-variant leading-relaxed mb-4">Lees wat klanten zeggen over onze werkwijze, communicatie en afwerking.</p>
+<p class="font-label-caps text-sm tracking-[0.18em] uppercase text-on-surface">Echte ervaringen van klanten</p>
+</div>
+<p class="text-sm lg:text-base text-on-surface-variant leading-relaxed mb-7">Lees wat klanten zeggen over onze werkwijze, communicatie en afwerking.</p>
 <a class="inline-flex items-center gap-2 border-b border-primary pb-1 text-primary font-nav-link text-xs uppercase tracking-wider hover:text-secondary hover:border-secondary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-secondary transition-colors" href="https://share.google/LeLFp1Pr14YgfNLCb" target="_blank" rel="noopener noreferrer">
 <span>BEKIJK GOOGLE REVIEWS</span>
 <span class="material-symbols-outlined text-base" aria-hidden="true">open_in_new</span>
 </a>
+</aside>
+<div class="grid md:grid-cols-2 gap-6 lg:gap-7">
+<article class="bg-white border border-surface-container-high shadow-[0_16px_38px_rgba(26,28,26,0.045)] p-8 lg:p-10 min-h-[420px] flex flex-col">
+<div class="flex gap-1 mb-7 text-secondary" aria-label="5 van 5 sterren">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
 </div>
-<div class="review-carousel max-w-5xl mx-auto" role="region" aria-label="Klantervaringen" data-review-carousel>
-<div class="review-carousel__viewport">
-<article class="review-slide is-active bg-white border border-surface-container-high shadow-[0_18px_45px_rgba(26,28,26,0.055)] p-8 lg:p-12" data-review-slide>
-<div class="flex gap-1 mb-7" aria-label="5 sterren">
-<span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-</div>
-<blockquote class="review-quote border-l-2 border-secondary pl-6 lg:pl-8">
-<p class="review-quote__text text-on-surface italic leading-relaxed mb-5" data-full-quote="“Mo heeft onlangs ons huis voor en achter geschilderd. Professioneel, vriendelijk en komt afspraken na. Wij zijn erg tevreden over het resultaat.”" data-excerpt="“Mo heeft onlangs ons huis voor en achter geschilderd. Professioneel, vriendelijk en komt afspraken na. Wij zijn erg tevreden over het resultaat.”">“Mo heeft onlangs ons huis voor en achter geschilderd. Professioneel, vriendelijk en komt afspraken na. Wij zijn erg tevreden over het resultaat.”</p>
-<button class="review-read-more hidden text-secondary font-label-caps tracking-widest uppercase border-b border-secondary pb-1 hover:text-primary hover:border-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-secondary transition-colors" type="button" aria-expanded="false">Lees volledige review</button>
-<footer class="mt-7">
+<blockquote class="border-l-2 border-secondary pl-6 lg:pl-7 flex flex-col flex-1">
+<p class="text-lg lg:text-[22px] xl:text-[24px] text-on-surface italic leading-relaxed mb-7">“Mo heeft onlangs ons huis voor en achter geschilderd. Professioneel, vriendelijk en komt afspraken na. Wij zijn erg tevreden over het resultaat.”</p>
+<footer class="mt-auto pt-4">
 <p class="text-[11px] font-bold tracking-[0.18em] uppercase">Marlies Kesseler</p>
 <p class="text-[11px] text-on-surface-variant mt-2">9 maanden geleden</p>
 </footer>
 </blockquote>
 </article>
-<article class="review-slide bg-white border border-surface-container-high shadow-[0_18px_45px_rgba(26,28,26,0.055)] p-8 lg:p-12" data-review-slide hidden>
-<div class="flex gap-1 mb-7" aria-label="5 sterren">
-<span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<article class="bg-white border border-surface-container-high shadow-[0_16px_38px_rgba(26,28,26,0.045)] p-8 lg:p-10 min-h-[420px] flex flex-col">
+<div class="flex gap-1 mb-7 text-secondary" aria-label="5 van 5 sterren">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">star</span>
 </div>
-<blockquote class="review-quote border-l-2 border-secondary pl-6 lg:pl-8">
-<p class="review-quote__text text-on-surface italic leading-relaxed mb-5" data-full-quote="“Mo en zijn collega’s zijn goud! Geweldig schilderwerk gedaan, binnen en buiten, netjes, precies en met oog voor detail. Heel betrouwbaar ook. Mo is heel lief, muzikaal, aardig en altijd vrolijk. Ons huis was bij hem in perfecte handen. We zijn heel blij met Mo! Dank je wel, ons huis ziet er dankzij jullie prachtig uit.”" data-excerpt="“Mo en zijn collega’s zijn goud! Geweldig schilderwerk gedaan, binnen en buiten, netjes, precies en met oog voor detail. Heel betrouwbaar ook.”">“Mo en zijn collega’s zijn goud! Geweldig schilderwerk gedaan, binnen en buiten, netjes, precies en met oog voor detail. Heel betrouwbaar ook.”</p>
-<button class="review-read-more text-secondary font-label-caps tracking-widest uppercase border-b border-secondary pb-1 hover:text-primary hover:border-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-secondary transition-colors" type="button" aria-expanded="false">Lees volledige review</button>
-<footer class="mt-7"><p class="text-[11px] font-bold tracking-[0.18em] uppercase">Carla Bos</p><p class="text-[11px] text-on-surface-variant mt-2">1 jaar geleden</p></footer>
+<blockquote class="border-l-2 border-secondary pl-6 lg:pl-7 flex flex-col flex-1">
+<p class="text-lg lg:text-[22px] xl:text-[24px] text-on-surface italic leading-relaxed mb-5" data-review-excerpt="“Mo en zijn collega’s zijn goud! Geweldig schilderwerk gedaan, binnen en buiten, netjes, precies en met oog voor detail. Heel betrouwbaar ook.”" data-review-full="“Mo en zijn collega’s zijn goud! Geweldig schilderwerk gedaan, binnen en buiten, netjes, precies en met oog voor detail. Heel betrouwbaar ook. Mo is heel lief, muzikaal, aardig en altijd vrolijk. Ons huis was bij hem in perfecte handen. We zijn heel blij met Mo! Dank je wel, ons huis ziet er dankzij jullie prachtig uit.”">“Mo en zijn collega’s zijn goud! Geweldig schilderwerk gedaan, binnen en buiten, netjes, precies en met oog voor detail. Heel betrouwbaar ook.”</p>
+<button class="review-read-more self-start text-secondary font-label-caps tracking-widest uppercase border-b border-secondary pb-1 hover:text-primary hover:border-primary transition-colors" type="button" aria-expanded="false">Lees volledige review</button>
+<footer class="mt-auto pt-7">
+<p class="text-[11px] font-bold tracking-[0.18em] uppercase">Carla Bos</p>
+<p class="text-[11px] text-on-surface-variant mt-2">1 jaar geleden</p>
+</footer>
 </blockquote>
 </article>
-<article class="review-slide bg-white border border-surface-container-high shadow-[0_18px_45px_rgba(26,28,26,0.055)] p-8 lg:p-12" data-review-slide hidden>
-<div class="flex gap-1 mb-7" aria-label="5 sterren">
-<span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-</div>
-<blockquote class="review-quote border-l-2 border-secondary pl-6 lg:pl-8">
-<p class="review-quote__text text-on-surface italic leading-relaxed mb-5" data-full-quote="“Dankjewel Mo voor het top werk! Je bent precies, netjes en levert mooi kwaliteit! Fijn dat ik naar werk kon gaan, en terug kwam bij een schoon en net geverfde huis! Onze plinten en deuren zijn nu precies zoals we het wilden. Ook de balken van zolder zien er weer als nieuw uit!”" data-excerpt="“Dankjewel Mo voor het top werk! Je bent precies, netjes en levert mooi kwaliteit! Fijn dat ik naar werk kon gaan, en terug kwam bij een schoon en net geverfde huis!”">“Dankjewel Mo voor het top werk! Je bent precies, netjes en levert mooi kwaliteit! Fijn dat ik naar werk kon gaan, en terug kwam bij een schoon en net geverfde huis!”</p>
-<button class="review-read-more text-secondary font-label-caps tracking-widest uppercase border-b border-secondary pb-1 hover:text-primary hover:border-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-secondary transition-colors" type="button" aria-expanded="false">Lees volledige review</button>
-<footer class="mt-7"><p class="text-[11px] font-bold tracking-[0.18em] uppercase">Anne-Sophie Loue</p><p class="text-[11px] text-on-surface-variant mt-2">2 jaar geleden</p></footer>
-</blockquote>
-</article>
-</div>
-<div class="review-carousel__controls mt-7 flex items-center justify-between gap-5">
-<button class="review-carousel__arrow" type="button" aria-label="Vorige review" data-review-prev><span class="material-symbols-outlined" aria-hidden="true">arrow_back</span></button>
-<div class="flex items-center justify-center gap-3" aria-label="Review navigatie">
-<button class="review-carousel__dot is-active" type="button" aria-label="Toon review 1" aria-current="true" data-review-dot></button>
-<button class="review-carousel__dot" type="button" aria-label="Toon review 2" data-review-dot></button>
-<button class="review-carousel__dot" type="button" aria-label="Toon review 3" data-review-dot></button>
-<button class="review-carousel__toggle" type="button" aria-label="Pauzeer automatische reviews" data-review-toggle><span class="material-symbols-outlined" aria-hidden="true">pause</span></button>
-</div>
-<button class="review-carousel__arrow" type="button" aria-label="Volgende review" data-review-next><span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></button>
 </div>
 </div>
 </div>
@@ -782,190 +679,19 @@
 
         initSlider(1);
 
-        // Review Carousel Logic
-        document.querySelectorAll('[data-review-carousel]').forEach((reviewCarousel) => {
-            if (reviewCarousel.dataset.reviewCarouselInitialized === 'true') {
+        // Review read-more toggles
+        document.querySelectorAll('.review-read-more').forEach((button) => {
+            const text = button.previousElementSibling;
+            if (!text || !text.dataset.reviewFull || !text.dataset.reviewExcerpt) {
                 return;
             }
-            reviewCarousel.dataset.reviewCarouselInitialized = 'true';
 
-            const slides = Array.from(reviewCarousel.querySelectorAll('[data-review-slide]'));
-            const dots = Array.from(reviewCarousel.querySelectorAll('[data-review-dot]'));
-            const prevButton = reviewCarousel.querySelector('[data-review-prev]');
-            const nextButton = reviewCarousel.querySelector('[data-review-next]');
-            const toggleButton = reviewCarousel.querySelector('[data-review-toggle]');
-            const toggleIcon = toggleButton ? toggleButton.querySelector('.material-symbols-outlined') : null;
-            const reduceMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-            const autoRotateDelay = 8000;
-            let activeIndex = 0;
-            let touchStartX = 0;
-            let autoRotateTimer = null;
-            let transitionTimer = null;
-            let isUserPaused = false;
-            let isHoverPaused = false;
-            let isFocusPaused = false;
-            let isTabHidden = document.hidden;
-            let isReducedMotion = reduceMotionQuery.matches;
-
-            function canAutoRotate() {
-                return !isReducedMotion && !isUserPaused && !isHoverPaused && !isFocusPaused && !isTabHidden;
-            }
-
-            function updateToggleButton() {
-                if (!toggleButton || !toggleIcon) {
-                    return;
-                }
-                const isPlaying = !isReducedMotion && !isUserPaused;
-                toggleButton.setAttribute('aria-label', isPlaying ? 'Pauzeer automatische reviews' : 'Start automatische reviews');
-                toggleIcon.textContent = isPlaying ? 'pause' : 'play_arrow';
-                toggleButton.setAttribute('aria-pressed', String(!isPlaying));
-            }
-
-            function stopAutoRotate() {
-                if (autoRotateTimer) {
-                    window.clearTimeout(autoRotateTimer);
-                    autoRotateTimer = null;
-                }
-            }
-
-            function scheduleAutoRotate() {
-                stopAutoRotate();
-                updateToggleButton();
-                if (!canAutoRotate() || slides.length < 2) {
-                    return;
-                }
-                autoRotateTimer = window.setTimeout(() => {
-                    setSlide(activeIndex + 1);
-                    scheduleAutoRotate();
-                }, autoRotateDelay);
-            }
-
-            function setSlide(index) {
-                activeIndex = (index + slides.length) % slides.length;
-                if (transitionTimer) {
-                    window.clearTimeout(transitionTimer);
-                    transitionTimer = null;
-                }
-
-                slides.forEach((slide) => {
-                    slide.hidden = false;
-                });
-
-                window.requestAnimationFrame(() => {
-                    slides.forEach((slide, slideIndex) => {
-                        const isActive = slideIndex === activeIndex;
-                        slide.classList.toggle('is-active', isActive);
-                        slide.setAttribute('aria-hidden', String(!isActive));
-                        slide.querySelectorAll('button, a').forEach((control) => {
-                            control.tabIndex = isActive ? 0 : -1;
-                        });
-                    });
-
-                    transitionTimer = window.setTimeout(() => {
-                        slides.forEach((slide, slideIndex) => {
-                            slide.hidden = slideIndex !== activeIndex;
-                        });
-                    }, isReducedMotion ? 0 : 240);
-                });
-
-                dots.forEach((dot, dotIndex) => {
-                    const isActive = dotIndex === activeIndex;
-                    dot.classList.toggle('is-active', isActive);
-                    if (isActive) {
-                        dot.setAttribute('aria-current', 'true');
-                    } else {
-                        dot.removeAttribute('aria-current');
-                    }
-                });
-            }
-
-            function manualSetSlide(index) {
-                setSlide(index);
-                scheduleAutoRotate();
-            }
-
-            reviewCarousel.querySelectorAll('.review-read-more').forEach((button) => {
-                const text = button.previousElementSibling;
-                const fullQuote = text.dataset.fullQuote;
-                const excerpt = text.dataset.excerpt;
-                if (fullQuote === excerpt) {
-                    button.classList.add('hidden');
-                    return;
-                }
-                button.addEventListener('click', () => {
-                    const isExpanded = button.getAttribute('aria-expanded') === 'true';
-                    text.textContent = isExpanded ? excerpt : fullQuote;
-                    button.textContent = isExpanded ? 'Lees volledige review' : 'Toon minder';
-                    button.setAttribute('aria-expanded', String(!isExpanded));
-                });
+            button.addEventListener('click', () => {
+                const isExpanded = button.getAttribute('aria-expanded') === 'true';
+                text.textContent = isExpanded ? text.dataset.reviewExcerpt : text.dataset.reviewFull;
+                button.textContent = isExpanded ? 'Lees volledige review' : 'Toon minder';
+                button.setAttribute('aria-expanded', String(!isExpanded));
             });
-
-            prevButton.addEventListener('click', () => manualSetSlide(activeIndex - 1));
-            nextButton.addEventListener('click', () => manualSetSlide(activeIndex + 1));
-            dots.forEach((dot, dotIndex) => dot.addEventListener('click', () => manualSetSlide(dotIndex)));
-            if (toggleButton) {
-                toggleButton.addEventListener('click', () => {
-                    isUserPaused = !isUserPaused;
-                    scheduleAutoRotate();
-                });
-            }
-            reviewCarousel.addEventListener('mouseenter', () => {
-                isHoverPaused = true;
-                scheduleAutoRotate();
-            });
-            reviewCarousel.addEventListener('mouseleave', () => {
-                isHoverPaused = false;
-                scheduleAutoRotate();
-            });
-            reviewCarousel.addEventListener('focusin', () => {
-                isFocusPaused = true;
-                scheduleAutoRotate();
-            });
-            reviewCarousel.addEventListener('focusout', () => {
-                window.setTimeout(() => {
-                    isFocusPaused = reviewCarousel.contains(document.activeElement);
-                    scheduleAutoRotate();
-                }, 0);
-            });
-            document.addEventListener('visibilitychange', () => {
-                isTabHidden = document.hidden;
-                scheduleAutoRotate();
-            });
-            reviewCarousel.addEventListener('keydown', (event) => {
-                if (event.key === 'ArrowLeft') {
-                    event.preventDefault();
-                    manualSetSlide(activeIndex - 1);
-                }
-                if (event.key === 'ArrowRight') {
-                    event.preventDefault();
-                    manualSetSlide(activeIndex + 1);
-                }
-            });
-            reviewCarousel.addEventListener('touchstart', (event) => {
-                touchStartX = event.changedTouches[0].clientX;
-            }, { passive: true });
-            reviewCarousel.addEventListener('touchend', (event) => {
-                const touchEndX = event.changedTouches[0].clientX;
-                const deltaX = touchEndX - touchStartX;
-                if (Math.abs(deltaX) > 50) {
-                    manualSetSlide(activeIndex + (deltaX < 0 ? 1 : -1));
-                }
-            }, { passive: true });
-
-            if (typeof reduceMotionQuery.addEventListener === 'function') {
-                reduceMotionQuery.addEventListener('change', (event) => {
-                    isReducedMotion = event.matches;
-                    scheduleAutoRotate();
-                });
-            } else if (typeof reduceMotionQuery.addListener === 'function') {
-                reduceMotionQuery.addListener((event) => {
-                    isReducedMotion = event.matches;
-                    scheduleAutoRotate();
-                });
-            }
-
-            setSlide(0);
-            scheduleAutoRotate();
         });
 
 
