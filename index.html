@@ -162,6 +162,75 @@
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
+
+        .review-carousel {
+            touch-action: pan-y;
+        }
+        .review-carousel__viewport {
+            position: relative;
+            min-height: 300px;
+        }
+        .review-slide {
+            min-height: 300px;
+            opacity: 0;
+            transform: translateX(16px);
+            transition: opacity 220ms ease, transform 220ms ease;
+        }
+        .review-slide.is-active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .review-quote__text {
+            font-size: clamp(1.125rem, 1.4vw, 1.5rem);
+        }
+        .review-carousel__arrow {
+            width: 44px;
+            height: 44px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #cdc5bc;
+            color: #1a1c1a;
+            background: transparent;
+            transition: border-color 180ms ease, color 180ms ease, background-color 180ms ease;
+        }
+        .review-carousel__arrow:hover {
+            border-color: #7c5800;
+            color: #7c5800;
+            background: #ffffff;
+        }
+        .review-carousel__arrow:focus-visible,
+        .review-carousel__dot:focus-visible {
+            outline: 2px solid #7c5800;
+            outline-offset: 4px;
+        }
+        .review-carousel__dot {
+            width: 11px;
+            height: 11px;
+            border: 1px solid #7c766e;
+            background: transparent;
+            padding: 0;
+            border-radius: 999px;
+            transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
+        }
+        .review-carousel__dot.is-active {
+            border-color: #ffc659;
+            background: #ffc659;
+            transform: scale(1.08);
+        }
+        @media (max-width: 639px) {
+            .review-carousel__viewport,
+            .review-slide {
+                min-height: 360px;
+            }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .review-slide,
+            .review-carousel__arrow,
+            .review-carousel__dot {
+                transition: none;
+            }
+        }
     </style>
 </head>
 <body class="bg-background text-on-surface font-body-md overflow-x-hidden">
@@ -452,77 +521,74 @@
 <!-- Reviews Section -->
 <section class="py-section-padding-mobile lg:py-section-padding-desktop bg-surface-container-low" id="reviews">
 <div class="px-margin-mobile lg:px-10 xl:px-16 max-w-[1440px] mx-auto">
-<div class="text-center mb-10 lg:mb-16">
+<div class="text-center mb-10 lg:mb-12">
 <h2 class="font-headline-md text-headline-md leading-tight">Ervaringen van onze klanten.</h2>
 <div class="w-20 h-1 bg-secondary-container mx-auto mt-5"></div>
 </div>
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 max-w-6xl mx-auto items-stretch">
-<div class="bg-white p-8 lg:p-10 xl:p-12 flex flex-col justify-center shadow-[0_24px_60px_rgba(26,28,26,0.06)] border border-surface-container-high min-h-[320px] sm:min-h-[360px] lg:min-h-0">
-<p class="font-label-caps text-secondary tracking-widest mb-5">GOOGLE REVIEWS</p>
-<h3 class="font-headline-sm text-headline-sm mb-5">Wat klanten over ons zeggen</h3>
-<div class="flex space-x-1 mb-3" aria-label="Vijf sterren beoordeling">
-<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<div class="reviews-intro max-w-3xl mx-auto mb-10 lg:mb-12 text-center">
+<div class="flex justify-center gap-1 mb-3" aria-label="Vijf sterren beoordeling">
+<span class="material-symbols-outlined text-secondary text-[19px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary text-[19px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary text-[19px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary text-[19px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary text-[19px]" style="font-variation-settings: 'FILL' 1;">star</span>
 </div>
-<p class="text-sm font-bold tracking-widest uppercase text-on-surface mb-6">Echte ervaringen van klanten</p>
-<p class="text-on-surface-variant leading-relaxed mb-8 max-w-xl">Klanten waarderen onze nette werkwijze, duidelijke afspraken en oog voor detail. Bekijk onze recente ervaringen op Google.</p>
-<a class="inline-flex self-start items-center gap-2 border-b border-primary pb-1 text-primary font-nav-link text-sm uppercase tracking-wider hover:text-secondary hover:border-secondary transition-colors" href="https://share.google/LeLFp1Pr14YgfNLCb" target="_blank" rel="noopener noreferrer">
+<p class="font-label-caps text-secondary tracking-widest mb-2">GOOGLE REVIEWS</p>
+<p class="text-sm font-bold tracking-widest uppercase text-on-surface mb-2">Echte ervaringen van klanten</p>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-4">Lees wat klanten zeggen over onze werkwijze, communicatie en afwerking.</p>
+<a class="inline-flex items-center gap-2 border-b border-primary pb-1 text-primary font-nav-link text-xs uppercase tracking-wider hover:text-secondary hover:border-secondary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-secondary transition-colors" href="https://share.google/LeLFp1Pr14YgfNLCb" target="_blank" rel="noopener noreferrer">
 <span>BEKIJK GOOGLE REVIEWS</span>
-<span class="material-symbols-outlined text-base">open_in_new</span>
+<span class="material-symbols-outlined text-base" aria-hidden="true">open_in_new</span>
 </a>
 </div>
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-<article class="bg-white p-7 lg:p-8 shadow-[0_24px_60px_rgba(26,28,26,0.06)] border border-surface-container-high">
-<div class="flex space-x-1 mb-5" aria-label="5 sterren">
+<div class="review-carousel max-w-5xl mx-auto" role="region" aria-label="Klantervaringen" data-review-carousel>
+<div class="review-carousel__viewport">
+<article class="review-slide is-active bg-white border border-surface-container-high shadow-[0_18px_45px_rgba(26,28,26,0.055)] p-8 lg:p-12" data-review-slide>
+<div class="flex gap-1 mb-7" aria-label="5 sterren">
 <span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
 <span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
 <span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
 <span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
 <span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
 </div>
-<blockquote class="border-l-4 border-secondary pl-5">
-<p class="text-on-surface-variant leading-relaxed italic mb-5">“Mo heeft onlangs ons huis voor en achter geschilderd. Professioneel, vriendelijk en komt afspraken na. Wij zijn erg tevreden over het resultaat.”</p>
-<footer>
-<p class="text-[10px] font-bold tracking-widest uppercase">Marlies Kesseler</p>
-<p class="text-[10px] text-on-surface-variant mt-1">9 maanden geleden</p>
+<blockquote class="review-quote border-l-2 border-secondary pl-6 lg:pl-8">
+<p class="review-quote__text text-on-surface italic leading-relaxed mb-5" data-full-quote="“Mo heeft onlangs ons huis voor en achter geschilderd. Professioneel, vriendelijk en komt afspraken na. Wij zijn erg tevreden over het resultaat.”" data-excerpt="“Mo heeft onlangs ons huis voor en achter geschilderd. Professioneel, vriendelijk en komt afspraken na. Wij zijn erg tevreden over het resultaat.”">“Mo heeft onlangs ons huis voor en achter geschilderd. Professioneel, vriendelijk en komt afspraken na. Wij zijn erg tevreden over het resultaat.”</p>
+<button class="review-read-more hidden text-secondary font-label-caps tracking-widest uppercase border-b border-secondary pb-1 hover:text-primary hover:border-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-secondary transition-colors" type="button" aria-expanded="false">Lees volledige review</button>
+<footer class="mt-7">
+<p class="text-[11px] font-bold tracking-[0.18em] uppercase">Marlies Kesseler</p>
+<p class="text-[11px] text-on-surface-variant mt-2">9 maanden geleden</p>
 </footer>
 </blockquote>
 </article>
-<article class="bg-white p-7 lg:p-8 shadow-[0_24px_60px_rgba(26,28,26,0.06)] border border-surface-container-high">
-<div class="flex space-x-1 mb-5" aria-label="5 sterren">
-<span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<article class="review-slide bg-white border border-surface-container-high shadow-[0_18px_45px_rgba(26,28,26,0.055)] p-8 lg:p-12" data-review-slide hidden>
+<div class="flex gap-1 mb-7" aria-label="5 sterren">
+<span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
 </div>
-<blockquote class="border-l-4 border-secondary pl-5">
-<p class="text-on-surface-variant leading-relaxed italic mb-5">“Mo en zijn collega’s zijn goud! Geweldig schilderwerk gedaan, binnen en buiten, netjes, precies en met oog voor detail. Heel betrouwbaar ook. Mo is heel lief, muzikaal, aardig en altijd vrolijk. Ons huis was bij hem in perfecte handen. We zijn heel blij met Mo! Dank je wel, ons huis ziet er dankzij jullie prachtig uit.”</p>
-<footer>
-<p class="text-[10px] font-bold tracking-widest uppercase">Carla Bos</p>
-<p class="text-[10px] text-on-surface-variant mt-1">1 jaar geleden</p>
-</footer>
+<blockquote class="review-quote border-l-2 border-secondary pl-6 lg:pl-8">
+<p class="review-quote__text text-on-surface italic leading-relaxed mb-5" data-full-quote="“Mo en zijn collega’s zijn goud! Geweldig schilderwerk gedaan, binnen en buiten, netjes, precies en met oog voor detail. Heel betrouwbaar ook. Mo is heel lief, muzikaal, aardig en altijd vrolijk. Ons huis was bij hem in perfecte handen. We zijn heel blij met Mo! Dank je wel, ons huis ziet er dankzij jullie prachtig uit.”" data-excerpt="“Mo en zijn collega’s zijn goud! Geweldig schilderwerk gedaan, binnen en buiten, netjes, precies en met oog voor detail. Heel betrouwbaar ook.”">“Mo en zijn collega’s zijn goud! Geweldig schilderwerk gedaan, binnen en buiten, netjes, precies en met oog voor detail. Heel betrouwbaar ook.”</p>
+<button class="review-read-more text-secondary font-label-caps tracking-widest uppercase border-b border-secondary pb-1 hover:text-primary hover:border-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-secondary transition-colors" type="button" aria-expanded="false">Lees volledige review</button>
+<footer class="mt-7"><p class="text-[11px] font-bold tracking-[0.18em] uppercase">Carla Bos</p><p class="text-[11px] text-on-surface-variant mt-2">1 jaar geleden</p></footer>
 </blockquote>
 </article>
-<article class="bg-white p-7 lg:p-8 shadow-[0_24px_60px_rgba(26,28,26,0.06)] border border-surface-container-high sm:col-span-2">
-<div class="flex space-x-1 mb-5" aria-label="5 sterren">
-<span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<article class="review-slide bg-white border border-surface-container-high shadow-[0_18px_45px_rgba(26,28,26,0.055)] p-8 lg:p-12" data-review-slide hidden>
+<div class="flex gap-1 mb-7" aria-label="5 sterren">
+<span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
 </div>
-<blockquote class="border-l-4 border-secondary pl-5">
-<p class="text-on-surface-variant leading-relaxed italic mb-5">“Dankjewel Mo voor het top werk! Je bent precies, netjes en levert mooi kwaliteit! Fijn dat ik naar werk kon gaan, en terug kwam bij een schoon en net geverfde huis! Onze plinten en deuren zijn nu precies zoals we het wilden. Ook de balken van zolder zien er weer als nieuw uit!”</p>
-<footer>
-<p class="text-[10px] font-bold tracking-widest uppercase">Anne-Sophie Loue</p>
-<p class="text-[10px] text-on-surface-variant mt-1">2 jaar geleden</p>
-</footer>
+<blockquote class="review-quote border-l-2 border-secondary pl-6 lg:pl-8">
+<p class="review-quote__text text-on-surface italic leading-relaxed mb-5" data-full-quote="“Dankjewel Mo voor het top werk! Je bent precies, netjes en levert mooi kwaliteit! Fijn dat ik naar werk kon gaan, en terug kwam bij een schoon en net geverfde huis! Onze plinten en deuren zijn nu precies zoals we het wilden. Ook de balken van zolder zien er weer als nieuw uit!”" data-excerpt="“Dankjewel Mo voor het top werk! Je bent precies, netjes en levert mooi kwaliteit! Fijn dat ik naar werk kon gaan, en terug kwam bij een schoon en net geverfde huis!”">“Dankjewel Mo voor het top werk! Je bent precies, netjes en levert mooi kwaliteit! Fijn dat ik naar werk kon gaan, en terug kwam bij een schoon en net geverfde huis!”</p>
+<button class="review-read-more text-secondary font-label-caps tracking-widest uppercase border-b border-secondary pb-1 hover:text-primary hover:border-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-secondary transition-colors" type="button" aria-expanded="false">Lees volledige review</button>
+<footer class="mt-7"><p class="text-[11px] font-bold tracking-[0.18em] uppercase">Anne-Sophie Loue</p><p class="text-[11px] text-on-surface-variant mt-2">2 jaar geleden</p></footer>
 </blockquote>
 </article>
+</div>
+<div class="review-carousel__controls mt-7 flex items-center justify-between gap-5">
+<button class="review-carousel__arrow" type="button" aria-label="Vorige review" data-review-prev><span class="material-symbols-outlined" aria-hidden="true">arrow_back</span></button>
+<div class="flex items-center justify-center gap-3" aria-label="Review navigatie">
+<button class="review-carousel__dot is-active" type="button" aria-label="Toon review 1" aria-current="true" data-review-dot></button>
+<button class="review-carousel__dot" type="button" aria-label="Toon review 2" data-review-dot></button>
+<button class="review-carousel__dot" type="button" aria-label="Toon review 3" data-review-dot></button>
+</div>
+<button class="review-carousel__arrow" type="button" aria-label="Volgende review" data-review-next><span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></button>
 </div>
 </div>
 </div>
@@ -687,6 +753,82 @@
         }
 
         initSlider(1);
+
+        // Review Carousel Logic
+        const reviewCarousel = document.querySelector('[data-review-carousel]');
+        if (reviewCarousel) {
+            const slides = Array.from(reviewCarousel.querySelectorAll('[data-review-slide]'));
+            const dots = Array.from(reviewCarousel.querySelectorAll('[data-review-dot]'));
+            const prevButton = reviewCarousel.querySelector('[data-review-prev]');
+            const nextButton = reviewCarousel.querySelector('[data-review-next]');
+            let activeIndex = 0;
+            let touchStartX = 0;
+
+            function setSlide(index) {
+                activeIndex = (index + slides.length) % slides.length;
+                slides.forEach((slide, slideIndex) => {
+                    const isActive = slideIndex === activeIndex;
+                    slide.hidden = !isActive;
+                    slide.classList.toggle('is-active', isActive);
+                    slide.setAttribute('aria-hidden', String(!isActive));
+                    slide.querySelectorAll('button, a').forEach((control) => {
+                        control.tabIndex = isActive ? 0 : -1;
+                    });
+                });
+                dots.forEach((dot, dotIndex) => {
+                    const isActive = dotIndex === activeIndex;
+                    dot.classList.toggle('is-active', isActive);
+                    if (isActive) {
+                        dot.setAttribute('aria-current', 'true');
+                    } else {
+                        dot.removeAttribute('aria-current');
+                    }
+                });
+            }
+
+            reviewCarousel.querySelectorAll('.review-read-more').forEach((button) => {
+                const text = button.previousElementSibling;
+                const fullQuote = text.dataset.fullQuote;
+                const excerpt = text.dataset.excerpt;
+                if (fullQuote === excerpt) {
+                    button.classList.add('hidden');
+                    return;
+                }
+                button.addEventListener('click', () => {
+                    const isExpanded = button.getAttribute('aria-expanded') === 'true';
+                    text.textContent = isExpanded ? excerpt : fullQuote;
+                    button.textContent = isExpanded ? 'Lees volledige review' : 'Toon minder';
+                    button.setAttribute('aria-expanded', String(!isExpanded));
+                });
+            });
+
+            prevButton.addEventListener('click', () => setSlide(activeIndex - 1));
+            nextButton.addEventListener('click', () => setSlide(activeIndex + 1));
+            dots.forEach((dot, dotIndex) => dot.addEventListener('click', () => setSlide(dotIndex)));
+            reviewCarousel.addEventListener('keydown', (event) => {
+                if (event.key === 'ArrowLeft') {
+                    event.preventDefault();
+                    setSlide(activeIndex - 1);
+                }
+                if (event.key === 'ArrowRight') {
+                    event.preventDefault();
+                    setSlide(activeIndex + 1);
+                }
+            });
+            reviewCarousel.addEventListener('touchstart', (event) => {
+                touchStartX = event.changedTouches[0].clientX;
+            }, { passive: true });
+            reviewCarousel.addEventListener('touchend', (event) => {
+                const touchEndX = event.changedTouches[0].clientX;
+                const deltaX = touchEndX - touchStartX;
+                if (Math.abs(deltaX) > 50) {
+                    setSlide(activeIndex + (deltaX < 0 ? 1 : -1));
+                }
+            }, { passive: true });
+
+            setSlide(0);
+        }
+
 
         // Sticky Header Shrink Effect
         window.addEventListener('scroll', () => {
