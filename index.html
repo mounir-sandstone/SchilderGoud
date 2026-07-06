@@ -163,15 +163,26 @@
         }
     </style>
 </head>
-<body class="bg-background text-on-surface font-body-md">
-<!-- Mobile Header (Shared Component Mapping) -->
-<header class="w-full top-0 sticky z-50 bg-background border-b border-outline-variant transition-all duration-200 ease-in-out">
-<div class="flex justify-between items-center px-margin-mobile py-4 max-w-[1440px] mx-auto">
-<div class="flex flex-col">
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- Header (Shared Component Mapping) -->
+<header class="w-full top-0 sticky z-50 bg-background/95 backdrop-blur border-b border-outline-variant transition-all duration-200 ease-in-out">
+<div class="flex justify-between items-center px-margin-mobile lg:px-10 xl:px-16 py-4 max-w-[1440px] mx-auto">
+<a class="flex flex-col" href="#" aria-label="SchilderGoud home">
 <span class="font-display-lg text-headline-sm tracking-tighter text-primary">SchilderGoud</span>
 <span class="text-[10px] font-label-caps text-on-surface-variant uppercase tracking-[0.2em]">Rijswijk &amp; Omgeving</span>
+</a>
+<nav class="hidden lg:flex items-center gap-8 xl:gap-10 font-nav-link text-[12px] uppercase tracking-[0.12em] text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#diensten">Diensten</a>
+<a class="hover:text-primary transition-colors" href="#projecten">Projecten</a>
+<a class="hover:text-primary transition-colors" href="#voor-na">Voor &amp; na</a>
+<a class="hover:text-primary transition-colors" href="#over-ons">Over ons</a>
+<a class="hover:text-primary transition-colors" href="#contact">Contact</a>
+</nav>
+<div class="hidden lg:flex items-center gap-5">
+<a class="text-[12px] font-bold text-on-surface-variant hover:text-primary transition-colors" href="tel:+310612345678">06 12 34 56 78</a>
+<a class="py-3 px-5 bg-secondary-container text-on-secondary-container font-bold text-[11px] tracking-widest hover:bg-secondary-fixed transition-colors" href="#contact">Vraag een offerte aan</a>
 </div>
-<button class="p-2 text-primary" id="mobileMenuBtn">
+<button class="lg:hidden p-2 text-primary" id="mobileMenuBtn" aria-label="Open mobiel menu" aria-expanded="false" aria-controls="mobileMenu">
 <span class="material-symbols-outlined text-[32px]">menu</span>
 </button>
 </div>
@@ -180,7 +191,7 @@
 <div class="fixed inset-0 z-[60] bg-background translate-x-full transition-transform duration-300 ease-in-out hidden" id="mobileMenu">
 <div class="flex flex-col h-full">
 <div class="flex justify-end p-margin-mobile">
-<button class="p-2 text-primary" id="closeMenuBtn">
+<button class="p-2 text-primary" id="closeMenuBtn" aria-label="Sluit mobiel menu">
 <span class="material-symbols-outlined text-[32px]">close</span>
 </button>
 </div>
@@ -199,28 +210,28 @@
 </div>
 <main>
 <!-- Hero Section -->
-<section class="relative h-[85vh] flex flex-col justify-end overflow-hidden">
+<section class="relative min-h-[640px] h-[85vh] lg:min-h-[760px] flex flex-col justify-end overflow-hidden">
 <div class="absolute inset-0 z-0">
-<img class="w-full h-full object-cover" data-alt="A cinematic, high-resolution architectural photograph of a luxury Dutch villa with crisp white painted brickwork and elegant dark charcoal window shutters. The lighting is the golden hour, casting long, soft shadows and highlighting the impeccable texture of the professional paint finish. The scene is clean, aspirational, and reflects high-end craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBH7BU3H2eQKChyKmzS3h-BaY6NHuIGwrMpJx5spkzgmmB4jy_l6bO2zNswip8R2NaaCXxdDJGaeaeuynwMVROVUUok74wPxPRJtjFzgSr3MLqvXSRIRt0YShI3JmJHl8UzkJzoh0eFpNmXtBccUSoSlOZkGbpjdJq-_uweYerHNSs4_QJltPFQgkTarzz_IlO3E_VB9Wrg9PPiZIldaMiFNq11aVuueLLLVkZootxHfimESaSPug"/>
+<img class="w-full h-full object-cover" alt="A cinematic, high-resolution architectural photograph of a luxury Dutch villa with crisp white painted brickwork and elegant dark charcoal window shutters. The lighting is the golden hour, casting long, soft shadows and highlighting the impeccable texture of the professional paint finish. The scene is clean, aspirational, and reflects high-end craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBH7BU3H2eQKChyKmzS3h-BaY6NHuIGwrMpJx5spkzgmmB4jy_l6bO2zNswip8R2NaaCXxdDJGaeaeuynwMVROVUUok74wPxPRJtjFzgSr3MLqvXSRIRt0YShI3JmJHl8UzkJzoh0eFpNmXtBccUSoSlOZkGbpjdJq-_uweYerHNSs4_QJltPFQgkTarzz_IlO3E_VB9Wrg9PPiZIldaMiFNq11aVuueLLLVkZootxHfimESaSPug"/>
 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
 </div>
-<div class="relative z-10 px-margin-mobile pb-12 text-white">
+<div class="relative z-10 px-margin-mobile lg:px-10 xl:px-16 pb-12 md:pb-20 lg:pb-28 text-white max-w-[1440px] mx-auto w-full">
 <p class="font-label-caps text-secondary-container mb-2 tracking-widest">GOED VOORBEREID. GOUD AFGEWERKT.</p>
-<h1 class="font-display-lg-mobile text-display-lg-mobile mb-6 leading-tight">
+<h1 class="font-display-lg-mobile text-display-lg-mobile md:text-[52px] lg:text-[68px] xl:text-[72px] mb-6 leading-tight max-w-4xl">
                     Schilderwerk waar je elke dag <span class="text-secondary-container">het verschil</span> ziet.
                 </h1>
-<p class="font-body-md text-surface-variant/90 mb-8 max-w-sm">
+<p class="font-body-md md:text-body-lg text-surface-variant/90 mb-8 max-w-sm md:max-w-xl">
                     Van buitengevel tot binnendetail. Netjes, duurzaam en tot in de puntjes afgewerkt door lokale vakmensen.
                 </p>
-<div class="flex flex-col space-y-4">
-<a class="w-full py-4 bg-secondary-container text-on-secondary-container text-center font-bold" href="#contact">VRAAG EEN OFFERTE AAN</a>
-<a class="w-full py-4 border border-white/40 text-center font-bold backdrop-blur-sm" href="#projecten">BEKIJK ONS WERK</a>
+<div class="flex flex-col sm:flex-row gap-4 sm:gap-5 max-w-xl">
+<a class="w-full sm:w-auto py-4 px-8 bg-secondary-container text-on-secondary-container text-center font-bold" href="#contact">VRAAG EEN OFFERTE AAN</a>
+<a class="w-full sm:w-auto py-4 px-8 border border-white/40 text-center font-bold backdrop-blur-sm" href="#projecten">BEKIJK ONS WERK</a>
 </div>
 </div>
 </section>
 <!-- Trust Bar -->
-<section class="bg-surface-container-low py-8 overflow-x-auto hide-scrollbar">
-<div class="flex items-center space-x-12 px-margin-mobile min-w-max">
+<section class="bg-surface-container-low py-8 overflow-x-auto md:overflow-visible hide-scrollbar">
+<div class="flex items-center space-x-12 md:space-x-0 md:justify-center md:gap-14 lg:gap-24 px-margin-mobile lg:px-10 xl:px-16 md:min-w-0 min-w-max max-w-[1440px] mx-auto">
 <div class="flex items-center space-x-3">
 <span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">verified</span>
 <span class="font-label-caps text-[10px] whitespace-nowrap">VRIJBLIJVENDE OFFERTE</span>
@@ -236,57 +247,59 @@
 </div>
 </section>
 <!-- USP Section -->
-<section class="py-section-padding-mobile px-margin-mobile bg-background">
-<div class="grid grid-cols-2 gap-8">
+<section class="py-section-padding-mobile lg:py-section-padding-desktop px-margin-mobile lg:px-10 xl:px-16 bg-background" id="over-ons">
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10 max-w-[1440px] mx-auto">
 <div class="flex flex-col space-y-3">
-<span class="material-symbols-outlined text-4xl text-outline">verified</span>
+<span class="material-symbols-outlined text-4xl lg:text-5xl text-outline">verified</span>
 <h3 class="font-headline-sm text-lg">Vakwerk &amp; Ervaring</h3>
 <p class="text-xs text-on-surface-variant leading-relaxed">Jarenlange ervaring met particulier en zakelijk schilderwerk.</p>
 </div>
 <div class="flex flex-col space-y-3">
-<span class="material-symbols-outlined text-4xl text-outline">workspace_premium</span>
+<span class="material-symbols-outlined text-4xl lg:text-5xl text-outline">workspace_premium</span>
 <h3 class="font-headline-sm text-lg">Kwaliteit in Detail</h3>
 <p class="text-xs text-on-surface-variant leading-relaxed">Voorbereiding en afwerking op het hoogste niveau.</p>
 </div>
 <div class="flex flex-col space-y-3">
-<span class="material-symbols-outlined text-4xl text-outline">calendar_month</span>
+<span class="material-symbols-outlined text-4xl lg:text-5xl text-outline">calendar_month</span>
 <h3 class="font-headline-sm text-lg">Duidelijke Afspraken</h3>
 <p class="text-xs text-on-surface-variant leading-relaxed">Heldere planning en eerlijke offertes zonder verrassingen.</p>
 </div>
 <div class="flex flex-col space-y-3">
-<span class="material-symbols-outlined text-4xl text-outline">home</span>
+<span class="material-symbols-outlined text-4xl lg:text-5xl text-outline">home</span>
 <h3 class="font-headline-sm text-lg">Binnen &amp; Buiten</h3>
 <p class="text-xs text-on-surface-variant leading-relaxed">Van gevel tot interieur, van houtwerk tot stucwerk.</p>
 </div>
 </div>
 </section>
 <!-- Before & After (Slider Component) -->
-<section class="py-section-padding-mobile bg-surface-container" id="voor-na">
-<div class="px-margin-mobile mb-8">
+<section class="py-section-padding-mobile lg:py-section-padding-desktop bg-surface-container" id="voor-na">
+<div class="px-margin-mobile lg:px-10 xl:px-16 mb-8 lg:mb-12 max-w-[1440px] mx-auto">
 <span class="font-label-caps text-secondary tracking-widest block mb-2">HET VERSCHIL</span>
 <h2 class="font-headline-md text-headline-md leading-tight">Vakmanschap tot in de kleinste details</h2>
 </div>
-<div class="px-margin-mobile flex overflow-x-auto space-x-6 pb-4 hide-scrollbar snap-x">
-<div class="snap-center min-w-[85vw]">
-<div class="before-after-slider mb-4">
-<img class="image-before" data-alt="A before-shot of a weathered, peeling wooden window frame on an old Dutch brick house. The wood is grayed, with visible cracks and old paint flakes, showing neglect and exposure to elements." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCi3MXKYXxrVi62yGFAs4l-jkRNfQwh73k9_jDTvkbQxHP--hZ-vjFBymZXC5sOzP3GWt15sKtIFF6edBFe7TD51hbS7IJSbgtpdQ-2-J509YXjZO1R_HQ2sGHR5iqbfrZsEbgxdWxj9hC97QEebqmNnmTyUddVxDkru8X-JeOsVtI-a7zAiuP7kcCv7uKyAeKVN_lMQll3uB95vwrFB_krVkSJxLARrkpwCU_ZIQH7ltXZOaeWuw"/>
+<div class="px-margin-mobile lg:px-10 xl:px-16 flex lg:grid lg:grid-cols-2 overflow-x-auto lg:overflow-visible space-x-6 lg:space-x-0 lg:gap-8 pb-4 hide-scrollbar snap-x max-w-[1440px] mx-auto">
+<div class="snap-center min-w-[85vw] lg:min-w-0">
+<div class="before-after-slider lg:aspect-[4/3] mb-4">
+<img class="image-before" alt="A before-shot of a weathered, peeling wooden window frame on an old Dutch brick house. The wood is grayed, with visible cracks and old paint flakes, showing neglect and exposure to elements." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCi3MXKYXxrVi62yGFAs4l-jkRNfQwh73k9_jDTvkbQxHP--hZ-vjFBymZXC5sOzP3GWt15sKtIFF6edBFe7TD51hbS7IJSbgtpdQ-2-J509YXjZO1R_HQ2sGHR5iqbfrZsEbgxdWxj9hC97QEebqmNnmTyUddVxDkru8X-JeOsVtI-a7zAiuP7kcCv7uKyAeKVN_lMQll3uB95vwrFB_krVkSJxLARrkpwCU_ZIQH7ltXZOaeWuw"/>
 <div class="image-after" id="after-1">
-<img class="w-full h-full object-cover" data-alt="An after-shot of the exact same wooden window frame, now perfectly restored with a smooth, glossy dark charcoal paint. The surrounding white bricks are also freshly cleaned, and the overall appearance is pristine and luxurious." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBT92J1DfDBC3Xlq5BfYYwHp57w_qXI-Av0oAMczhAhL1ZxHv9AeWZmJWAJZMxtDBCUsOpJAUYpVANgR6BIqUHc8uOdvspDjEr6HhEPEmWxwWzPvwlkrpBjImAU1Xh7JaX6rAfn_9_qzEBmvyVvedsKX38e8-xfFoiu2bObaopMoyULeAkLoMGp6NP7mKulsS8DIBhPe67wt2B4WFbZr0UiAIrWEmnRDAhrV8QCa6p4Q7Jcxneowg"/>
+<img class="w-full h-full object-cover" alt="An after-shot of the exact same wooden window frame, now perfectly restored with a smooth, glossy dark charcoal paint. The surrounding white bricks are also freshly cleaned, and the overall appearance is pristine and luxurious." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBT92J1DfDBC3Xlq5BfYYwHp57w_qXI-Av0oAMczhAhL1ZxHv9AeWZmJWAJZMxtDBCUsOpJAUYpVANgR6BIqUHc8uOdvspDjEr6HhEPEmWxwWzPvwlkrpBjImAU1Xh7JaX6rAfn_9_qzEBmvyVvedsKX38e8-xfFoiu2bObaopMoyULeAkLoMGp6NP7mKulsS8DIBhPe67wt2B4WFbZr0UiAIrWEmnRDAhrV8QCa6p4Q7Jcxneowg"/>
 </div>
-<div class="before-after-handle" id="handle-1" style="left: 50%;"></div>
+<div class="before-after-handle" id="handle-1" role="slider" tabindex="0" aria-label="Voor en na slider Houtrot Reparatie" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" style="left: 50%;"></div>
 <div class="absolute bottom-4 left-4 bg-black/50 text-white px-3 py-1 text-[10px] font-label-caps backdrop-blur-sm">VOOR</div>
 <div class="absolute bottom-4 right-4 bg-secondary text-white px-3 py-1 text-[10px] font-label-caps">NA</div>
 </div>
 <h4 class="font-headline-sm text-base">Houtrot Reparatie</h4>
 <p class="text-xs text-on-surface-variant mt-1 italic">Kozijn &amp; dorpel restauratie</p>
 </div>
-<div class="snap-center min-w-[85vw]">
-<div class="before-after-slider mb-4">
-<img class="image-before" data-alt="An interior stairway before painting: the banister is worn, dark wood with visible scuffs and scratches. The walls are a dingy cream color with uneven light marks." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqs6lkm_SaFZUUS8rcROqSnQR_F_Xwl5-k-8GMTRPl2RQyhkrVLo4zrcm1KTkmK6vCkuDmGNiqnh3jMzYhwdWHC0uUZ3MrTAaQOMRmu3Bt5prrDwQ3mZ-stUhCieu-3_DMm9ml3KYmYbt9LntvLrtKWzO7KF31POu6SH7l8FxDUaQQ6M_K9aexfnjHyAh2TGa0Zwg5Cox5x613yLIqOtagJmzB_9OQwCyKryE5YmsAu_8bDBsswg"/>
+<div class="snap-center min-w-[85vw] lg:min-w-0">
+<div class="before-after-slider lg:aspect-[4/3] mb-4">
+<img class="image-before" alt="An interior stairway before painting: the banister is worn, dark wood with visible scuffs and scratches. The walls are a dingy cream color with uneven light marks." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqs6lkm_SaFZUUS8rcROqSnQR_F_Xwl5-k-8GMTRPl2RQyhkrVLo4zrcm1KTkmK6vCkuDmGNiqnh3jMzYhwdWHC0uUZ3MrTAaQOMRmu3Bt5prrDwQ3mZ-stUhCieu-3_DMm9ml3KYmYbt9LntvLrtKWzO7KF31POu6SH7l8FxDUaQQ6M_K9aexfnjHyAh2TGa0Zwg5Cox5x613yLIqOtagJmzB_9OQwCyKryE5YmsAu_8bDBsswg"/>
 <div class="image-after" id="after-2">
-<img class="w-full h-full object-cover" data-alt="The same interior stairway transformed: the banister is now a sharp, professional matte white, and the walls are a sophisticated warm taupe. The craftsmanship is flawless, reflecting light beautifully." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGDzc5V9m1YgZIaN3kmz3nvE84_4BjxuppAXVNbeYlsWDE9N93v8W87-HGPf8Ynm6R7zPQ5hNDP2j7zPUanA_BJ5JTRsO4D5KpwzHOipaEc-Pmu1w8L0XHIO3BYD9jbxlV2Ekl1As48PqhOj4FH0ZPZ30CSN6CncbK3PI7cBPLQEtaXBz8O3mhMQ0xv4Z8znEI8y3qPVCQjQGa_y2ROnfI7I9XCPg2WE1ZnvEBPMI_3PrwUvE4SA"/>
+<img class="w-full h-full object-cover" alt="The same interior stairway transformed: the banister is now a sharp, professional matte white, and the walls are a sophisticated warm taupe. The craftsmanship is flawless, reflecting light beautifully." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGDzc5V9m1YgZIaN3kmz3nvE84_4BjxuppAXVNbeYlsWDE9N93v8W87-HGPf8Ynm6R7zPQ5hNDP2j7zPUanA_BJ5JTRsO4D5KpwzHOipaEc-Pmu1w8L0XHIO3BYD9jbxlV2Ekl1As48PqhOj4FH0ZPZ30CSN6CncbK3PI7cBPLQEtaXBz8O3mhMQ0xv4Z8znEI8y3qPVCQjQGa_y2ROnfI7I9XCPg2WE1ZnvEBPMI_3PrwUvE4SA"/>
 </div>
-<div class="before-after-handle" id="handle-2" style="left: 50%;"></div>
+<div class="before-after-handle" id="handle-2" role="slider" tabindex="0" aria-label="Voor en na slider Binnenschilderwerk" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" style="left: 50%;"></div>
+<div class="absolute bottom-4 left-4 bg-black/50 text-white px-3 py-1 text-[10px] font-label-caps backdrop-blur-sm">VOOR</div>
+<div class="absolute bottom-4 right-4 bg-secondary text-white px-3 py-1 text-[10px] font-label-caps">NA</div>
 </div>
 <h4 class="font-headline-sm text-base">Binnenschilderwerk</h4>
 <p class="text-xs text-on-surface-variant mt-1 italic">Trap &amp; balustrade</p>
@@ -294,13 +307,14 @@
 </div>
 </section>
 <!-- Services Section (Bento Inspired Grid) -->
-<section class="py-section-padding-mobile px-margin-mobile" id="diensten">
+<section class="py-section-padding-mobile lg:py-section-padding-desktop px-margin-mobile lg:px-10 xl:px-16" id="diensten">
+<div class="max-w-[1440px] mx-auto">
 <span class="font-label-caps text-secondary tracking-widest block mb-2">ONZE DIENSTEN</span>
 <h2 class="font-headline-md text-headline-md leading-tight mb-8">Voor iedere klus de juiste oplossing.</h2>
-<div class="grid grid-cols-1 gap-6 gap-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
 <!-- Large Card -->
-<div class="group relative overflow-hidden h-[300px]">
-<img class="w-full h-full object-cover grayscale-[0.2] transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9vpMF290OmFgN_pWBXcbX9ToUibDj87rryDiQmGn_lRV0Jf1GNchXrhYRdIyJ1M4F2Lh9nPkuSW7CWqJ4HpH7-YUdwg3A8VDg8Fx4KLvxytCqegDDcVwoKoo-ZRg_Di-togkhNFHukc2BmwYkkiWUKjyqRkqwyhmGf1dsErSqpxYnKEh50pFztn44E5YjWeQqoHggy1zR1amqJdYOHbVysXM4Y7GRd33fk6cFT6_GZDv1VToLXMYo-1u_jJYJbnc"/>
+<div class="group relative overflow-hidden h-[300px] lg:h-auto lg:min-h-[560px] lg:col-span-7 lg:row-span-2">
+<img class="w-full h-full object-cover grayscale-[0.2] transition-transform duration-700 group-hover:scale-105" alt="Luxe buitenschilderwerk aan een verzorgde woning" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9vpMF290OmFgN_pWBXcbX9ToUibDj87rryDiQmGn_lRV0Jf1GNchXrhYRdIyJ1M4F2Lh9nPkuSW7CWqJ4HpH7-YUdwg3A8VDg8Fx4KLvxytCqegDDcVwoKoo-ZRg_Di-togkhNFHukc2BmwYkkiWUKjyqRkqwyhmGf1dsErSqpxYnKEh50pFztn44E5YjWeQqoHggy1zR1amqJdYOHbVysXM4Y7GRd33fk6cFT6_GZDv1VToLXMYo-1u_jJYJbnc"/>
 <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
 <div class="absolute bottom-0 p-6 text-white">
 <h3 class="font-headline-sm text-xl mb-2">Buitenschilderwerk</h3>
@@ -308,7 +322,7 @@
 </div>
 </div>
 <!-- 2-Column Grid -->
-<div class="grid grid-cols-2 gap-4 gap-6">
+<div class="grid grid-cols-2 lg:grid-cols-1 gap-4 lg:gap-6 lg:col-span-5">
 <div class="bg-surface-container-high p-6 flex flex-col justify-between">
 <div>
 <span class="material-symbols-outlined text-secondary mb-4">format_paint</span>
@@ -325,7 +339,7 @@
 </div>
 </div>
 <!-- Regular List-Style Cards -->
-<div class="space-y-4 space-y-6">
+<div class="space-y-4 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-6 lg:col-span-5">
 <div class="flex items-center p-4 border border-outline-variant">
 <div class="w-12 h-12 bg-secondary-container flex items-center justify-center mr-4">
 <span class="material-symbols-outlined text-on-secondary-container">texture</span>
@@ -346,13 +360,15 @@
 </div>
 </div>
 </div>
-<div class="mt-8">
-<button class="w-full py-4 border border-primary font-bold">ONTDEK ALLE DIENSTEN</button>
+<div class="mt-8 lg:mt-10">
+<a class="inline-flex w-full sm:w-auto justify-center py-4 px-8 border border-primary font-bold hover:bg-primary hover:text-white transition-colors" href="#contact">ONTDEK ALLE DIENSTEN</a>
+</div>
 </div>
 </section>
 <!-- Journey & Contact Form -->
-<section class="py-section-padding-mobile bg-primary text-white py-24" id="contact">
-<div class="px-margin-mobile">
+<section class="py-section-padding-mobile lg:py-section-padding-desktop bg-primary text-white" id="contact">
+<div class="px-margin-mobile lg:px-10 xl:px-16 max-w-[1440px] mx-auto lg:grid lg:grid-cols-2 lg:gap-16 xl:gap-24 items-start">
+<div>
 <span class="font-label-caps text-secondary-container tracking-widest block mb-4">ONZE AANPAK</span>
 <h2 class="font-headline-md text-headline-md leading-tight mb-12">In 5 stappen naar een gouden resultaat.</h2>
 <!-- Vertical Stepper -->
@@ -385,26 +401,47 @@
 <p class="text-xs text-surface-variant">Schoon en vakkundig.</p>
 </div>
 </div>
+<div class="relative flex space-x-6">
+<div class="z-10 w-6 h-6 rounded-full bg-secondary-container flex items-center justify-center shrink-0">
+<span class="text-[10px] font-bold text-on-secondary-container">4</span>
+</div>
+<div>
+<h4 class="font-bold text-base mb-1">Oplevering</h4>
+<p class="text-xs text-surface-variant">Samen controleren we het eindresultaat.</p>
+</div>
+</div>
+<div class="relative flex space-x-6">
+<div class="z-10 w-6 h-6 rounded-full bg-secondary-container flex items-center justify-center shrink-0">
+<span class="text-[10px] font-bold text-on-secondary-container">5</span>
+</div>
+<div>
+<h4 class="font-bold text-base mb-1">Nazorg</h4>
+<p class="text-xs text-surface-variant">Advies voor duurzaam onderhoud.</p>
+</div>
+</div>
+</div>
 </div>
 <!-- Form Card -->
-<div class="mt-20 bg-surface-container p-8 text-on-surface mt-24">
+<div class="mt-20 lg:mt-0 bg-surface-container p-8 md:p-10 text-on-surface">
 <h3 class="font-display-lg text-2xl mb-2">Vertel ons over je klus</h3>
 <p class="text-xs text-on-surface-variant mb-8">Binnen 1 werkdag reactie.</p>
 <form class="space-y-6">
 <div class="space-y-4">
-<input class="w-full bg-transparent border-outline p-2 focus:border-secondary outline-none text-sm bg-surface-container-low" placeholder="Naam" type="text"/>
-<input class="w-full bg-transparent border-outline p-2 focus:border-secondary outline-none text-sm bg-surface-container-low" placeholder="Telefoonnummer" type="tel"/>
-<input class="w-full bg-transparent border-outline p-2 focus:border-secondary outline-none text-sm bg-surface-container-low" placeholder="E-mailadres" type="email"/>
-<select class="w-full bg-transparent border-outline p-2 focus:border-secondary outline-none text-sm appearance-none bg-surface-container-low">
+<div class="md:grid md:grid-cols-2 md:gap-4 space-y-4 md:space-y-0">
+<input aria-label="Naam" class="w-full border border-outline-variant p-3 focus:border-secondary focus:ring-secondary text-sm bg-surface-container-low" placeholder="Naam" type="text"/>
+<input aria-label="Telefoonnummer" class="w-full border border-outline-variant p-3 focus:border-secondary focus:ring-secondary text-sm bg-surface-container-low" placeholder="Telefoonnummer" type="tel"/>
+</div>
+<input aria-label="E-mailadres" class="w-full border border-outline-variant p-3 focus:border-secondary focus:ring-secondary text-sm bg-surface-container-low" placeholder="E-mailadres" type="email"/>
+<select aria-label="Type klus" class="w-full border border-outline-variant p-3 focus:border-secondary focus:ring-secondary text-sm appearance-none bg-surface-container-low">
 <option>Type klus...</option>
 <option>Buitenschilderwerk</option>
 <option>Binnenschilderwerk</option>
 <option>Overig</option>
 </select>
-<textarea class="w-full bg-transparent border-outline p-2 focus:border-secondary outline-none text-sm resize-none bg-surface-container-low" placeholder="Omschrijf de klus" rows="4"></textarea>
+<textarea aria-label="Omschrijf de klus" class="w-full border border-outline-variant p-3 focus:border-secondary focus:ring-secondary text-sm resize-none bg-surface-container-low" placeholder="Omschrijf de klus" rows="4"></textarea>
 </div>
 <div class="bg-surface-container-high border-2 border-dashed border-outline-variant p-8 text-center cursor-pointer">
-<span class="material-symbols-outlined text-4xl text-outline mb-2">upload_file</span>
+<span class="material-symbols-outlined text-4xl lg:text-5xl text-outline mb-2">upload_file</span>
 <p class="text-[10px] font-label-caps">FOTO'S TOEVOEGEN (OPTIONEEL)</p>
 </div>
 <div class="flex items-start space-x-3">
@@ -416,12 +453,12 @@
 <span class="material-symbols-outlined text-lg">arrow_forward</span>
 </button>
 </form>
-<p class="text-[9px] text-center mt-6 text-on-surface-variant/60 italic italic">Jouw gegevens zijn veilig bij ons en worden niet gedeeld met derden.</p>
+<p class="text-[9px] text-center mt-6 text-on-surface-variant/60 italic">Jouw gegevens zijn veilig bij ons en worden niet gedeeld met derden.</p>
 </div>
 </div>
 </section>
 <!-- Reviews Section -->
-<section class="py-section-padding-mobile px-margin-mobile">
+<section class="py-section-padding-mobile lg:py-section-padding-desktop px-margin-mobile lg:px-10 xl:px-16">
 <div class="text-center mb-12">
 <div class="flex justify-center space-x-1 mb-4">
 <span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
@@ -433,12 +470,12 @@
 <p class="font-headline-sm text-lg">4,9/5 op Google Reviews</p>
 <p class="text-xs text-on-surface-variant mt-2">Gebaseerd op 27 recente projecten</p>
 </div>
-<div class="space-y-6">
-<div class="bg-surface-container-lowest p-6 border-l-4 border-secondary">
+<div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+<div class="bg-surface-container-lowest p-6 border-l-4 border-secondary h-full">
 <p class="text-xs italic leading-relaxed text-on-surface-variant mb-4 italic">"Perfect werk geleverd aan onze voor- en achtergevel. Alles strak afgewerkt en de communicatie was top."</p>
 <p class="text-[10px] font-bold">Familie Van der Meer, Rijswijk</p>
 </div>
-<div class="bg-surface-container-lowest p-6 border-l-4 border-secondary">
+<div class="bg-surface-container-lowest p-6 border-l-4 border-secondary h-full">
 <p class="text-xs italic leading-relaxed text-on-surface-variant mb-4 italic">"Vakkundig, betrouwbaar en denkt echt mee. Het resultaat is prachtig."</p>
 <p class="text-[10px] font-bold">M. Bakker, Voorburg</p>
 </div>
@@ -451,42 +488,42 @@
 </div>
 </section>
 <!-- Project Gallery -->
-<section class="py-section-padding-mobile" id="projecten">
-<div class="px-margin-mobile mb-8">
+<section class="py-section-padding-mobile lg:py-section-padding-desktop" id="projecten">
+<div class="px-margin-mobile lg:px-10 xl:px-16 mb-8 lg:mb-12 max-w-[1440px] mx-auto">
 <span class="font-label-caps text-secondary tracking-widest block mb-2">PORTFOLIO</span>
 <h2 class="font-headline-md text-headline-md leading-tight">Bekijk onze meest recente projecten.</h2>
 </div>
-<div class="grid grid-cols-2 gap-1">
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-1 lg:gap-3 max-w-[1440px] mx-auto lg:px-10 xl:px-16">
 <div class="aspect-square overflow-hidden relative group">
-<img class="w-full h-full object-cover grayscale-[0.3]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYPSON14NqoHqeXxKReN-KbFY--N5R6crbQTbUWth44JXxSXQXoWO4isoprbvI8uJDeiwDY-rYZny9EautFa1mk88e0ejoPGTsqUp2LXoi5S0BLbJXmmVvu96lcyU_GTMeVGVb3F6LgnZ_4i_OEDun3ao2uXVnXxGQSGcMrIOs9ZpcIW8La5kW2dg6hXXllR77p-44ft7Zq8KvFKnFy1u4yOUj8iyeSZpBtyeke4Z1jG6MfdRTz6GEpAzaSaqOiOE"/>
-<div class="absolute inset-0 bg-primary/20"></div>
-</div>
-<div class="aspect-square overflow-hidden relative group">
-<img class="w-full h-full object-cover grayscale-[0.3]" data-alt="A clean, minimalist close-up shot of a white stucco exterior house with deep black window frames and subtle greenery. The contrast is sharp and the lighting is high-key." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBr1HYLjWOBkO-I15z6HcSXque-LmPSTli5hHvd9Ft3Rcrx4o6RKDl6jClee8bNf0lZHSIz_9bfej4X695BscSFZqrebkQnRPjfvAueASUZ1uPtIC1gwQHxmk0Pa6EVUeFdjIaIVmNkfN_jnG9TP0yGJsb367MNNfiRHqi_sRL4O-VjnqRVurpTt9vWLNHa4b9iCAcZSbvcdG0vLuWgLqyoxu4eb9KLxmjPOvFI6DjHgiYVG9jF0w"/>
-<div class="absolute inset-0 bg-primary/20"></div>
+<img class="w-full h-full object-cover grayscale-[0.3] transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYPSON14NqoHqeXxKReN-KbFY--N5R6crbQTbUWth44JXxSXQXoWO4isoprbvI8uJDeiwDY-rYZny9EautFa1mk88e0ejoPGTsqUp2LXoi5S0BLbJXmmVvu96lcyU_GTMeVGVb3F6LgnZ_4i_OEDun3ao2uXVnXxGQSGcMrIOs9ZpcIW8La5kW2dg6hXXllR77p-44ft7Zq8KvFKnFy1u4yOUj8iyeSZpBtyeke4Z1jG6MfdRTz6GEpAzaSaqOiOE"/>
+<div class="absolute inset-0 bg-primary/20 lg:bg-primary/10 lg:group-hover:bg-primary/55 transition-colors duration-300"></div><div class="hidden lg:flex absolute inset-0 items-end p-5 text-white opacity-0 group-hover:opacity-100 transition-opacity"><span class="font-label-caps text-xs">Recent project</span></div>
 </div>
 <div class="aspect-square overflow-hidden relative group">
-<img class="w-full h-full object-cover grayscale-[0.3]" data-alt="Interior luxury bedroom with masterfully painted cream walls and ornate crown molding in gold leaf details. Soft morning light enters the room, highlighting the professional finish." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZELhMQDTVf7K1sGjgaKAOitUZmHXW4yBbOT4gtE5E7LwnwGbEFlv9jQp9FfDqs47mJaye5XKyNICfHvAmQ7MJQo-7NsRc7879w5YAejR9aQaIWGjfA-NTVCiZ0Rk4P_9DYfu4zOV3QaPYVDut2EldvJcx6BrR0zt5dN0ymx9R4J9wtd_k0Y6dYXJ2o980H5gIDlXL13pNvdNaDcOfZpugqTlOKCIVlYXyTHeesLPnYoTnwp5nnA"/>
-<div class="absolute inset-0 bg-primary/20"></div>
+<img class="w-full h-full object-cover grayscale-[0.3] transition-transform duration-700 group-hover:scale-105" alt="A clean, minimalist close-up shot of a white stucco exterior house with deep black window frames and subtle greenery. The contrast is sharp and the lighting is high-key." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBr1HYLjWOBkO-I15z6HcSXque-LmPSTli5hHvd9Ft3Rcrx4o6RKDl6jClee8bNf0lZHSIz_9bfej4X695BscSFZqrebkQnRPjfvAueASUZ1uPtIC1gwQHxmk0Pa6EVUeFdjIaIVmNkfN_jnG9TP0yGJsb367MNNfiRHqi_sRL4O-VjnqRVurpTt9vWLNHa4b9iCAcZSbvcdG0vLuWgLqyoxu4eb9KLxmjPOvFI6DjHgiYVG9jF0w"/>
+<div class="absolute inset-0 bg-primary/20 lg:bg-primary/10 lg:group-hover:bg-primary/55 transition-colors duration-300"></div><div class="hidden lg:flex absolute inset-0 items-end p-5 text-white opacity-0 group-hover:opacity-100 transition-opacity"><span class="font-label-caps text-xs">Recent project</span></div>
 </div>
 <div class="aspect-square overflow-hidden relative group">
-<img class="w-full h-full object-cover grayscale-[0.3]" data-alt="Detail shot of a professional painter's hand working with a gold brush on a dark wood door. The focus is sharp on the wood texture and the smooth application of the paint." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHFLIw1arIC-HxDnPbi7OfL4M_KwwxtOCQdEG37XINRY53q9Aw1Tv2gOuU8hh18ak67ypQijEBuuXrgmHAeKB2RKCQaaFOLMe8NO2_aKs7utYQOvtcvmqfNnnYU_DxkqbVy6ShX6metldlCF1FyobqVc6UAPWHtY6biEU0ftITnfND8kbyOmK61RLR7dxi0cKNCWZf__7JTNhX-VH88ycFmw-BAX56Zu-EcmrBp-zP_EbQ1PZkQQ"/>
-<div class="absolute inset-0 bg-primary/20"></div>
+<img class="w-full h-full object-cover grayscale-[0.3] transition-transform duration-700 group-hover:scale-105" alt="Interior luxury bedroom with masterfully painted cream walls and ornate crown molding in gold leaf details. Soft morning light enters the room, highlighting the professional finish." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZELhMQDTVf7K1sGjgaKAOitUZmHXW4yBbOT4gtE5E7LwnwGbEFlv9jQp9FfDqs47mJaye5XKyNICfHvAmQ7MJQo-7NsRc7879w5YAejR9aQaIWGjfA-NTVCiZ0Rk4P_9DYfu4zOV3QaPYVDut2EldvJcx6BrR0zt5dN0ymx9R4J9wtd_k0Y6dYXJ2o980H5gIDlXL13pNvdNaDcOfZpugqTlOKCIVlYXyTHeesLPnYoTnwp5nnA"/>
+<div class="absolute inset-0 bg-primary/20 lg:bg-primary/10 lg:group-hover:bg-primary/55 transition-colors duration-300"></div><div class="hidden lg:flex absolute inset-0 items-end p-5 text-white opacity-0 group-hover:opacity-100 transition-opacity"><span class="font-label-caps text-xs">Recent project</span></div>
+</div>
+<div class="aspect-square overflow-hidden relative group">
+<img class="w-full h-full object-cover grayscale-[0.3] transition-transform duration-700 group-hover:scale-105" alt="Detail shot of a professional painter's hand working with a gold brush on a dark wood door. The focus is sharp on the wood texture and the smooth application of the paint." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHFLIw1arIC-HxDnPbi7OfL4M_KwwxtOCQdEG37XINRY53q9Aw1Tv2gOuU8hh18ak67ypQijEBuuXrgmHAeKB2RKCQaaFOLMe8NO2_aKs7utYQOvtcvmqfNnnYU_DxkqbVy6ShX6metldlCF1FyobqVc6UAPWHtY6biEU0ftITnfND8kbyOmK61RLR7dxi0cKNCWZf__7JTNhX-VH88ycFmw-BAX56Zu-EcmrBp-zP_EbQ1PZkQQ"/>
+<div class="absolute inset-0 bg-primary/20 lg:bg-primary/10 lg:group-hover:bg-primary/55 transition-colors duration-300"></div><div class="hidden lg:flex absolute inset-0 items-end p-5 text-white opacity-0 group-hover:opacity-100 transition-opacity"><span class="font-label-caps text-xs">Recent project</span></div>
 </div>
 </div>
-<div class="px-margin-mobile mt-8">
-<button class="w-full py-4 border border-primary font-bold">VOLLEDIG PORTFOLIO</button>
+<div class="px-margin-mobile lg:px-10 xl:px-16 mt-8 max-w-[1440px] mx-auto">
+<a class="inline-flex w-full sm:w-auto justify-center py-4 px-8 border border-primary font-bold hover:bg-primary hover:text-white transition-colors" href="#contact">VOLLEDIG PORTFOLIO</a>
 </div>
 </section>
 <!-- Final CTA (With Background Asset) -->
 <section class="relative py-24 overflow-hidden">
 <div class="absolute inset-0 z-0">
-<img class="w-full h-full object-cover grayscale-[0.4]" data-alt="A beautiful wide shot of a traditional Dutch landscape with a newly painted heritage home in the foreground. The sky is bright blue, and the overall atmosphere is one of peace and pride in craftsmanship. Warm lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuACfqO9tLEw-SzRTgwl1y6NwVuBrkVOtOiQWuGZLXxdWWUvtJL8SFCJwjwo_RIvMIal3N1xQAZRQuLwBprSkiuWUjNAXoubvAuYgtJJBn5f-vZtwrhnpBxXXWQZk1uO9haXm5wcTe_1qdOarVxU_jLg1vEQlkHorGS_R7orDaqYP1rnJEX3J_ovcz6og-MnoCJmU2b4LV2kKtFK6xcU-e6wm6tIKVKQt1xka8LuttR4h0eHWHaoAg"/>
+<img class="w-full h-full object-cover grayscale-[0.4]" alt="A beautiful wide shot of a traditional Dutch landscape with a newly painted heritage home in the foreground. The sky is bright blue, and the overall atmosphere is one of peace and pride in craftsmanship. Warm lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuACfqO9tLEw-SzRTgwl1y6NwVuBrkVOtOiQWuGZLXxdWWUvtJL8SFCJwjwo_RIvMIal3N1xQAZRQuLwBprSkiuWUjNAXoubvAuYgtJJBn5f-vZtwrhnpBxXXWQZk1uO9haXm5wcTe_1qdOarVxU_jLg1vEQlkHorGS_R7orDaqYP1rnJEX3J_ovcz6og-MnoCJmU2b4LV2kKtFK6xcU-e6wm6tIKVKQt1xka8LuttR4h0eHWHaoAg"/>
 <div class="absolute inset-0 bg-secondary/80 mix-blend-multiply"></div>
 </div>
-<div class="relative z-10 px-margin-mobile text-center text-white">
-<h2 class="font-display-lg text-3xl mb-6 leading-tight">Klaar voor een resultaat waar je elke dag trots op bent?</h2>
-<div class="flex flex-col space-y-4 max-w-xs mx-auto">
+<div class="relative z-10 px-margin-mobile lg:px-10 xl:px-16 text-center text-white max-w-[1100px] mx-auto">
+<h2 class="font-display-lg text-3xl md:text-5xl lg:text-[64px] mb-6 leading-tight">Klaar voor een resultaat waar je elke dag trots op bent?</h2>
+<div class="flex flex-col sm:flex-row gap-4 sm:gap-8 max-w-none mx-auto justify-center items-center">
 <a class="bg-primary py-4 px-8 font-bold tracking-widest" href="#contact">OFFERTE AANVRAGEN</a>
 <a class="text-sm font-bold flex items-center justify-center space-x-2" href="tel:+310612345678">
 <span class="material-symbols-outlined">call</span>
@@ -497,21 +534,21 @@
 </section>
 </main>
 <!-- Footer (Shared Component Mapping) -->
-<footer class="bg-primary text-white pt-section-padding-mobile pb-12">
-<div class="px-margin-mobile space-y-12">
+<footer class="bg-primary text-white pt-section-padding-mobile lg:pt-24 pb-12">
+<div class="px-margin-mobile lg:px-10 xl:px-16 space-y-12 max-w-[1440px] mx-auto">
 <div class="space-y-4">
 <span class="font-display-lg text-headline-sm block">SchilderGoud</span>
 <p class="text-xs text-surface-variant max-w-xs leading-relaxed">Schilderwerk en afwerking met aandacht voor detail in Rijswijk en de wijde omgeving.</p>
 <div class="flex space-x-4 pt-4">
-<a class="w-10 h-10 rounded-full border border-surface-variant/30 flex items-center justify-center" href="#">
+<a aria-label="Volg SchilderGoud op social media" class="w-10 h-10 rounded-full border border-surface-variant/30 flex items-center justify-center" href="#">
 <span class="material-symbols-outlined text-base">face_nod</span>
 </a>
-<a class="w-10 h-10 rounded-full border border-surface-variant/30 flex items-center justify-center" href="#">
+<a aria-label="Bekijk SchilderGoud online profiel" class="w-10 h-10 rounded-full border border-surface-variant/30 flex items-center justify-center" href="#">
 <span class="material-symbols-outlined text-base">link</span>
 </a>
 </div>
 </div>
-<div class="grid grid-cols-2 gap-8">
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
 <div class="space-y-4">
 <h5 class="font-label-caps text-xs tracking-widest text-secondary-container">NAVIGATIE</h5>
 <ul class="space-y-2 text-xs text-surface-variant/80">
@@ -558,10 +595,12 @@
                 menu.classList.remove('hidden');
                 setTimeout(() => menu.classList.remove('translate-x-full'), 10);
                 document.body.style.overflow = 'hidden';
+                menuBtn.setAttribute('aria-expanded', 'true');
             } else {
                 menu.classList.add('translate-x-full');
                 setTimeout(() => menu.classList.add('hidden'), 300);
-                document.body.style.overflow = 'auto';
+                document.body.style.overflow = '';
+                menuBtn.setAttribute('aria-expanded', 'false');
             }
         }
 
@@ -584,10 +623,29 @@
                 
                 handle.style.left = `${percent}%`;
                 after.style.clipPath = `inset(0 0 0 ${percent}%)`;
+                handle.setAttribute('aria-valuenow', Math.round(percent));
+            }
+
+            function moveSliderTo(percent) {
+                percent = Math.max(0, Math.min(100, percent));
+                handle.style.left = `${percent}%`;
+                after.style.clipPath = `inset(0 0 0 ${percent}%)`;
+                handle.setAttribute('aria-valuenow', Math.round(percent));
             }
 
             slider.addEventListener('mousemove', moveSlider);
-            slider.addEventListener('touchmove', moveSlider);
+            slider.addEventListener('touchmove', moveSlider, { passive: true });
+            handle.addEventListener('keydown', (e) => {
+                const current = parseFloat(handle.style.left) || 50;
+                if (e.key === 'ArrowLeft') {
+                    e.preventDefault();
+                    moveSliderTo(current - 5);
+                }
+                if (e.key === 'ArrowRight') {
+                    e.preventDefault();
+                    moveSliderTo(current + 5);
+                }
+            });
         }
 
         initSlider(1);
@@ -597,11 +655,9 @@
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
             if (window.scrollY > 50) {
-                header.classList.add('py-2', 'shadow-sm');
-                header.classList.remove('py-4');
+                header.classList.add('shadow-sm');
             } else {
-                header.classList.add('py-4');
-                header.classList.remove('py-2', 'shadow-sm');
+                header.classList.remove('shadow-sm');
             }
         });
     </script>
