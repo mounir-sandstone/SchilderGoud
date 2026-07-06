@@ -2,10 +2,47 @@
 
 <html class="scroll-smooth" lang="nl"><head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="assets/Favicon - SchilderGoud.png" rel="icon" type="image/png"/>
+<!-- TODO: Replace SITE_URL with the final custom production domain before launch -->
+<script>const SITE_URL = "https://schilder-goud.vercel.app";</script>
 <title>Algemene voorwaarden | SchilderGoud</title>
-<meta content="Lees de algemene voorwaarden van SchilderGoud voor schilderwerk, onderhoud en specialistische afwerkingen." name="description"/>
+<meta name="description" content="Lees de algemene voorwaarden van SchilderGoud voor offertes, schilderwerk, onderhoud en specialistische afwerkingen.">
+<meta name="robots" content="index,follow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://schilder-goud.vercel.app/algemene-voorwaarden">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SchilderGoud">
+<meta property="og:title" content="Algemene voorwaarden | SchilderGoud">
+<meta property="og:description" content="Lees de algemene voorwaarden van SchilderGoud voor offertes, schilderwerk, onderhoud en specialistische afwerkingen.">
+<meta property="og:url" content="https://schilder-goud.vercel.app/algemene-voorwaarden">
+<meta property="og:image" content="https://schilder-goud.vercel.app/assets/Monumenthuis%20hout%20schilderwerk.jpg">
+<meta property="og:image:alt" content="SchilderGoud schilderwerk in Rijswijk en omgeving">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Algemene voorwaarden | SchilderGoud">
+<meta name="twitter:description" content="Lees de algemene voorwaarden van SchilderGoud voor offertes, schilderwerk, onderhoud en specialistische afwerkingen.">
+<meta name="twitter:image" content="https://schilder-goud.vercel.app/assets/Monumenthuis%20hout%20schilderwerk.jpg">
+<link href="/assets/Favicon - SchilderGoud.png" rel="icon" type="image/png"/>
+<!-- GTM container snippet will be added here later. Do not add tracking tags directly to page templates. -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: "page_context",
+    page_type: "legal_terms",
+    page_name: "Algemene voorwaarden",
+    page_path: window.location.pathname,
+    page_title: document.title,
+    site_language: "nl"
+  });
+</script>
+<script src="/assets/js/datalayer-events.js" defer></script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://schilder-goud.vercel.app/"},
+    {"@type": "ListItem", "position": 2, "name": "Algemene voorwaarden", "item": "https://schilder-goud.vercel.app/algemene-voorwaarden"}
+  ]
+}</script>
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -179,19 +216,19 @@
 <!-- Header (Shared Component Mapping) -->
 <header class="w-full top-0 sticky z-50 bg-background/95 backdrop-blur border-b border-outline-variant transition-all duration-200 ease-in-out">
 <div class="flex justify-between items-center px-margin-mobile lg:px-10 xl:px-16 py-4 max-w-[1440px] mx-auto">
-<a class="flex flex-col" href="index.html" aria-label="SchilderGoud home">
+<a class="flex flex-col" href="/" aria-label="SchilderGoud home">
 <span class="font-display-lg text-headline-sm tracking-tighter text-primary"><span>Schilder</span><span class="text-secondary">Goud</span></span>
 <span class="text-[10px] font-label-caps text-on-surface-variant uppercase tracking-[0.2em]">Rijswijk &amp; Omgeving</span>
 </a>
 <nav class="hidden lg:flex items-center gap-8 xl:gap-10 font-nav-link text-[12px] uppercase tracking-[0.12em] text-on-surface-variant">
-<a class="hover:text-primary transition-colors" href="diensten.html">Diensten</a>
-<a class="hover:text-primary transition-colors" href="projecten.html">Projecten</a>
-<a class="hover:text-primary transition-colors" href="over-ons.html">Over ons</a>
-<a class="hover:text-primary transition-colors" href="contact.html">Contact</a>
+<a class="hover:text-primary transition-colors" href="/diensten">Diensten</a>
+<a class="hover:text-primary transition-colors" href="/projecten">Projecten</a>
+<a class="hover:text-primary transition-colors" href="/over-ons">Over ons</a>
+<a class="hover:text-primary transition-colors" href="/contact">Contact</a>
 </nav>
 <div class="hidden lg:flex items-center gap-5">
-<a class="text-[12px] font-bold text-on-surface-variant hover:text-primary transition-colors" href="tel:+31633733706">06 33 73 37 06</a>
-<a class="py-3 px-5 bg-secondary-container text-on-secondary-container font-bold text-[11px] tracking-widest hover:bg-secondary-fixed transition-colors" href="contact.html#offerte">Vraag een offerte aan</a>
+<a class="text-[12px] font-bold text-on-surface-variant hover:text-primary transition-colors" href="tel:+31633733706" data-track="phone" data-contact-location="footer">06 33 73 37 06</a>
+<a class="py-3 px-5 bg-secondary-container text-on-secondary-container font-bold text-[11px] tracking-widest hover:bg-secondary-fixed transition-colors" href="/contact#offerte" data-track="cta" data-cta-name="Vraag een offerte aan" data-cta-location="header" data-cta-destination="/contact#offerte">Vraag een offerte aan</a>
 </div>
 <button class="lg:hidden p-2 text-primary" id="mobileMenuBtn" aria-label="Open mobiel menu" aria-expanded="false" aria-controls="mobileMenu">
 <span class="material-symbols-outlined text-[32px]">menu</span>
@@ -207,14 +244,14 @@
 </button>
 </div>
 <nav class="flex flex-col items-center justify-center space-y-8 mt-12">
-<a class="font-nav-link text-headline-sm text-on-surface-variant" href="diensten.html">Diensten</a>
-<a class="font-nav-link text-headline-sm text-on-surface-variant" href="projecten.html">Projecten</a>
-<a class="font-nav-link text-headline-sm text-on-surface-variant" href="over-ons.html">Over ons</a>
-<a class="font-nav-link text-headline-sm text-on-surface-variant" href="contact.html">Contact</a>
+<a class="font-nav-link text-headline-sm text-on-surface-variant" href="/diensten">Diensten</a>
+<a class="font-nav-link text-headline-sm text-on-surface-variant" href="/projecten">Projecten</a>
+<a class="font-nav-link text-headline-sm text-on-surface-variant" href="/over-ons">Over ons</a>
+<a class="font-nav-link text-headline-sm text-on-surface-variant" href="/contact">Contact</a>
 </nav>
 <div class="mt-auto p-margin-mobile flex flex-col space-y-4">
-<a class="w-full py-4 bg-secondary text-on-primary text-center font-bold" href="contact.html#offerte">Vraag een offerte aan</a>
-<a class="w-full py-4 border border-primary text-center font-bold" href="tel:+31633733706">06 33 73 37 06</a>
+<a class="w-full py-4 bg-secondary text-on-primary text-center font-bold" href="/contact#offerte" data-track="cta" data-cta-name="Vraag een offerte aan" data-cta-location="header" data-cta-destination="/contact#offerte">Vraag een offerte aan</a>
+<a class="w-full py-4 border border-primary text-center font-bold" href="tel:+31633733706" data-track="phone" data-contact-location="footer">06 33 73 37 06</a>
 </div>
 </div>
 </div>
@@ -232,16 +269,16 @@
 <section id="annulering" class="border-t border-outline-variant py-8"><h2 class="font-headline-md text-headline-md text-on-surface mb-4">9. Annulering en beëindiging</h2><p>Wil de opdrachtgever een geplande opdracht annuleren of wijzigen? Neem dan zo snel mogelijk contact op met SchilderGoud.</p><p class="mt-4">Wanneer werkzaamheden al zijn uitgevoerd, materialen speciaal zijn besteld of aantoonbare kosten zijn gemaakt, kunnen in redelijkheid kosten in rekening worden gebracht, voor zover dit vooraf is afgesproken of wettelijk is toegestaan.</p><p class="mt-4">Voor consumenten gelden eventuele wettelijke rechten, waaronder het herroepingsrecht wanneer dat van toepassing is, onverminderd.</p></section>
 <section id="aansprakelijkheid" class="border-t border-outline-variant py-8"><h2 class="font-headline-md text-headline-md text-on-surface mb-4">10. Aansprakelijkheid</h2><p>SchilderGoud is aansprakelijk voor schade die het rechtstreekse gevolg is van een toerekenbare tekortkoming, voor zover die aansprakelijkheid niet op grond van de wet kan worden uitgesloten.</p><p class="mt-4">SchilderGoud is niet aansprakelijk voor schade die ontstaat door gebreken in de ondergrond, verborgen constructieve problemen, ondeugdelijke eerdere behandelingen of onjuiste of onvolledige informatie van de opdrachtgever, tenzij SchilderGoud deze omstandigheden kende of redelijkerwijs had moeten kennen.</p><p class="mt-4">Deze bepaling beperkt geen wettelijke rechten van consumenten.</p></section>
 <section id="overmacht" class="border-t border-outline-variant py-8"><h2 class="font-headline-md text-headline-md text-on-surface mb-4">11. Overmacht</h2><p>SchilderGoud is niet gehouden tot nakoming wanneer uitvoering tijdelijk of blijvend wordt verhinderd door omstandigheden buiten redelijke invloed, zoals extreme weersomstandigheden, ziekte, storingen, materiaaltekorten of overheidsmaatregelen.</p><p class="mt-4">Wanneer mogelijk bespreken partijen een passende nieuwe planning.</p></section>
-<section id="privacy" class="border-t border-outline-variant py-8"><h2 class="font-headline-md text-headline-md text-on-surface mb-4">12. Privacy</h2><p>SchilderGoud verwerkt persoonsgegevens volgens het <a class="underline hover:text-secondary" href="privacybeleid.html">privacybeleid</a>.</p></section>
+<section id="privacy" class="border-t border-outline-variant py-8"><h2 class="font-headline-md text-headline-md text-on-surface mb-4">12. Privacy</h2><p>SchilderGoud verwerkt persoonsgegevens volgens het <a class="underline hover:text-secondary" href="/privacybeleid">privacybeleid</a>.</p></section>
 <section id="geschillen" class="border-t border-outline-variant py-8"><h2 class="font-headline-md text-headline-md text-on-surface mb-4">13. Toepasselijk recht en geschillen</h2><p>Op overeenkomsten met SchilderGoud is Nederlands recht van toepassing.</p><p class="mt-4">Partijen proberen een geschil eerst in goed overleg op te lossen.</p><p class="mt-4">Voor consumenten wordt de wettelijk bevoegde rechter niet beperkt.</p></section>
-<div class="border-t border-outline-variant pt-8"><h2 class="font-headline-md text-headline-md text-on-surface mb-3">Vragen over een offerte of afspraak?</h2><p>Neem contact op. We lichten onze werkwijze en afspraken graag toe.</p><div class="mt-6 flex flex-col sm:flex-row gap-3"><a class="sg-focus sg-primary-gold inline-flex justify-center py-4 px-6 bg-secondary-container border border-secondary-container text-on-secondary-container font-bold tracking-widest text-xs" href="contact.html#offerte">Neem contact op</a><a class="sg-focus sg-outline-light inline-flex justify-center py-4 px-6 border border-primary text-primary font-bold tracking-widest text-xs" href="tel:+31633733706">Bel 06 33 73 37 06</a></div><a class="inline-block mt-8 text-sm underline underline-offset-4 hover:text-secondary" href="#top">Terug naar boven</a></div>
+<div class="border-t border-outline-variant pt-8"><h2 class="font-headline-md text-headline-md text-on-surface mb-3">Vragen over een offerte of afspraak?</h2><p>Neem contact op. We lichten onze werkwijze en afspraken graag toe.</p><div class="mt-6 flex flex-col sm:flex-row gap-3"><a class="sg-focus sg-primary-gold inline-flex justify-center py-4 px-6 bg-secondary-container border border-secondary-container text-on-secondary-container font-bold tracking-widest text-xs" href="/contact#offerte" data-track="cta" data-cta-name="Vraag een offerte aan" data-cta-location="final_cta" data-cta-destination="/contact#offerte">Neem contact op</a><a class="sg-focus sg-outline-light inline-flex justify-center py-4 px-6 border border-primary text-primary font-bold tracking-widest text-xs" href="tel:+31633733706" data-track="phone" data-contact-location="footer">Bel 06 33 73 37 06</a></div><a class="inline-block mt-8 text-sm underline underline-offset-4 hover:text-secondary" href="#top">Terug naar boven</a></div>
 </div></div></section></main>
 <!-- Footer (Shared Component Mapping) -->
 <footer class="bg-primary text-white pt-16 lg:pt-20 pb-8 lg:pb-10">
 <div class="max-w-[1440px] mx-auto px-6 lg:px-10 xl:px-16">
 <div class="grid gap-10 lg:gap-16 xl:gap-24 lg:grid-cols-12 items-start">
 <div class="lg:col-span-5 space-y-5">
-<a class="inline-flex flex-col" href="index.html" aria-label="SchilderGoud home">
+<a class="inline-flex flex-col" href="/" aria-label="SchilderGoud home">
 <span class="font-display-lg text-headline-sm leading-none block"><span class="text-white">Schilder</span><span class="text-secondary-container">Goud</span></span>
 <span class="mt-2 font-label-caps text-[10px] tracking-[0.32em] text-white/55 uppercase">RIJSWIJK &amp; OMGEVING</span>
 </a>
@@ -250,24 +287,24 @@
 <div class="lg:col-span-3 space-y-5">
 <h5 class="font-label-caps text-xs tracking-widest text-secondary-container">NAVIGATIE</h5>
 <ul class="space-y-3 text-sm text-white/65">
-<li><a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="diensten.html">Diensten</a></li>
-<li><a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="projecten.html">Projecten</a></li>
-<li><a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="projecten.html#voor-na">Voor &amp; na</a></li>
-<li><a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="over-ons.html">Over ons</a></li>
-<li><a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="contact.html">Contact</a></li>
+<li><a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="/diensten">Diensten</a></li>
+<li><a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="/projecten">Projecten</a></li>
+<li><a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="/projecten#voor-na">Voor &amp; na</a></li>
+<li><a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="/over-ons">Over ons</a></li>
+<li><a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="/contact">Contact</a></li>
 </ul>
 </div>
 <div class="lg:col-span-4 space-y-5">
 <h5 class="font-label-caps text-xs tracking-widest text-secondary-container">CONTACT</h5>
 <ul class="space-y-4 text-sm text-white/65">
 <li>
-<a class="inline-flex items-center gap-3 transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="tel:+31633733706">
+<a class="inline-flex items-center gap-3 transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="tel:+31633733706" data-track="phone" data-contact-location="footer">
 <span class="material-symbols-outlined text-[18px]" aria-hidden="true">call</span>
 <span>06 33 73 37 06</span>
 </a>
 </li>
 <li>
-<a class="inline-flex items-center gap-3 transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="mailto:goudrijswijk.m@gmail.com">
+<a class="inline-flex items-center gap-3 transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="mailto:goudrijswijk.m@gmail.com" data-track="email" data-contact-location="footer">
 <span class="material-symbols-outlined text-[18px]" aria-hidden="true">mail</span>
 <span>goudrijswijk.m@gmail.com</span>
 </a>
@@ -278,8 +315,8 @@
 <div class="mt-12 lg:mt-14 pt-6 border-t border-white/10 flex flex-col items-center gap-4 text-center lg:flex-row lg:justify-between lg:text-left">
 <p class="text-[10px] sm:text-xs text-white/45">© 2026 SchilderGoud. Alle rechten voorbehouden. KvK: 85979864</p>
 <nav aria-label="Juridische links" class="flex flex-col items-center gap-2 sm:flex-row sm:gap-5 text-[10px] sm:text-xs text-white/45">
-<a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="privacybeleid.html">Privacybeleid</a>
-<a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="algemene-voorwaarden.html">Algemene voorwaarden</a>
+<a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="/privacybeleid">Privacybeleid</a>
+<a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="/algemene-voorwaarden">Algemene voorwaarden</a>
 </nav>
 </div>
 </div>

@@ -2,10 +2,55 @@
 
 <html class="scroll-smooth" lang="nl"><head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="assets/Favicon - SchilderGoud.png" rel="icon" type="image/png"/>
-<title>SchilderGoud | Meesterlijk Schilderwerk Rijswijk &amp; Omgeving</title>
-<meta content="Hoogwaardig schilderwerk voor uw woning of bedrijfspand. Ontdek de ambachtelijke kwaliteit van SchilderGoud. Vraag direct een offerte aan." name="description"/>
+<!-- TODO: Replace SITE_URL with the final custom production domain before launch -->
+<script>const SITE_URL = "https://schilder-goud.vercel.app";</script>
+<title>Schilderwerk in Rijswijk & omgeving | SchilderGoud</title>
+<meta name="description" content="SchilderGoud verzorgt binnen- en buitenschilderwerk, monumentaal houtwerk en specialistische afwerkingen in Rijswijk en omgeving. Vraag vrijblijvend een offerte aan.">
+<meta name="robots" content="index,follow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://schilder-goud.vercel.app/">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SchilderGoud">
+<meta property="og:title" content="Schilderwerk in Rijswijk & omgeving | SchilderGoud">
+<meta property="og:description" content="SchilderGoud verzorgt binnen- en buitenschilderwerk, monumentaal houtwerk en specialistische afwerkingen in Rijswijk en omgeving. Vraag vrijblijvend een offerte aan.">
+<meta property="og:url" content="https://schilder-goud.vercel.app/">
+<meta property="og:image" content="https://schilder-goud.vercel.app/assets/Monumenthuis%20hout%20schilderwerk.jpg">
+<meta property="og:image:alt" content="SchilderGoud schilderwerk in Rijswijk en omgeving">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Schilderwerk in Rijswijk & omgeving | SchilderGoud">
+<meta name="twitter:description" content="SchilderGoud verzorgt binnen- en buitenschilderwerk, monumentaal houtwerk en specialistische afwerkingen in Rijswijk en omgeving. Vraag vrijblijvend een offerte aan.">
+<meta name="twitter:image" content="https://schilder-goud.vercel.app/assets/Monumenthuis%20hout%20schilderwerk.jpg">
+<link href="/assets/Favicon - SchilderGoud.png" rel="icon" type="image/png"/>
+<!-- GTM container snippet will be added here later. Do not add tracking tags directly to page templates. -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: "page_context",
+    page_type: "home",
+    page_name: "Home",
+    page_path: window.location.pathname,
+    page_title: document.title,
+    site_language: "nl"
+  });
+</script>
+<script src="/assets/js/datalayer-events.js" defer></script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "SchilderGoud",
+  "url": "https://schilder-goud.vercel.app",
+  "logo": "https://schilder-goud.vercel.app/assets/Favicon%20-%20SchilderGoud.png",
+  "email": "goudrijswijk.m@gmail.com",
+  "telephone": "+31633733706"
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "SchilderGoud",
+  "url": "https://schilder-goud.vercel.app",
+  "inLanguage": "nl-NL"
+}</script>
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -253,19 +298,19 @@
 <!-- Header (Shared Component Mapping) -->
 <header class="w-full top-0 sticky z-50 bg-background/95 backdrop-blur border-b border-outline-variant transition-all duration-200 ease-in-out">
 <div class="flex justify-between items-center px-6 lg:px-10 xl:px-16 py-4 max-w-[1440px] mx-auto">
-<a class="flex flex-col" href="index.html" aria-label="SchilderGoud home">
+<a class="flex flex-col" href="/" aria-label="SchilderGoud home">
 <span class="font-display-lg text-headline-sm tracking-tighter text-primary"><span>Schilder</span><span class="text-secondary">Goud</span></span>
 <span class="text-[10px] font-label-caps text-on-surface-variant uppercase tracking-[0.2em]">Rijswijk &amp; Omgeving</span>
 </a>
 <nav class="hidden lg:flex items-center gap-8 xl:gap-10 font-nav-link text-[12px] uppercase tracking-[0.12em] text-on-surface-variant">
-<a class="hover:text-primary transition-colors" href="diensten.html">Diensten</a>
-<a class="hover:text-primary transition-colors" href="projecten.html">Projecten</a>
-<a class="hover:text-primary transition-colors" href="over-ons.html">Over ons</a>
-<a class="hover:text-primary transition-colors" href="contact.html">Contact</a>
+<a class="hover:text-primary transition-colors" href="/diensten">Diensten</a>
+<a class="hover:text-primary transition-colors" href="/projecten">Projecten</a>
+<a class="hover:text-primary transition-colors" href="/over-ons">Over ons</a>
+<a class="hover:text-primary transition-colors" href="/contact">Contact</a>
 </nav>
 <div class="hidden lg:flex items-center gap-5">
-<a class="text-[12px] font-bold text-on-surface-variant hover:text-primary transition-colors" href="tel:+31633733706">06 33 73 37 06</a>
-<a class="sg-focus sg-primary-gold min-h-12 inline-flex items-center py-3 px-5 border border-secondary-container bg-secondary-container text-on-secondary-container font-bold text-[11px] tracking-widest" href="contact.html#offerte">Vraag een offerte aan</a>
+<a class="text-[12px] font-bold text-on-surface-variant hover:text-primary transition-colors" href="tel:+31633733706" data-track="phone" data-contact-location="footer">06 33 73 37 06</a>
+<a class="sg-focus sg-primary-gold min-h-12 inline-flex items-center py-3 px-5 border border-secondary-container bg-secondary-container text-on-secondary-container font-bold text-[11px] tracking-widest" href="/contact#offerte" data-track="cta" data-cta-name="Vraag een offerte aan" data-cta-location="header" data-cta-destination="/contact#offerte">Vraag een offerte aan</a>
 </div>
 <button class="lg:hidden p-2 text-primary" id="mobileMenuBtn" aria-label="Open mobiel menu" aria-expanded="false" aria-controls="mobileMenu">
 <span class="material-symbols-outlined text-[32px]">menu</span>
@@ -281,14 +326,14 @@
 </button>
 </div>
 <nav class="flex flex-col items-center justify-center space-y-8 mt-12">
-<a class="font-nav-link text-headline-sm text-on-surface-variant" href="diensten.html">Diensten</a>
-<a class="font-nav-link text-headline-sm text-on-surface-variant" href="projecten.html">Projecten</a>
-<a class="font-nav-link text-headline-sm text-on-surface-variant" href="over-ons.html">Over ons</a>
-<a class="font-nav-link text-headline-sm text-on-surface-variant" href="contact.html">Contact</a>
+<a class="font-nav-link text-headline-sm text-on-surface-variant" href="/diensten">Diensten</a>
+<a class="font-nav-link text-headline-sm text-on-surface-variant" href="/projecten">Projecten</a>
+<a class="font-nav-link text-headline-sm text-on-surface-variant" href="/over-ons">Over ons</a>
+<a class="font-nav-link text-headline-sm text-on-surface-variant" href="/contact">Contact</a>
 </nav>
 <div class="mt-auto p-margin-mobile flex flex-col space-y-4">
-<a class="sg-focus sg-primary-gold w-full min-h-12 py-4 bg-secondary-container border border-secondary-container text-on-secondary-container text-center font-bold" href="contact.html#offerte">Vraag een offerte aan</a>
-<a class="sg-focus sg-outline-light w-full min-h-12 py-4 border border-primary text-center font-bold" href="tel:+31633733706">06 33 73 37 06</a>
+<a class="sg-focus sg-primary-gold w-full min-h-12 py-4 bg-secondary-container border border-secondary-container text-on-secondary-container text-center font-bold" href="/contact#offerte" data-track="cta" data-cta-name="Vraag een offerte aan" data-cta-location="header" data-cta-destination="/contact#offerte">Vraag een offerte aan</a>
+<a class="sg-focus sg-outline-light w-full min-h-12 py-4 border border-primary text-center font-bold" href="tel:+31633733706" data-track="phone" data-contact-location="footer">06 33 73 37 06</a>
 </div>
 </div>
 </div>
@@ -308,8 +353,8 @@
                     Van buitengevel tot binnendetail. Netjes, duurzaam en tot in de puntjes afgewerkt door lokale vakmensen.
                 </p>
 <div class="flex flex-col sm:flex-row gap-4 sm:gap-5 max-w-xl">
-<a class="sg-focus sg-primary-gold w-full sm:w-auto min-h-12 py-4 px-8 border border-secondary-container bg-secondary-container text-on-secondary-container text-center font-bold" href="contact.html#offerte">VRAAG EEN OFFERTE AAN</a>
-<a class="sg-focus sg-outline-dark w-full sm:w-auto min-h-12 py-4 px-8 border border-white/60 text-center font-bold backdrop-blur-sm" href="projecten.html">BEKIJK ONS WERK</a>
+<a class="sg-focus sg-primary-gold w-full sm:w-auto min-h-12 py-4 px-8 border border-secondary-container bg-secondary-container text-on-secondary-container text-center font-bold" href="/contact#offerte" data-track="cta" data-cta-name="Vraag een offerte aan" data-cta-location="header" data-cta-destination="/contact#offerte">VRAAG EEN OFFERTE AAN</a>
+<a class="sg-focus sg-outline-dark w-full sm:w-auto min-h-12 py-4 px-8 border border-white/60 text-center font-bold backdrop-blur-sm" href="/projecten" data-track="cta" data-cta-name="Bekijk ons werk" data-cta-location="hero" data-cta-destination="/projecten">BEKIJK ONS WERK</a>
 </div>
 </div>
 </section>
@@ -355,7 +400,7 @@
 <div class="w-20 h-1 bg-secondary-container mx-auto mt-5"></div>
 </div>
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 max-w-6xl mx-auto items-stretch">
-<div class="before-after-slider lg:aspect-[4/3] min-h-[320px] sm:min-h-[420px] lg:min-h-0 border border-outline-variant shadow-[0_24px_60px_rgba(26,28,26,0.12)]">
+<div data-track-before-after data-project-name="Monumentenhuis schilderwerk" class="before-after-slider lg:aspect-[4/3] min-h-[320px] sm:min-h-[420px] lg:min-h-0 border border-outline-variant shadow-[0_24px_60px_rgba(26,28,26,0.12)]">
 <img class="image-before" alt="Before foto van schilderwerk vóór het aflakken" src="assets/Geschilderd%20%26%20afgelakt%20before.png"/>
 <div class="image-after" id="after-1">
 <img class="w-full h-full object-cover" alt="Afgelakt schilderwerk met strakke details en duurzame afwerking" src="assets/Geschilderd%20%26%20afgelakt.jpg"/>
@@ -368,7 +413,7 @@
 <p class="font-label-caps text-secondary tracking-widest mb-5">RESTAURATIE PROJECT RIJSWIJK</p>
 <h3 class="font-headline-sm text-headline-sm mb-6">Herstel van monumentaal houtwerk</h3>
 <p class="text-on-surface-variant leading-relaxed mb-8 max-w-xl">Bij dit project hebben we de oorspronkelijke allure van een 19e-eeuwse villa hersteld. Na jaren van verwaarlozing vereiste het houtwerk grondige sanering en een vijflaags verfsysteem voor maximale bescherming.</p>
-<a class="sg-link inline-flex self-start border-b border-primary pb-1 text-primary font-nav-link text-sm uppercase tracking-wider" href="projecten.html">BEKIJK PROJECT DETAILS</a>
+<a class="sg-link inline-flex self-start border-b border-primary pb-1 text-primary font-nav-link text-sm uppercase tracking-wider" href="/projecten">BEKIJK PROJECT DETAILS</a>
 </div>
 </div>
 </div>
@@ -428,7 +473,7 @@
 </div>
 </div>
 <div class="mt-8 lg:mt-10">
-<a class="sg-focus sg-outline-light inline-flex w-full sm:w-auto min-h-12 items-center justify-center py-4 px-8 border border-primary font-bold" href="diensten.html">ONTDEK ALLE DIENSTEN</a>
+<a class="sg-focus sg-outline-light inline-flex w-full sm:w-auto min-h-12 items-center justify-center py-4 px-8 border border-primary font-bold" href="/diensten" data-track="cta" data-cta-name="Ontdek alle diensten" data-cta-location="services" data-cta-destination="/diensten">ONTDEK ALLE DIENSTEN</a>
 </div>
 </div>
 </section>
@@ -439,25 +484,25 @@
 <h2 class="font-headline-md text-[32px] md:text-[42px] lg:text-[48px] leading-tight">Bekijk onze meest recente projecten.</h2>
 </div>
 <div class="grid grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-3 max-w-[1440px] mx-auto px-6 lg:px-10 xl:px-16">
-<div class="aspect-square overflow-hidden relative group">
+<div class="aspect-square overflow-hidden relative group" data-track="project" data-content-name="Fotobehang" data-content-location="homepage">
 <img class="w-full h-full object-cover grayscale-[0.3] sg-card-image" src="assets/Fotobehang.jpg" alt="Fotobehang project met zorgvuldig geplaatst patroon"/>
 <div class="absolute inset-0 bg-primary/20 lg:bg-primary/10 lg:group-hover:bg-primary/45 transition-colors duration-300"></div><div class="hidden lg:flex absolute inset-0 items-end p-5 text-white opacity-0 group-hover:opacity-100 transition-opacity"><span class="font-label-caps text-xs">Recent project</span></div>
 </div>
-<div class="aspect-square overflow-hidden relative group">
+<div class="aspect-square overflow-hidden relative group" data-track="project" data-content-name="Vernis bespoten decoratie" data-content-location="homepage">
 <img class="w-full h-full object-cover grayscale-[0.3] sg-card-image" alt="Vernis gespoten decoratie met gladde professionele afwerking" src="assets/Vernis%20bespoten%20decoratie.jpg"/>
 <div class="absolute inset-0 bg-primary/20 lg:bg-primary/10 lg:group-hover:bg-primary/45 transition-colors duration-300"></div><div class="hidden lg:flex absolute inset-0 items-end p-5 text-white opacity-0 group-hover:opacity-100 transition-opacity"><span class="font-label-caps text-xs">Recent project</span></div>
 </div>
-<div class="aspect-square overflow-hidden relative group">
+<div class="aspect-square overflow-hidden relative group" data-track="project" data-content-name="Vernis & antislip" data-content-location="homepage">
 <img class="w-full h-full object-cover grayscale-[0.3] sg-card-image" alt="Vernis en antislip behandeling voor duurzaam beschermd oppervlak" src="assets/Vernis%20%26%20antislip.jpg"/>
 <div class="absolute inset-0 bg-primary/20 lg:bg-primary/10 lg:group-hover:bg-primary/45 transition-colors duration-300"></div><div class="hidden lg:flex absolute inset-0 items-end p-5 text-white opacity-0 group-hover:opacity-100 transition-opacity"><span class="font-label-caps text-xs">Recent project</span></div>
 </div>
-<div class="aspect-square overflow-hidden relative group">
+<div class="aspect-square overflow-hidden relative group" data-track="project" data-content-name="Airless spuitwerk" data-content-location="homepage">
 <img class="w-full h-full object-cover grayscale-[0.3] sg-card-image" alt="Airless spuitwerk als recent project van SchilderGoud" src="assets/Airless%20gespoten.jpg"/>
 <div class="absolute inset-0 bg-primary/20 lg:bg-primary/10 lg:group-hover:bg-primary/45 transition-colors duration-300"></div><div class="hidden lg:flex absolute inset-0 items-end p-5 text-white opacity-0 group-hover:opacity-100 transition-opacity"><span class="font-label-caps text-xs">Recent project</span></div>
 </div>
 </div>
 <div class="px-6 lg:px-10 xl:px-16 mt-8 max-w-[1440px] mx-auto">
-<a class="sg-focus sg-outline-light inline-flex w-full sm:w-auto min-h-12 items-center justify-center py-4 px-8 border border-primary font-bold" href="projecten.html">VOLLEDIG PORTFOLIO</a>
+<a class="sg-focus sg-outline-light inline-flex w-full sm:w-auto min-h-12 items-center justify-center py-4 px-8 border border-primary font-bold" href="/projecten" data-track="cta" data-cta-name="Volledig portfolio" data-cta-location="portfolio" data-cta-destination="/projecten">VOLLEDIG PORTFOLIO</a>
 </div>
 </section>
 <!-- Reviews Section -->
@@ -481,7 +526,7 @@
 <p class="font-label-caps text-sm tracking-[0.18em] uppercase text-on-surface">Echte ervaringen van klanten</p>
 </div>
 <p class="text-sm lg:text-base text-on-surface-variant leading-relaxed mb-7">Lees wat klanten zeggen over onze werkwijze, communicatie en afwerking.</p>
-<a class="sg-link inline-flex items-center gap-2 border-b border-primary pb-1 text-primary font-nav-link text-xs uppercase tracking-wider" href="https://share.google/LeLFp1Pr14YgfNLCb" target="_blank" rel="noopener noreferrer">
+<a class="sg-link inline-flex items-center gap-2 border-b border-primary pb-1 text-primary font-nav-link text-xs uppercase tracking-wider" href="https://share.google/LeLFp1Pr14YgfNLCb" data-track="review" target="_blank" rel="noopener noreferrer">
 <span>BEKIJK GOOGLE REVIEWS</span>
 <span class="material-symbols-outlined text-base" aria-hidden="true">open_in_new</span>
 </a>
@@ -584,7 +629,7 @@
 <div class="mt-12 lg:mt-0 bg-surface-container p-8 md:p-10 text-on-surface">
 <h3 class="font-display-lg text-2xl mb-2">Vertel ons over je klus</h3>
 <p class="text-xs text-on-surface-variant mb-8">Binnen 1 werkdag reactie.</p>
-<form class="space-y-6">
+<form class="space-y-6" data-track-form="quote" data-form-location="homepage">
 <div class="space-y-4">
 <div class="md:grid md:grid-cols-2 md:gap-4 space-y-4 md:space-y-0">
 <input aria-label="Naam" class="w-full border border-outline-variant min-h-12 p-3 focus:border-secondary focus:ring-secondary focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 text-sm bg-surface-container-low" placeholder="Naam" type="text"/>
@@ -605,9 +650,9 @@
 </div>
 <div class="flex items-start space-x-3">
 <input class="mt-1 h-5 w-5 bg-surface-container-low focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2" id="privacy" type="checkbox" required/>
-<label class="text-[10px] text-on-surface-variant leading-tight" for="privacy">Ik ga akkoord met de <a class="underline hover:text-secondary" href="privacybeleid.html">privacyverklaring</a>.</label>
+<label class="text-[10px] text-on-surface-variant leading-tight" for="privacy">Ik ga akkoord met de <a class="underline hover:text-secondary" href="/privacybeleid">privacyverklaring</a>.</label>
 </div>
-<p class="text-[10px] text-on-surface-variant leading-relaxed">Een aanvraag is vrijblijvend. Op werkzaamheden die voortkomen uit een geaccepteerde offerte zijn onze <a class="underline hover:text-secondary" href="algemene-voorwaarden.html">Algemene voorwaarden</a> van toepassing.</p>
+<p class="text-[10px] text-on-surface-variant leading-relaxed">Een aanvraag is vrijblijvend. Op werkzaamheden die voortkomen uit een geaccepteerde offerte zijn onze <a class="underline hover:text-secondary" href="/algemene-voorwaarden">Algemene voorwaarden</a> van toepassing.</p>
 <button class="sg-focus sg-primary-gold w-full min-h-12 py-5 bg-secondary-container border border-secondary-container text-on-secondary-container font-bold tracking-widest flex items-center justify-center space-x-2" type="submit">
 <span>OFFERTE AANVRAGEN</span>
 <span class="material-symbols-outlined text-lg sg-arrow">arrow_forward</span>
@@ -626,8 +671,8 @@
 <div class="relative z-10 px-6 lg:px-10 xl:px-16 text-center text-white max-w-[1100px] mx-auto">
 <h2 class="font-display-lg text-3xl md:text-5xl lg:text-[64px] mb-6 leading-tight">Klaar voor een resultaat waar je elke dag trots op bent?</h2>
 <div class="flex flex-col sm:flex-row gap-4 sm:gap-8 max-w-none mx-auto justify-center items-center">
-<a class="sg-focus sg-primary-black min-h-12 inline-flex items-center bg-primary border border-primary py-4 px-8 font-bold tracking-widest" href="contact.html#offerte">OFFERTE AANVRAGEN</a>
-<a class="sg-focus sg-link min-h-12 text-sm font-bold flex items-center justify-center space-x-2 border-b border-transparent" href="tel:+31633733706">
+<a class="sg-focus sg-primary-black min-h-12 inline-flex items-center bg-primary border border-primary py-4 px-8 font-bold tracking-widest" href="/contact#offerte">OFFERTE AANVRAGEN</a>
+<a class="sg-focus sg-link min-h-12 text-sm font-bold flex items-center justify-center space-x-2 border-b border-transparent" href="tel:+31633733706" data-track="phone" data-contact-location="footer">
 <span class="material-symbols-outlined">call</span>
 <span>06 33 73 37 06</span>
 </a>
@@ -640,7 +685,7 @@
 <div class="max-w-[1440px] mx-auto px-6 lg:px-10 xl:px-16">
 <div class="grid gap-10 lg:gap-16 xl:gap-24 lg:grid-cols-12 items-start">
 <div class="lg:col-span-5 space-y-5">
-<a class="inline-flex flex-col" href="index.html" aria-label="SchilderGoud home">
+<a class="inline-flex flex-col" href="/" aria-label="SchilderGoud home">
 <span class="font-display-lg text-headline-sm leading-none block"><span class="text-white">Schilder</span><span class="text-secondary-container">Goud</span></span>
 <span class="mt-2 font-label-caps text-[10px] tracking-[0.32em] text-white/55 uppercase">RIJSWIJK &amp; OMGEVING</span>
 </a>
@@ -649,24 +694,24 @@
 <div class="lg:col-span-3 space-y-5">
 <h5 class="font-label-caps text-xs tracking-widest text-secondary-container">NAVIGATIE</h5>
 <ul class="space-y-3 text-sm text-white/65">
-<li><a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="diensten.html">Diensten</a></li>
-<li><a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="projecten.html">Projecten</a></li>
-<li><a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="projecten.html#voor-na">Voor &amp; na</a></li>
-<li><a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="over-ons.html">Over ons</a></li>
-<li><a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="contact.html">Contact</a></li>
+<li><a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="/diensten">Diensten</a></li>
+<li><a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="/projecten">Projecten</a></li>
+<li><a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="/projecten#voor-na">Voor &amp; na</a></li>
+<li><a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="/over-ons">Over ons</a></li>
+<li><a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="/contact">Contact</a></li>
 </ul>
 </div>
 <div class="lg:col-span-4 space-y-5">
 <h5 class="font-label-caps text-xs tracking-widest text-secondary-container">CONTACT</h5>
 <ul class="space-y-4 text-sm text-white/65">
 <li>
-<a class="inline-flex items-center gap-3 transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="tel:+31633733706">
+<a class="inline-flex items-center gap-3 transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="tel:+31633733706" data-track="phone" data-contact-location="footer">
 <span class="material-symbols-outlined text-[18px]" aria-hidden="true">call</span>
 <span>06 33 73 37 06</span>
 </a>
 </li>
 <li>
-<a class="inline-flex items-center gap-3 transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="mailto:goudrijswijk.m@gmail.com">
+<a class="inline-flex items-center gap-3 transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="mailto:goudrijswijk.m@gmail.com" data-track="email" data-contact-location="footer">
 <span class="material-symbols-outlined text-[18px]" aria-hidden="true">mail</span>
 <span>goudrijswijk.m@gmail.com</span>
 </a>
@@ -677,8 +722,8 @@
 <div class="mt-12 lg:mt-14 pt-6 border-t border-white/10 flex flex-col items-center gap-4 text-center lg:flex-row lg:justify-between lg:text-left">
 <p class="text-[10px] sm:text-xs text-white/45">© 2026 SchilderGoud. Alle rechten voorbehouden. KvK: 85979864</p>
 <nav aria-label="Juridische links" class="flex flex-col items-center gap-2 sm:flex-row sm:gap-5 text-[10px] sm:text-xs text-white/45">
-<a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="privacybeleid.html">Privacybeleid</a>
-<a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="algemene-voorwaarden.html">Algemene voorwaarden</a>
+<a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="/privacybeleid">Privacybeleid</a>
+<a class="transition-colors duration-200 hover:text-secondary-container focus-visible:text-secondary-container" href="/algemene-voorwaarden">Algemene voorwaarden</a>
 </nav>
 </div>
 </div>
